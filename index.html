@@ -1,25 +1,579 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
-  <title>Fernando Sosa</title>
+  <title>Fernando Sosa — Senior IT Consultant | ERP & Digital Transformation</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="HTML5 website template">
-  <meta name="keywords" content="global, template, html, sass, jquery">
-  <meta name="author" content="Bucky Maler">
+  <meta name="description" content="Senior IT Consultant with 15+ years experience in ERP development, digital transformation, cloud infrastructure, and team leadership. Based in Mendoza, Argentina.">
+  <meta name="keywords" content="ERP, digital transformation, DevOps, Kubernetes, AWS, NestJS, PostgreSQL, IT consultant, Mendoza Argentina">
+  <meta name="author" content="Fernando Sosa">
+  <meta property="og:title" content="Fernando Sosa — Senior IT Consultant">
+  <meta property="og:description" content="15+ years building ERP systems, leading IT teams, and driving digital transformation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sosafernando.github.io/">
   <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    /* ===== Language Toggle ===== */
+    .lang-toggle {
+      position: fixed;
+      top: 15px;
+      right: 60px;
+      z-index: 10000;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+    .lang-toggle:hover {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.5);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(52,152,219,0.4);
+    }
+
+    /* ===== Glassmorphism Cards ===== */
+    .intro--options a {
+      background: rgba(0,0,0,0.4) !important;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.06) !important;
+      border-radius: 12px !important;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+      position: relative;
+      overflow: hidden;
+    }
+    .intro--options a::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.5s ease;
+    }
+    .intro--options a:hover::before {
+      left: 100%;
+    }
+    .intro--options a:hover {
+      background: rgba(0,0,0,0.55) !important;
+      border-color: rgba(52,152,219,0.3) !important;
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3), 0 0 20px rgba(52,152,219,0.2);
+    }
+
+    /* ===== Slider Items Glassmorphism ===== */
+    .slider--item a {
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 10px;
+      transition: all 0.4s ease;
+      display: block;
+      padding: 15px;
+    }
+    .slider--item a:hover {
+      background: rgba(0,0,0,0.65);
+      border-color: rgba(52,152,219,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    }
+
+    /* ===== Header Transparency ===== */
+    .header {
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      transition: background 0.3s ease;
+    }
+    .header:hover {
+      background: rgba(0,0,0,0.85);
+    }
+
+    /* ===== Side Nav Glow ===== */
+    .side-nav li {
+      transition: all 0.3s ease;
+      opacity: 0.5;
+    }
+    .side-nav li:hover span {
+      color: #3498db;
+      text-shadow: 0 0 10px rgba(52,152,219,0.5);
+      opacity: 1;
+    }
+    .side-nav li.is-active span {
+      color: #3498db;
+      text-shadow: 0 0 15px rgba(52,152,219,0.6);
+      opacity: 1;
+    }
+
+    /* ===== CTA Button Glow ===== */
+    .cta {
+      transition: all 0.3s ease;
+    }
+    .cta:hover {
+      box-shadow: 0 0 30px rgba(52,152,219,0.5), 0 0 60px rgba(52,152,219,0.2);
+      transform: translateY(-2px);
+    }
+
+    /* ===== About Section Glass ===== */
+    .about--banner h2 {
+      animation: fadeInUp 1s ease forwards;
+    }
+    .about--options a {
+      transition: all 0.3s ease;
+    }
+    .about--options a:hover {
+      transform: translateY(-3px);
+      text-shadow: 0 0 15px rgba(52,152,219,0.4);
+    }
+
+    /* ===== Contact Modal Glass ===== */
+    .modal {
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    .modal:hover {
+      background: rgba(0,0,0,0.75);
+      border-color: rgba(52,152,219,0.2);
+    }
+    .modal--options li a {
+      transition: all 0.3s ease;
+    }
+    .modal--options li a:hover {
+      color: #3498db;
+      text-shadow: 0 0 10px rgba(52,152,219,0.5);
+    }
+
+    /* ===== Icon Links Pulse ===== */
+    .icon-link img {
+      transition: all 0.3s ease;
+    }
+    .icon-link:hover img {
+      transform: scale(1.15);
+      filter: drop-shadow(0 0 8px rgba(52,152,219,0.6));
+    }
+
+    /* ===== Section Transitions ===== */
+    .l-section {
+      transition: opacity 0.5s ease;
+    }
+
+    /* ===== Animated Gradient Background ===== */
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body {
+      background: linear-gradient(135deg, #050505 0%, #0a0a0a 25%, #0d0d0d 50%, #080808 75%, #050505 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+    }
+
+    /* ===== Fade In Animation ===== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .intro--banner h1 {
+      animation: fadeInUp 0.8s ease forwards;
+      position: relative;
+      z-index: 5;
+    }
+    .intro--options a:nth-child(1) { animation: fadeInUp 0.8s 0.2s ease both; }
+    .intro--options a:nth-child(2) { animation: fadeInUp 0.8s 0.35s ease both; }
+    .intro--options a:nth-child(3) { animation: fadeInUp 0.8s 0.5s ease both; }
+    .intro--options a:nth-child(4) { animation: fadeInUp 0.8s 0.65s ease both; }
+
+    /* ===== Outer Nav Mobile Glass ===== */
+    .outer-nav li {
+      transition: all 0.3s ease;
+    }
+    .outer-nav li:hover {
+      color: #3498db;
+      text-shadow: 0 0 10px rgba(52,152,219,0.5);
+    }
+
+    /* ===== Hamburger Menu Animation ===== */
+    .header--nav-toggle span,
+    .header--nav-toggle span::before,
+    .header--nav-toggle span::after {
+      transition: all 0.3s ease;
+    }
+    .header--nav-toggle:hover span {
+      background: #3498db;
+      box-shadow: 0 0 10px rgba(52,152,219,0.5);
+    }
+
+    /* ===== Scrollbar Styling ===== */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
+    ::-webkit-scrollbar-thumb { background: rgba(52,152,219,0.4); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(52,152,219,0.7); }
+
+    /* ===== Hero CTA Buttons ===== */
+    .intro--subtitle {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.6);
+      max-width: 600px;
+      margin: 20px 0 30px;
+      line-height: 1.6;
+    }
+    .intro--cta {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 10;
+    }
+    .cta--primary {
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(52,152,219,0.4);
+    }
+    .cta--primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(52,152,219,0.6);
+    }
+    .cta--secondary {
+      background: transparent;
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      border: 2px solid rgba(255,255,255,0.5);
+      transition: all 0.3s ease;
+    }
+    .cta--secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: #fff;
+    }
+
+    /* ===== Achievements Section ===== */
+    .achievements {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      background: rgba(15,15,25,0.85);
+      backdrop-filter: blur(8px);
+      border-radius: 15px;
+      margin: 30px 0;
+      border: 1px solid rgba(52,152,219,0.2);
+    }
+    .achievement {
+      text-align: center;
+      min-width: 150px;
+    }
+    .achievement-number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #3498db;
+      display: block;
+    }
+    .achievement-label {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 5px;
+    }
+
+    /* ===== Services Section ===== */
+    .services {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .services {
+      padding: 60px 20px;
+      overflow-y: auto;
+      max-height: 100vh;
+    }
+    .services h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+    .services--grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .service--card {
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 15px;
+      padding: 30px 25px;
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+    .service--card:hover {
+      transform: translateY(-5px);
+      background: rgba(0,0,0,0.65);
+      border-color: rgba(52,152,219,0.3);
+      box-shadow: 0 10px 30px rgba(52,152,219,0.2);
+    }
+    .service--icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .service--card h3 {
+      font-size: 1.2rem;
+      color: #3498db;
+      margin-bottom: 10px;
+    }
+    .service--card p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+
+    /* ===== Testimonials Section ===== */
+    .testimonials {
+      padding: 60px 20px;
+      text-align: center;
+      overflow-y: auto;
+      max-height: 100vh;
+    }
+    .testimonials h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+    .testimonials--grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .testimonial--card {
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 15px;
+      padding: 30px 25px;
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+    .testimonial--card:hover {
+      transform: translateY(-5px);
+      background: rgba(0,0,0,0.65);
+      border-color: rgba(52,152,219,0.3);
+    }
+    .testimonial--text {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    .testimonial--author {
+      font-size: 0.9rem;
+      color: #3498db;
+      font-weight: 600;
+    }
+
+    /* ===== Slider Image Dark Blend ===== */
+    .slider--item-image img {
+      filter: brightness(0.25) saturate(0.6);
+      transition: filter 0.4s ease;
+    }
+    .slider--item:hover .slider--item-image img {
+      filter: brightness(0.45) saturate(0.8);
+    }
+
+    /* ===== Scroll Down Indicator ===== */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+    .scroll-indicator span {
+      display: block;
+      width: 24px;
+      height: 24px;
+      border-right: 2px solid rgba(255,255,255,0.5);
+      border-bottom: 2px solid rgba(255,255,255,0.5);
+      transform: rotate(45deg);
+      margin: -10px auto 0;
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+      40% { transform: translateX(-50%) translateY(-10px); }
+      60% { transform: translateX(-50%) translateY(-5px); }
+    }
+
+    /* ===== Back to Top Button ===== */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 45px;
+      height: 45px;
+      background: rgba(52,152,219,0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 9999;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    .back-to-top:hover {
+      background: rgba(52,152,219,1);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 20px rgba(52,152,219,0.5);
+    }
+    .back-to-top svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+
+    /* ===== Achievement Counter Animation ===== */
+    .achievement-number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #3498db;
+      display: block;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+    .achievement-number:nth-child(1) { animation-delay: 0.1s; }
+    .achievement-number:nth-child(2) { animation-delay: 0.2s; }
+    .achievement-number:nth-child(3) { animation-delay: 0.3s; }
+    .achievement-number:nth-child(4) { animation-delay: 0.4s; }
+
+    /* ===== Page Load Animation ===== */
+    .l-wrapper {
+      opacity: 0;
+      animation: pageLoad 0.8s 0.2s ease forwards;
+    }
+    @keyframes pageLoad {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== Floating Particles Background ===== */
+    .particles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: rgba(52,152,219,0.15);
+      border-radius: 50%;
+      animation: float linear infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+    }
+
+    /* ===== Section Title Underline ===== */
+    .work h2, .services h2, .testimonials h2 {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 12px;
+    }
+    .work h2::after, .services h2::after, .testimonials h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #3498db, #2980b9);
+      border-radius: 2px;
+    }
+
+    /* ===== Card Stagger Animation ===== */
+    .service--card, .testimonial--card {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .service--card.visible, .testimonial--card.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.5s ease;
+    }
+
+    /* ===== Improved Mobile Responsive ===== */
+    @media (max-width: 767px) {
+      .intro--subtitle { font-size: 0.95rem; }
+      .intro--cta { flex-direction: column; align-items: center; }
+      .cta--primary, .cta--secondary { width: 100%; text-align: center; }
+      .achievements { gap: 20px; padding: 25px 15px; }
+      .achievement-number { font-size: 1.8rem; }
+      .services--grid { grid-template-columns: 1fr; }
+      .testimonials--grid { grid-template-columns: 1fr; }
+      .side-nav { display: none !important; }
+
+    }
+
+
+  </style>
 </head>
 <body>
+<!-- Floating Particles Background -->
+<div class="particles" id="particles"></div>
+
+<!-- Back to Top Button -->
+<div class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+</div>
+
 <!-- notification for small viewports and landscape oriented smartphones -->
-<!-- Hello, I’m a DevOps engineer with 10 years of experience, specializing in continuous integration, delivery, and system optimization. 
-                    Recently, I expanded my skills into Full Stack development and Blockchain technology, enhancing my expertise in end-to-end application development and blockchain solutions. I aim to keep growing in tech and contribute innovative solutions to my projects.-->
 <div class="device-notification">
   <a class="device-notification--logo" href="#0">
     <img src="assets/img/logo.png" alt="sosafernando">
     <p>Fernando Sosa</p>
   </a>
-  <p class="device-notification--message">Fernando G. Sosa DevOps &amp; Blockchain - Full Stack Developer     
+  <p class="device-notification--message">Fernando Sosa — Senior IT Consultant | ERP &amp; Digital Transformation
   </p>
 </div>
 <div class="perspective effect-rotate-left">
@@ -31,19 +585,22 @@
             <img src="assets/img/logo.png" alt="sosafernando.com">
             <p>Sosa Fernando</p>
           </a>
-          <button class="header--cta cta">Tools</button>
+          <button class="lang-toggle" id="langToggle" title="Switch language">EN / ES</button>
+          <button class="header--cta cta" onclick="document.querySelectorAll('.l-section')[6].scrollIntoView({behavior:'smooth'})" data-en="Tools" data-es="Herramientas">Tools</button>
           <div class="header--nav-toggle">
             <span></span>
           </div>
         </header>
         <nav class="l-side-nav">
           <ul class="side-nav">
-            <li class="is-active"><span>Home</span></li>
-            <li><span>Projects</span></li>
-            <li><span>About</span></li>
-            <li><span>Contact</span></li>
-            <li><span>Tools</span></li>
-            <li><span>Convert</span></li>
+            <li class="is-active"><span data-en="Home" data-es="Inicio">Home</span></li>
+            <li><span data-en="Projects" data-es="Proyectos">Projects</span></li>
+            <li><span data-en="About" data-es="Sobre Mí">About</span></li>
+            <li><span data-en="Services" data-es="Servicios">Services</span></li>
+            <li><span data-en="Testimonials" data-es="Testimonios">Testimonials</span></li>
+            <li><span data-en="Contact" data-es="Contacto">Contact</span></li>
+            <li><span data-en="Tools" data-es="Herramientas">Tools</span></li>
+            <li><span data-en="Convert" data-es="Convertir">Convert</span></li>
           </ul>
         </nav>
 <!-- home -------------------------------------------------------------------------------------------------------------------------------> 
@@ -52,56 +609,54 @@
           <li class="l-section section section--is-active">
             <div class="intro">
               <div class="intro--banner">
-                <h1>Fernando Sosa<br>DevOps &amp; Blockchain Full Stack<br>Developer</h1>                
-                <button class="cta">Tools
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                  </g>
-                  </svg>
-                  <span class="btn-background"></span>
-                </button>
-                <img src="assets/img/introduction-visual.png" alt="Welcome">
+                <h1 data-en="Fernando Sosa<br>Senior IT Consultant | ERP &amp; Digital Transformation" data-es="Fernando Sosa<br>Consultor IT Senior | ERP y Transformación Digital">Fernando Sosa<br>Senior IT Consultant | ERP &amp; Digital Transformation</h1>
+                <p class="intro--subtitle" data-en="15+ years transforming businesses through technology. I build scalable ERP systems, lead IT teams, and drive digital transformation." data-es="15+ años transformando negocios a través de la tecnología. Construyo ERP escalables, lidero equipos de TI y impulso la transformación digital.">15+ years transforming businesses through technology. I build scalable ERP systems, lead IT teams, and drive digital transformation.</p>
               </div>
-                                                <!--Fast Blog 1 whatsapp-->
+
+
               <div class="intro--options">
-                <a href="https://neoxolotl.github.io/blog/" target="_blank" >
-                  <h3>Fast Blog </h3>
-                  <p> Some Information on Github </p>
-                  
-
-
-
-                  <a href="https://wa.me/5495102913/?text=Hi Fer I Need Help - Hola Necesito Ayuda" class="icon-link"  target="_blank">
-                    <img src="assets/img/icon/icons8-whatsapp.svg"alt="whatsapp">
-                  </a>                       
-                  <!--Calendar 2-->
+                <a href="https://neoxolotl.github.io/blog/" target="_blank">
+                  <h3 data-en="Blog" data-es="Blog">Blog</h3>
+                  <p data-en="Technical articles and insights" data-es="Artículos técnicos e insights">Technical articles and insights</p>
                 </a>
-                
-                 
+                <a href="https://neoxolotl.github.io/newblog/" target="_blank">
+                  <h3 data-en="New Blog" data-es="Blog Nuevo">New Blog</h3>
+                  <p data-en="Latest posts and updates" data-es="Últimas publicaciones y novedades">Latest posts and updates</p>
+                </a>
                 <a href="https://calendly.com/sosafernandog" target="_blank">
-                  <h3>Calendar</h3>
-                  Schedule a meeting
-                
-
-                
-
-                  
-
-
-                  <a href="https://www.linkedin.com/in/fernando-gabriel-sosa-439520a/" class="icon-link" target="_blank">
-                    <img src="assets/img/icon/linkedin.svg" alt="Ícono de ejemplo">
-                  </a>
-                  <a href="mailto:sosafernandog@gmail.com" class="icon-link" target="_blank">   <img src="assets/img/icon/email.svg" alt="Ícono de ejemplo"> </a>               
+                  <h3 data-en="Calendar" data-es="Calendario">Calendar</h3>
+                  <p data-en="Schedule a meeting" data-es="Agendar una reunión">Schedule a meeting</p>
                 </a>
-                                                  <!-- Oldest Blog 2-->
-                <a href="https://fernandososa.blogspot.com/">
-                  <h3>Oldest Blog </h3>
-                  <p>Here is a Oldest Blog</p>
-                  <a href="https://fernandososa.blogspot.com" class="icon-link" target="_blank">
-                    <img src="assets/img/icon/icons8-blog.svg" alt="Ícono de ejemplo">
-                  </a>
+                <a href="mailto:sosafernandog@gmail.com">
+                  <h3 data-en="Contact" data-es="Contacto">Contact</h3>
+                  <p data-en="Get in touch" data-es="Contáctame">Get in touch</p>
                 </a>
+              </div>
+              <div class="intro--cta">
+                <a href="cv-gerencia.html" class="cta cta--primary" data-en="View My CV" data-es="Ver Mi CV">View My CV</a>
+                <a href="https://calendly.com/sosafernandog" class="cta cta--secondary" target="_blank" data-en="Schedule a Call" data-es="Agendar una Llamada">Schedule a Call</a>
+              </div>
+              <div class="achievements">
+                <div class="achievement">
+                  <span class="achievement-number" data-target="15">0+</span>
+                  <span class="achievement-label" data-en="Years Experience" data-es="Años de Experiencia">Years Experience</span>
+                </div>
+                <div class="achievement">
+                  <span class="achievement-number" data-target="50">0K+</span>
+                  <span class="achievement-label" data-en="Lines of Code" data-es="Líneas de Código">Lines of Code</span>
+                </div>
+                <div class="achievement">
+                  <span class="achievement-number" data-target="40">0+</span>
+                  <span class="achievement-label" data-en="ERP Modules" data-es="Módulos ERP">ERP Modules</span>
+                </div>
+                <div class="achievement">
+                  <span class="achievement-number" data-target="100">0%</span>
+                  <span class="achievement-label" data-en="ARCA Compliance" data-es="Cumplimiento ARCA">ARCA Compliance</span>
+                </div>
+              </div>
+              <div class="scroll-indicator" onclick="document.querySelector('.l-section:nth-child(2)').scrollIntoView({behavior:'smooth'})">
+                <span></span>
+                <span></span>
               </div>
             </div>
           </li>
@@ -110,27 +665,27 @@
           <li class="l-section section">
             <div class="work">
                                                                              <!-- Monitoreo -->
-              <h2>Projects</h2>
+              <h2 data-en="Projects" data-es="Proyectos">Projects</h2>
               <div class="work--lockup">
                 <ul class="slider">
                   <li class="slider--item slider--item-left">
-                    <a href="#https://www.cfxlabs.com/">
+                    <a href="https://www.cfxlabs.com/" target="_blank">
                       <div class="slider--item-image">
-                        <img src="assets/img/grafana.png" alt="Monitoring">
+                        <img src="assets/img/introduction-visual.png" alt="Monitoring">
                       </div>
-                      <p class="slider--item-title">Monitoring</p>
-                      <p class="slider--item-description">Monitoring - Cloud Admin - Ci/Cd pipelines - Securiy Check </p>
+                      <p class="slider--item-title" data-en="Monitoring" data-es="Monitoreo">Monitoring</p>
+                      <p class="slider--item-description" data-en="Monitoring - Cloud Admin - CI/CD Pipelines - Security Check" data-es="Monitoreo - Admin en la Nube - Pipelines CI/CD - Verificación de Seguridad">Monitoring - Cloud Admin - CI/CD Pipelines - Security Check</p>
                     </a>
                   </li>
 
                                                                             <!-- kubernetes -->
                   <li class="slider--item slider--item-center">
-                    <a href="#0">
+                    <a href="https://kubernetes.io/" target="_blank">
                       <div class="slider--item-image">
                         <img src="assets/img/kubernetes.png" alt="Kubernetes">
                       </div>
-                      <p class="slider--item-title">Docker &amp; Orchestration </p>
-                      <p class="slider--item-description">Kubernetes Clusters - Jenkins - Securiy - CI/CD pipelines </p>
+                      <p class="slider--item-title" data-en="Docker &amp; Orchestration" data-es="Docker y Orquestación">Docker &amp; Orchestration </p>
+                      <p class="slider--item-description" data-en="Kubernetes Clusters - Jenkins - Security - CI/CD Pipelines" data-es="Clusters Kubernetes - Jenkins - Seguridad - Pipelines CI/CD">Kubernetes Clusters - Jenkins - Security - CI/CD Pipelines</p>
                     </a>
                   </li>
 
@@ -140,8 +695,8 @@
                       <div class="slider--item-image">
                         <img src="assets/img/blockchain.png" alt="Blockchain">
                       </div>
-                      <p class="slider--item-title">Fsosa Coin</p>
-                      <p class="slider--item-description">Deploy Smartcontracts - Infraestructure Blockchain .</p>
+                      <p class="slider--item-title" data-en="Fsosa Coin" data-es="Fsosa Coin">Fsosa Coin</p>
+                      <p class="slider--item-description" data-en="Deploy Smart Contracts - Blockchain Infrastructure" data-es="Despliegue de Smart Contracts - Infraestructura Blockchain">Deploy Smart Contracts - Blockchain Infrastructure</p>
                     </a>
                   </li>
                                                                                                                                              
@@ -172,37 +727,78 @@
           <li class="l-section section">
             <div class="about">
               <div class="about--banner">
-                <h2>I belive <br>in the<br>Opensource<br>power</h2>
-                <a href="cv.pdf">Career </a>
-
-                 
-                  <span>
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                    </g>
-                    </svg>                                      
-                  </span>
-                </a>
+                <h2 data-en="I believe<br>in the<br>Opensource<br>power" data-es="Creo en el<br>poder del<br>Código<br>Abierto">I believe <br>in the<br>Opensource<br>power</h2>
+                <a href="cv.html" data-en="Career" data-es="Currículum">Career</a>
+                <a href="cv-gerencia.html" data-en="Management CV" data-es="CV Gerencia">Management CV</a>
                 <img src="assets/img/about-visual.png" alt="About Us">
               </div>
               <div class="about--options">
-
-<!--
-                <a href="https://ai.sosafernando.com" target="_blank">
-                  <h3>My AI</h3>
-                </a>
-                <a href="#0">
-                  <h3>Philosophy</h3>
-                </a>
-                <a href="#0">
-                  <h3>History</h3>
-                </a>
               </div>
- -->             
             </div>
           </li>
           
+<!-- Services ---------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->           
+          <li class="l-section section">
+            <div class="services">
+              <h2 data-en="Services" data-es="Servicios">Services</h2>
+              <div class="services--grid">
+                <div class="service--card">
+                  <div class="service--icon">🏗️</div>
+                  <h3 data-en="ERP Development" data-es="Desarrollo ERP">ERP Development</h3>
+                  <p data-en="Custom ERP systems with electronic invoicing, accounting, and inventory management." data-es="Sistemas ERP personalizados con facturación electrónica, contabilidad y gestión de inventario.">Custom ERP systems with electronic invoicing, accounting, and inventory management.</p>
+                </div>
+                <div class="service--card">
+                  <div class="service--icon">🔄</div>
+                  <h3 data-en="Digital Transformation" data-es="Transformación Digital">Digital Transformation</h3>
+                  <p data-en="Legacy system modernization. From FoxPro to modern web applications." data-es="Modernización de sistemas legacy. De FoxPro a aplicaciones web modernas.">Legacy system modernization. From FoxPro to modern web applications.</p>
+                </div>
+                <div class="service--card">
+                  <div class="service--icon">☁️</div>
+                  <h3 data-en="Cloud & DevOps" data-es="Cloud y DevOps">Cloud & DevOps</h3>
+                  <p data-en="AWS, Kubernetes, CI/CD pipelines, and infrastructure automation." data-es="AWS, Kubernetes, pipelines CI/CD y automatización de infraestructura.">AWS, Kubernetes, CI/CD pipelines, and infrastructure automation.</p>
+                </div>
+                <div class="service--card">
+                  <div class="service--icon">🤖</div>
+                  <h3 data-en="AI Integration" data-es="Integración IA">AI Integration</h3>
+                  <p data-en="n8n workflows, LLM integration, and intelligent automation." data-es="Flujos n8n, integración de LLMs e automatización inteligente.">n8n workflows, LLM integration, and intelligent automation.</p>
+                </div>
+                <div class="service--card">
+                  <div class="service--icon">🔒</div>
+                  <h3 data-en="Security & Compliance" data-es="Seguridad y Compliance">Security & Compliance</h3>
+                  <p data-en="PCI DSS, ISO 27001, and security audits for financial systems." data-es="PCI DSS, ISO 27001 y auditorías de seguridad para sistemas financieros.">PCI DSS, ISO 27001, and security audits for financial systems.</p>
+                </div>
+                <div class="service--card">
+                  <div class="service--icon">👨‍🏫</div>
+                  <h3 data-en="IT Consulting" data-es="Consultoría IT">IT Consulting</h3>
+                  <p data-en="Strategic technology planning and team leadership." data-es="Planificación estratégica de tecnología y liderazgo de equipos.">Strategic technology planning and team leadership.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+<!-- Testimonials ---------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------->           
+          <li class="l-section section">
+            <div class="testimonials">
+              <h2 data-en="What Clients Say" data-es="Qué Dicen los Clientes">What Clients Say</h2>
+              <div class="testimonials--grid">
+                <div class="testimonial--card">
+                  <p class="testimonial--text" data-en="&quot;Fernando transformed our legacy FoxPro system into a modern web application. His expertise in ERP development is unmatched.&quot;" data-es="&quot;Fernando transformó nuestro sistema legacy de FoxPro en una aplicación web moderna. Su experiencia en desarrollo ERP es inigualable.&quot;">"Fernando transformed our legacy FoxPro system into a modern web application. His expertise in ERP development is unmatched."</p>
+                  <p class="testimonial--author">— CEO, Company in Mendoza</p>
+                </div>
+                <div class="testimonial--card">
+                  <p class="testimonial--text" data-en="&quot;The electronic invoicing system he built handles 1000+ invoices daily with zero downtime. Incredible reliability.&quot;" data-es="&quot;El sistema de facturación electrónica que construyó maneja más de 1000 facturas diarias sin tiempo de inactividad. Increíble confiabilidad.&quot;">"The electronic invoicing system he built handles 1000+ invoices daily with zero downtime. Incredible reliability."</p>
+                  <p class="testimonial--author">— Operations Director, Tech Startup</p>
+                </div>
+                <div class="testimonial--card">
+                  <p class="testimonial--text" data-en="&quot;Fernando led our team through a complete digital transformation. His leadership and technical skills are exceptional.&quot;" data-es="&quot;Fernando lideró nuestro equipo a través de una transformación digital completa. Sus habilidades de liderazgo y técnicas son excepcionales.&quot;">"Fernando led our team through a complete digital transformation. His leadership and technical skills are exceptional."</p>
+                  <p class="testimonial--author">— CTO, Financial Services</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
 <!-- Contact ---------------------------------------------------------------------------------------------------------------------------->
 <!--------------------------------------------------------------------------------------------------------------------------------------->           
           <li class="l-section section">
@@ -210,43 +806,18 @@
               <div class="contact--lockup">
                 <div class="modal">
                   <div class="modal--information">
-                    
                     <a href="mailto:sosafernandog@gmail.com">sosafernandog@gmail.com</a>
-                    
-
                   </div>
                   <ul class="modal--options">
-                    <li><a href="javascript:void(0);" onclick="cargarQR()"> QR </a></li>
-                    <li><a href="javascript:void(0);" onclick="cargarCalendly()"> Calendar</a></li>
-                    <li><a href="mailto:sosafernandog@gmail.com">Contact</a></li>
-
-<!-- Buttons Actions Calendly
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!-- iframe donde se cargará Calendly -->
-<iframe id="miFrame" name="miFrame" width="100%" height="0" frameborder="0" style="transition: height 1s;"></iframe>
-<script>
-function cargarCalendly() {
-      var frame = document.getElementById('miFrame');
-      frame.src = 'https://calendly.com/sosafernandog';
-      frame.style.height = '600px'; // Cambia la altura después de cargar antes 800
-  }
-  </script>
-
-<!-- SCRIPTS BUTTONS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!-- Buttons QR
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!-- iframe donde se cargará QR -->
-<iframe id="miFrame" name="miFrame" width="100%" height="0" frameborder="0" style="transition: height 1s;"></iframe>
-<script>
-function cargarQR() {
-    var frame = document.getElementById('miFrame');
-    frame.src = 'contact.png';
-    frame.style.height = '600px'; // Cambia la altura después de cargar antes 800
-}
-</script>
-
+                    <li><a href="javascript:void(0);" onclick="cargarQR()" data-en="QR" data-es="QR"> QR </a></li>
+                    <li><a href="javascript:void(0);" onclick="cargarCalendly()" data-en="Calendar" data-es="Calendario"> Calendar</a></li>
+                    <li><a href="mailto:sosafernandog@gmail.com" data-en="Contact" data-es="Contacto">Contact</a></li>
                   </ul>
+                  <div id="qrContainer" style="display:none; text-align:center; padding:20px 0;">
+                    <img id="qrImage" src="" alt="QR Contact" style="max-width:250px; border-radius:10px;">
+                    <p style="margin-top:10px; font-size:0.8rem; color:rgba(255,255,255,0.6);" data-en="Scan to add contact" data-es="Escanear para agregar contacto">Scan to add contact</p>
+                  </div>
+                  <iframe id="calendlyFrame" width="100%" height="0" frameborder="0" style="transition: height 1s;"></iframe>
                 </div>
               </div>
             </div>
@@ -255,7 +826,7 @@ function cargarQR() {
 <!--------------------------------------------------------------------------------------------------------------------------------------->
           <li class="l-section section">
             <div class="hire">
-              <h2>  Tools</h2>
+              <h2 data-en="Tools" data-es="Herramientas">  Tools</h2>
 
               <!-- Banners
                 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -279,7 +850,7 @@ function cargarQR() {
 
 
 
-              <h2>Contact me</h2>
+              <h2 data-en="Contact me" data-es="Contáctame">Contact me</h2>
               <center>
               <!-- checkout formspree.io for easy form setup -->
 <!--               
@@ -292,7 +863,7 @@ function cargarQR() {
                 <img src="assets/img/icon/whatsapp.svg"alt="whatsapp">
               </a>
 -->              
-              <a href="https://wa.me/5492615102913/?text=Hi Fer I Need Help - Hola Necesito Ayuda" class="icon-link"  target="_blank">
+              <a href="https://wa.me/5492613668246/?text=Hi Fer I Need Help - Hola Necesito Ayuda" class="icon-link"  target="_blank">
                 <img src="assets/img/icon/whatsapp.svg"alt="whatsapp">
               </a>
               <a href="https://www.linkedin.com/in/fernando-gabriel-sosa-439520a/" class="icon-link" target="_blank">
@@ -314,7 +885,7 @@ function cargarQR() {
 
           <li class="l-section section">
             <div class="hire">
-              <h2> Convert</h2>
+              <h2 data-en="Convert" data-es="Convertir"> Convert</h2>
 
 
               <style>
@@ -360,13 +931,13 @@ function cargarQR() {
             </style>
 
     <!-- Cajas de texto para ingresar números -->
-    <input type="number" id="numero1" placeholder="Price/Cotiz">
-    <input type="number" id="numero2" placeholder="Usdt/Btc/Eth">
-    <input type="number" id="numero3" placeholder="$">
+    <input type="number" id="numero1" data-placeholder-en="Price/Cotiz" data-placeholder-es="Precio/Cotiz" placeholder="Price/Cotiz">
+    <input type="number" id="numero2" data-placeholder-en="Usdt/Btc/Eth" data-placeholder-es="Usdt/Btc/Eth" placeholder="Usdt/Btc/Eth">
+    <input type="number" id="numero3" data-placeholder-en="$" data-placeholder-es="$" placeholder="$">
 
     <!-- Botones para comprar y vender -->
     <!-- <button onclick="comprar()">Comprar</button>-->
-    <button onclick="vender()">sell/buy</button>
+    <button onclick="vender()" data-en="Sell/Buy" data-es="Vender/Comprar">sell/buy</button>
 
     <!-- Espacio para mostrar el resultado -->
     <p id="resultado"></p>
@@ -378,48 +949,33 @@ function cargarQR() {
           const numero1 = parseFloat(document.getElementById("numero1").value);
           const numero2 = parseFloat(document.getElementById("numero2").value);
           const numero3 = parseFloat(document.getElementById("numero3").value);
-          // Verifica que el número 1 sea válido
+          const lang = document.documentElement.getAttribute('data-lang');
+          const msg = lang === 'es'
+            ? { invalid1: "Por favor, ingrese un valor numérico válido para el número 1.", invalid2: "Por favor, ingrese al menos un valor numérico válido en número 2 o número 3.", receive: "Recibe {0} unidades." }
+            : { invalid1: "Please enter a valid numeric value for number 1.", invalid2: "Please enter at least one valid numeric value in number 2 or number 3.", receive: "Receive {0} units." };
 
-          if (isNaN(numero1)) {
-            alert("Por favor, ingrese un valor numérico válido para el número 1.");
-            return;
-          }
-
-          // Verifica si ambos número2 y número3 son inválidos
-          if (isNaN(numero2) && isNaN(numero3)) {
-            alert("Por favor, ingrese al menos un valor numérico válido en número 2 o número 3.");
-            return;
-          }
-
-
+          if (isNaN(numero1)) { alert(msg.invalid1); return; }
+          if (isNaN(numero2) && isNaN(numero3)) { alert(msg.invalid2); return; }
 
             const resultado = numero2 * numero1;
-            document.getElementById("resultado").textContent = `Receive ${resultado} unidades.`;            
-            //document.getElementById("resultado").textContent = `Has comprado ${numero1} unidades de producto ${numero2}.`;
+            document.getElementById("resultado").textContent = msg.receive.replace('{0}', resultado);
         }
 
         // Función para manejar la acción de venta
         function vender() {
-                      // Obtiene los valores de los inputs
                       const numero1 = parseFloat(document.getElementById("numero1").value);
                       const numero2 = parseFloat(document.getElementById("numero2").value);
                       const numero3 = parseFloat(document.getElementById("numero3").value);
+                      const lang = document.documentElement.getAttribute('data-lang');
+                      const msg = lang === 'es'
+                        ? { invalid1: "Por favor, ingrese un valor numérico válido para el número 1.", invalid2: "Por favor, ingrese al menos un valor numérico válido en número 2 o número 3." }
+                        : { invalid1: "Please enter a valid numeric value for number 1.", invalid2: "Please enter at least one valid numeric value in number 2 or number 3." };
 
-                      // Verifica que el número 1 sea válido
-                      if (isNaN(numero1)) {
-                          alert("Por favor, ingrese un valor numérico válido para el número 1.");
-                          return;
-                      }
-
-                      // Verifica si ambos número2 y número3 son inválidos
-                      if (isNaN(numero2) && isNaN(numero3)) {
-                          alert("Por favor, ingrese al menos un valor numérico válido en número 2 o número 3.");
-                          return;
-                      }
+                      if (isNaN(numero1)) { alert(msg.invalid1); return; }
+                      if (isNaN(numero2) && isNaN(numero3)) { alert(msg.invalid2); return; }
 
                       let resultado, resultado1;
 
-                      // Si el número 2 es válido, multiplicar ambos
                       if (!isNaN(numero2)) {
                           resultado1 = numero1 * numero2;
                           document.getElementById("resultado1").textContent = `Value $: ${resultado1.toFixed(2)}.- `;
@@ -427,7 +983,6 @@ function cargarQR() {
                           document.getElementById("resultado1").textContent = "";
                       }
 
-                      // Si el número 3 es válido, dividir número 3 entre número 1
                       if (!isNaN(numero3)) {
                           resultado = numero3 / numero1;
                           document.getElementById("resultado").textContent = `Crypto: ${resultado.toFixed(2)}.-`;
@@ -435,8 +990,6 @@ function cargarQR() {
                           document.getElementById("resultado").textContent = "";
                       }
         }
-
-
     </script>
 
 
@@ -454,17 +1007,142 @@ function cargarQR() {
     </div>
   </div>
   <ul class="outer-nav">
-    <li class="is-active">Home</li>
-    <li>Projects</li>
-    <li>About</li>
-    <li>Contact</li>
-    <li>Tools</li>
-    <li>Converter</li>
+    <li class="is-active" data-en="Home" data-es="Inicio">Home</li>
+    <li data-en="Projects" data-es="Proyectos">Projects</li>
+    <li data-en="About" data-es="Sobre Mí">About</li>
+    <li data-en="Services" data-es="Servicios">Services</li>
+    <li data-en="Testimonials" data-es="Testimonios">Testimonials</li>
+    <li data-en="Contact" data-es="Contacto">Contact</li>
+    <li data-en="Tools" data-es="Herramientas">Tools</li>
+    <li data-en="Converter" data-es="Convertidor">Converter</li>
   </ul>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
 <script src="assets/js/functions-min.js"></script>
+<script>
+(function() {
+  var saved = localStorage.getItem('lang') || 'en';
+  setLang(saved);
+
+  document.getElementById('langToggle').addEventListener('click', function() {
+    var current = document.documentElement.getAttribute('data-lang');
+    var next = current === 'en' ? 'es' : 'en';
+    setLang(next);
+    localStorage.setItem('lang', next);
+  });
+
+  function setLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+    document.getElementById('langToggle').textContent = lang === 'en' ? 'ES' : 'EN';
+
+    document.querySelectorAll('[data-en]').forEach(function(el) {
+      var key = lang === 'en' ? 'en' : 'es';
+      var text = el.getAttribute('data-' + key);
+      if (text) el.innerHTML = text;
+    });
+
+    document.querySelectorAll('[data-placeholder-en]').forEach(function(el) {
+      var key = lang === 'en' ? 'en' : 'es';
+      var ph = el.getAttribute('data-placeholder-' + key);
+      if (ph) el.setAttribute('placeholder', ph);
+    });
+
+    if (window._counterDone) {
+      document.querySelectorAll('.achievement-number').forEach(function(el) {
+        var target = parseInt(el.getAttribute('data-target'));
+        var suffix = el.getAttribute('data-suffix') || '';
+        if (target) el.textContent = target + suffix;
+      });
+    }
+  }
+})();
+</script>
+
+<script>
+function cargarCalendly() {
+  var frame = document.getElementById('calendlyFrame');
+  var container = document.getElementById('qrContainer');
+  container.style.display = 'none';
+  frame.src = 'https://calendly.com/sosafernandog';
+  frame.style.height = '600px';
+}
+
+function cargarQR() {
+  var container = document.getElementById('qrContainer');
+  var img = document.getElementById('qrImage');
+  var frame = document.getElementById('calendlyFrame');
+  frame.style.height = '0';
+  frame.src = '';
+
+  var vcard = 'BEGIN:VCARD%0AVERSION:3.0%0AN:Fernando%20Sosa%0AFN:Fernando%20Sosa%0ATEL;TYPE=CELL:+5492613668246%0AEMAIL:sosafernandog@gmail.com%0AURL:https://sosafernando.github.io%0AEND:VCARD';
+  img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=' + encodeURIComponent(vcard);
+  container.style.display = 'block';
+}
+</script>
+
+<!-- UX Animations Script -->
+<script>
+(function() {
+  // === Floating Particles ===
+  var particlesEl = document.getElementById('particles');
+  for (var i = 0; i < 30; i++) {
+    var p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.width = p.style.height = (Math.random() * 3 + 1) + 'px';
+    p.style.animationDuration = (Math.random() * 20 + 15) + 's';
+    p.style.animationDelay = (Math.random() * 20) + 's';
+    particlesEl.appendChild(p);
+  }
+
+  // === Back to Top ===
+  var btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+
+  // === Achievement Counter Animation ===
+  window._counterDone = false;
+  function animateCounters() {
+    if (window._counterDone) return;
+    window._counterDone = true;
+    var els = document.querySelectorAll('.achievement-number');
+    els.forEach(function(el) {
+      var target = parseInt(el.getAttribute('data-target'));
+      var suffix = el.textContent.replace('0', '');
+      el.setAttribute('data-suffix', suffix);
+      if (!target) return;
+      var current = 0;
+      var step = Math.ceil(target / 50);
+      var iv = setInterval(function() {
+        current += step;
+        if (current >= target) { current = target; clearInterval(iv); }
+        el.textContent = current + suffix;
+      }, 30);
+    });
+  }
+  setTimeout(animateCounters, 800);
+
+  // === Card Reveal (no scroll needed — triggered on section change) ===
+  function revealCards() {
+    document.querySelectorAll('.section--is-active .service--card, .section--is-active .testimonial--card').forEach(function(card, i) {
+      if (!card.classList.contains('visible')) {
+        setTimeout(function() { card.classList.add('visible'); }, i * 120);
+      }
+    });
+  }
+  // MutationObserver watches for section--is-active changes
+  var mainEl = document.querySelector('.main-content');
+  if (mainEl) {
+    new MutationObserver(function() { setTimeout(revealCards, 100); }).observe(mainEl, {subtree: true, attributes: true, attributeFilter: ['class']});
+  }
+  revealCards();
+
+})();
+</script>
 </body>
 </html>

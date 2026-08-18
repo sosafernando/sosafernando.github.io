@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Fernando Gabriel Sosa Fernández</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 40px auto; background: var(--card-bg); box-shadow: 0 0 20px rgba(0,0,0,0.1); display: grid; grid-template-columns: 300px 1fr; }
+        .sidebar { background-color: var(--primary-color); color: #fff; padding: 25px 20px; text-align: center; }
+        .profile-img { width: 120px; height: 120px; border-radius: 50%; border: 4px solid var(--accent-color); margin-bottom: 15px; object-fit: cover; background-color: #ddd; }
+        .sidebar h1 { font-size: 1.3rem; margin-bottom: 4px; font-weight: 700; }
+        .sidebar h2 { font-size: 0.85rem; font-weight: 300; color: var(--accent-color); margin-bottom: 20px; }
+        .contact-info { text-align: left; margin-bottom: 20px; }
+        .contact-item { margin-bottom: 10px; font-size: 0.8rem; word-break: break-all; }
+        .contact-item i { width: 20px; color: var(--accent-color); }
+        .contact-item a { color: #fff; text-decoration: none; transition: color 0.3s; }
+        .contact-item a:hover { color: var(--accent-color); }
+        .skills-section { text-align: left; }
+        .skill-category { margin-bottom: 14px; }
+        .skill-category h3 { font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 4px; margin-bottom: 8px; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+        .skill-tag { background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-size: 0.72rem; }
+        .main-content { padding: 25px 30px; }
+        section { margin-bottom: 18px; }
+        .section-title { color: var(--primary-color); font-size: 1.15rem; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid var(--accent-color); padding-bottom: 6px; margin-bottom: 12px; display: flex; align-items: center; }
+        .section-title i { margin-right: 8px; color: var(--accent-color); }
+        .experience-item, .education-item { margin-bottom: 14px; position: relative; padding-left: 16px; border-left: 2px solid var(--border-color); }
+        .experience-item::before, .education-item::before { content: ''; position: absolute; left: -5px; top: 0; width: 8px; height: 8px; background: var(--accent-color); border-radius: 50%; }
+        .job-title { font-weight: 700; font-size: 0.95rem; }
+        .company-date { font-size: 0.8rem; color: #666; margin-bottom: 6px; font-style: italic; }
+        .company-date span { font-weight: 500; color: var(--primary-color); font-style: normal; }
+        ul.job-details { list-style-type: none; }
+        ul.job-details li { margin-bottom: 3px; position: relative; padding-left: 12px; font-size: 0.82rem; }
+        ul.job-details li::before { content: "\2022"; color: var(--accent-color); position: absolute; left: 0; font-weight: bold; }
+        .footer-note { margin-top: 20px; padding-top: 12px; border-top: 1px solid var(--border-color); font-size: 0.8rem; color: #666; text-align: center; }
+        .lang-toggle { position: fixed; top: 15px; right: 15px; z-index: 10000; background: var(--primary-color); color: #fff; border: 1px solid var(--accent-color); border-radius: 4px; padding: 6px 14px; font-size: 13px; cursor: pointer; transition: background 0.3s, color 0.3s; font-family: 'Roboto', sans-serif; }
+        .lang-toggle:hover { background: var(--accent-color); color: #fff; }
+        .back-link { position: fixed; top: 15px; left: 15px; z-index: 10000; background: var(--primary-color); color: #fff; border: 1px solid var(--accent-color); border-radius: 4px; padding: 6px 14px; font-size: 13px; text-decoration: none; transition: background 0.3s, color 0.3s; }
+        .back-link:hover { background: var(--accent-color); color: #fff; }
+        .highlight-box { background: #f0f7ff; border-left: 4px solid var(--accent-color); padding: 12px 16px; margin-bottom: 20px; border-radius: 0 4px 4px 0; font-size: 0.95rem; }
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; margin: 0; box-shadow: none; }
+            .sidebar { padding: 20px; }
+            .main-content { padding: 20px; }
+        }
+        @media print {
+            @page { size: 210mm 297mm; margin: 0; }
+            html, body { width: 210mm; height: 297mm; margin: 0; padding: 0; overflow: hidden; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            body { background: #fff; font-size: 9px; line-height: 1.35; }
+            .container { display: flex; margin: 0; max-width: none; width: 210mm; height: 297mm; box-shadow: none; }
+            .sidebar { width: 65mm; min-width: 65mm; padding: 8mm 4mm; -webkit-print-color-adjust: exact; print-color-adjust: exact; overflow: hidden; }
+            .main-content { flex: 1; padding: 8mm 8mm; overflow: hidden; }
+            .profile-img { width: 60px; height: 60px; margin-bottom: 8px; }
+            .sidebar h1 { font-size: 13px; margin-bottom: 2px; }
+            .sidebar h2 { font-size: 8.5px; margin-bottom: 10px; }
+            .contact-item { margin-bottom: 4px; font-size: 7.5px; }
+            .contact-item i { width: 13px; font-size: 7.5px; }
+            .skill-category { margin-bottom: 6px; }
+            .skill-category h3 { font-size: 8.5px; padding-bottom: 2px; margin-bottom: 3px; }
+            .skill-tag { font-size: 6.5px; padding: 1px 3px; }
+            .highlight-box { padding: 4px 6px; margin-bottom: 6px; font-size: 7.5px; }
+            section { margin-bottom: 6px; }
+            .section-title { font-size: 9.5px; padding-bottom: 2px; margin-bottom: 5px; }
+            .section-title i { font-size: 8px; }
+            .experience-item, .education-item { margin-bottom: 5px; padding-left: 8px; }
+            .experience-item::before, .education-item::before { width: 5px; height: 5px; left: -3px; }
+            .job-title { font-size: 8.5px; }
+            .company-date { font-size: 7px; margin-bottom: 2px; }
+            ul.job-details li { font-size: 7px; margin-bottom: 1px; padding-left: 8px; }
+            .footer-note { margin-top: 4px; padding-top: 3px; font-size: 6.5px; }
+            .lang-toggle, .back-link { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-link">&larr; <span data-en="Home" data-es="Inicio">Home</span></a>
+    <button class="lang-toggle" id="langToggle" title="Switch language">ES</button>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="fer.png" alt="Fernando Sosa" class="profile-img">
+            
+            <h1>Fernando Gabriel<br>Sosa Fernández</h1>
+            <h2 data-en="Senior IT Project Manager & ERP Specialist" data-es="Gerente de Proyectos IT Senior & Especialista ERP">Senior IT Project Manager & ERP Specialist</h2>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+5492613668246">+54 9 261 366-8246</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:sosafernandog@gmail.com">sosafernandog@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="https://sosafernando.github.io" target="_blank">sosafernando.github.io</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/fernando-gabriel-sosa-439520a/" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/sosafernando" target="_blank">GitHub</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Mendoza, Argentina
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <div class="skill-category">
+                    <h3 data-en="Core Competencies" data-es="Competencias Clave">Core Competencies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-en="ERP Implementation" data-es="Implementación ERP">ERP Implementation</span>
+                        <span class="skill-tag" data-en="Process Improvement" data-es="Mejora de Procesos">Process Improvement</span>
+                        <span class="skill-tag" data-en="Digital Transformation" data-es="Transformación Digital">Digital Transformation</span>
+                        <span class="skill-tag" data-en="Project Leadership" data-es="Liderazgo de Proyectos">Project Leadership</span>
+                        <span class="skill-tag" data-en="Financial Reporting" data-es="Reportes Financieros">Financial Reporting</span>
+                        <span class="skill-tag" data-en="Accounting &amp; Tax" data-es="Contabilidad e Impuestos">Accounting &amp; Tax</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-en="Tools &amp; Platforms" data-es="Herramientas y Plataformas">Tools &amp; Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Excel <span data-en="(Advanced)" data-es="(Avanzado)">(Advanced)</span></span>
+                        <span class="skill-tag">Power BI / QuickSight</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">n8n</span>
+                        <span class="skill-tag">LLMs (Hermes, DeepSeek)</span>
+                        <span class="skill-tag">AI/ML Tools</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-en="Languages" data-es="Idiomas">Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-en="Spanish (Native)" data-es="Español (Nativo)">Spanish (Native)</span>
+                        <span class="skill-tag" data-en="English (B2+)" data-es="Inglés (B2+)">English (B2+)</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-en="Soft Skills" data-es="Habilidades Blandas">Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-en="Team Leadership" data-es="Liderazgo de Equipos">Team Leadership</span>
+                        <span class="skill-tag" data-en="Effective Communication" data-es="Comunicación Efectiva">Effective Communication</span>
+                        <span class="skill-tag" data-en="Proactive" data-es="Proactivo">Proactive</span>
+                        <span class="skill-tag" data-en="Adaptable" data-es="Adaptable">Adaptable</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <section>
+                <div class="highlight-box" data-en="Results-driven IT professional with 15+ years of experience leading digital transformation projects, implementing ERP systems, and managing cross-functional teams. Built from scratch a complete ERP system with electronic invoicing (ARCA/AFIP), double-entry accounting, tax management, and real-time dashboards &mdash; serving as both architect and project leader." data-es="Profesional IT con más de 15 años de experiencia liderando proyectos de transformación digital, implementando sistemas ERP y gestionando equipos multifunción. Diseñé y desarrollé desde cero un ERP completo con facturación electrónica (ARCA/AFIP), contabilidad partida doble, gestión impositiva y dashboards en tiempo real &mdash; ejerciendo como arquitecto y líder de proyecto.">
+                    Results-driven IT professional with 15+ years of experience leading digital transformation projects, implementing ERP systems, and managing cross-functional teams. Built from scratch a complete ERP system with electronic invoicing (ARCA/AFIP), double-entry accounting, tax management, and real-time dashboards &mdash; serving as both architect and project leader.
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">
+                    <i class="fas fa-briefcase"></i> <span data-en="Work Experience" data-es="Experiencia Laboral">Work Experience</span>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title" data-en="Senior IT Consultant &ndash; ERP, Process Optimization &amp; Digital Transformation" data-es="Consultor IT Senior &ndash; ERP, Optimización de Procesos y Transformación Digital">Senior IT Consultant &ndash; ERP, Process Optimization &amp; Digital Transformation</div>
+                    <div class="company-date"><span>2024 &ndash; <span data-en="Present" data-es="Actualidad">Present</span></span> | <span data-en="Freelance" data-es="Freelance">Freelance</span></div>
+                    <ul class="job-details">
+                        <li><span data-en="Designed and developed a complete ERP system (50,000+ lines of code) including: electronic invoicing (ARCA/AFIP integration), double-entry accounting, tax withholdings (IVA, Ganancias, IIBB), bank reconciliation, inventory management, and real-time GPS tracking." data-es="Diseñé y desarrollé un sistema ERP completo (50.000+ líneas de código) que incluye: facturación electrónica (integración ARCA/AFIP), contabilidad partida doble, retenciones impositivas (IVA, Ganancias, IIBB), conciliación bancaria, gestión de inventario y rastreo GPS en tiempo real.">Designed and developed a complete ERP system (50,000+ lines of code) including: electronic invoicing (ARCA/AFIP integration), double-entry accounting, tax withholdings (IVA, Ganancias, IIBB), bank reconciliation, inventory management, and real-time GPS tracking.</span></li>
+                        <li><span data-en="Led the digital transformation from legacy FoxPro system to modern web-based platform, managing the full migration lifecycle." data-es="Lideré la transformación digital desde un sistema legacy FoxPro a una plataforma web moderna, gestionando todo el ciclo de migración.">Led the digital transformation from legacy FoxPro system to modern web-based platform, managing the full migration lifecycle.</span></li>
+                        <li><span data-en="Implemented AI-powered data analysis using Python, LLM models, and automated dashboards with Amazon QuickSight and AWS Lambda pipelines." data-es="Implementé análisis de datos con IA usando Python, modelos LLM y dashboards automatizados con Amazon QuickSight y pipelines de AWS Lambda.">Implemented AI-powered data analysis using Python, LLM models, and automated dashboards with Amazon QuickSight and AWS Lambda pipelines.</span></li>
+                        <li><span data-en="Current projects: AI workflow automation with n8n and local LLM deployment using Hermes models for enterprise-grade automation and data processing." data-es="Proyectos actuales: Automatización de flujos de trabajo con IA usando n8n y despliegue de LLMs locales con modelos Hermes para automatización empresarial y procesamiento de datos.">Current projects: AI workflow automation with n8n and local LLM deployment using Hermes models for enterprise-grade automation and data processing.</span></li>
+                        <li><span data-en="Assisted companies in London with PCI DSS certification compliance and contributed to ISO 27001 information security certification processes." data-es="Asistí a empresas en Londres con el cumplimiento de certificación PCI DSS y contribuí a procesos de certificación de seguridad de la información ISO 27001.">Assisted companies in London with PCI DSS certification compliance and contributed to ISO 27001 information security certification processes.</span></li>
+                        <li><span data-en="Developed credit and merchandise tracking applications with GPS monitoring for field operations." data-es="Desarrollé aplicaciones de seguimiento de créditos y mercaderías con monitoreo GPS para operaciones de campo.">Developed credit and merchandise tracking applications with GPS monitoring for field operations.</span></li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title" data-en="Project Lead &amp; DevOps/SRE" data-es="Líder de Proyecto y DevOps/SRE">Project Lead &amp; DevOps/SRE</div>
+                    <div class="company-date"><span>2015 &ndash; 2024</span> | <span data-en="Multiple Companies (OpenMinds, Invoition, NTT Data, T4T Partners, RHT Telecom)" data-es="Múltiples Empresas (OpenMinds, Invoition, NTT Data, T4T Partners, RHT Telecom)">Multiple Companies (OpenMinds, Invoition, NTT Data, T4T Partners, RHT Telecom)</span></div>
+                    <ul class="job-details">
+                        <li><span data-en="Led infrastructure modernization projects: server virtualization, cloud migration (AWS/Azure/GCP), and CI/CD pipeline implementation across multiple organizations." data-es="Lideré proyectos de modernización de infraestructura: virtualización de servidores, migración a la nube (AWS/Azure/GCP) e implementación de pipelines CI/CD en múltiples organizaciones.">Led infrastructure modernization projects: server virtualization, cloud migration (AWS/Azure/GCP), and CI/CD pipeline implementation across multiple organizations.</span></li>
+                        <li><span data-en="Managed and coordinated development teams, defining technical standards, code reviews, and deployment processes." data-es="Gestioné y coordiné equipos de desarrollo, definiendo estándares técnicos, revisiones de código y procesos de despliegue.">Managed and coordinated development teams, defining technical standards, code reviews, and deployment processes.</span></li>
+                        <li><span data-en="Implemented process improvement initiatives using DevOps methodologies: automation, monitoring, and continuous feedback loops." data-es="Implementé iniciativas de mejora de procesos con metodologías DevOps: automatización, monitoreo y ciclos de retroalimentación continua.">Implemented process improvement initiatives using DevOps methodologies: automation, monitoring, and continuous feedback loops.</span></li>
+                        <li><span data-en="Deployed ERP modules (Odoo) and managed system administration for mail, LDAP, firewalls, and storage." data-es="Implementé módulos ERP (Odoo) y gestioné la administración de sistemas de correo, LDAP, firewalls y almacenamiento.">Deployed ERP modules (Odoo) and managed system administration for mail, LDAP, firewalls, and storage.</span></li>
+                        <li><span data-en="Built real-time operational dashboards with Grafana, Prometheus, and Loki for management reporting." data-es="Construí dashboards operativos en tiempo real con Grafana, Prometheus y Loki para reportes de gestión.">Built real-time operational dashboards with Grafana, Prometheus, and Loki for management reporting.</span></li>
+                        <li><span data-en="Infrastructure for WhatsApp bots integrated with AI on Azure. GenAI implementation on Azure and AWS." data-es="Infraestructura para bots de WhatsApp con IA en Azure. Implementación de GenAI en Azure y AWS.">Infrastructure for WhatsApp bots integrated with AI on Azure. GenAI implementation on Azure and AWS.</span></li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title" data-en="IT Team Leader &amp; Systems Manager" data-es="Líder de Equipo IT y Gerente de Sistemas">IT Team Leader &amp; Systems Manager</div>
+                    <div class="company-date"><span>2007 &ndash; 2015</span> | <span data-en="Various Companies" data-es="Diversas Empresas">Various Companies</span></div>
+                    <ul class="job-details">
+                        <li><span data-en="Led IT teams from the early stages of career, managing system administration, process documentation, and operational reporting using Excel and spreadsheet-based tools." data-es="Lideré equipos IT desde las primeras etapas de mi carrera, gestionando administración de sistemas, documentación de procesos y reportes operativos usando Excel y herramientas de hojas de cálculo.">Led IT teams from the early stages of career, managing system administration, process documentation, and operational reporting using Excel and spreadsheet-based tools.</span></li>
+                        <li><span data-en="Managed server infrastructure, virtualization (KVM, Proxmox), and storage systems (LVM, Ceph, ZFS)." data-es="Gestioné infraestructura de servidores, virtualización (KVM, Proxmox) y sistemas de almacenamiento (LVM, Ceph, ZFS).">Managed server infrastructure, virtualization (KVM, Proxmox), and storage systems (LVM, Ceph, ZFS).</span></li>
+                        <li><span data-en="Implemented monitoring and reporting solutions (Cacti, Nagios, Zabbix) for operational management." data-es="Implementé soluciones de monitoreo y reporting (Cacti, Nagios, Zabbix) para gestión operativa.">Implemented monitoring and reporting solutions (Cacti, Nagios, Zabbix) for operational management.</span></li>
+                        <li><span data-en="Started as forensic investigator at Mendoza Police Department (1992-2014), developing analytical and documentation skills applied to IT processes." data-es="Comencé como investigador forense en la Policía de Mendoza (1992-2014), desarrollando habilidades analíticas y de documentación aplicadas a procesos IT.">Started as forensic investigator at Mendoza Police Department (1992-2014), developing analytical and documentation skills applied to IT processes.</span></li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title" data-en="University Professor &ndash; Cloud Computing &amp; Digital Forensics" data-es="Profesor Universitario &ndash; Cloud Computing e Informática Forense">University Professor &ndash; Cloud Computing &amp; Digital Forensics</div>
+                    <div class="company-date"><span>2018 &ndash; <span data-en="Present" data-es="Presente">Present</span></span> | <span data-en="University of Mendoza" data-es="Universidad de Mendoza">University of Mendoza</span></div>
+                    <ul class="job-details">
+                        <li><span data-en="Teach Cloud Computing and Computer Forensics subjects, mentoring students and developing curriculum." data-es="Dicto las materias Cloud Computing e Informática Forense, mentorizando estudiantes y desarrollando el plan de estudios.">Teach Cloud Computing and Computer Forensics subjects, mentoring students and developing curriculum.</span></li>
+                        <li><span data-en="Collaborate with universities on Proxmox, OpenStack, and Kubernetes training programs." data-es="Colaboro con universidades en programas de capacitación en Proxmox, OpenStack y Kubernetes.">Collaborate with universities on Proxmox, OpenStack, and Kubernetes training programs.</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">
+                    <i class="fas fa-project-diagram"></i> <span data-en="Featured Project: ERP Boyas" data-es="Proyecto Destacado: ERP Boyas">Featured Project: ERP Boyas</span>
+                </div>
+                <div class="highlight-box" data-en="Complete ERP system built from scratch for a credit/lending company, migrating from legacy FoxPro. 40+ backend modules, 60+ frontend pages, 3 microservices. Currently in production with 4 federated entities." data-es="Sistema ERP completo construido desde cero para una empresa de créditos, migrando desde FoxPro legacy. 40+ módulos backend, 60+ páginas frontend, 3 microservicios. Actualmente en producción con 4 entidades federadas.">
+                    Complete ERP system built from scratch for a credit/lending company, migrating from legacy FoxPro. 40+ backend modules, 60+ frontend pages, 3 microservices. Currently in production with 4 federated entities.
+                </div>
+                <ul class="job-details">
+                    <li><span data-en="Financial Module: Double-entry accounting, chart of accounts (AFIP/ARCA RT 9), journal entries, general ledger, trial balance, balance sheet, income statement." data-es="Módulo Financiero: Contabilidad partida doble, plan de cuentas (AFIP/ARCA RT 9), asientos contables, libro mayor, sumas y saldos, balance general, estado de resultados.">Financial Module: Double-entry accounting, chart of accounts (AFIP/ARCA RT 9), journal entries, general ledger, trial balance, balance sheet, income statement.</span></li>
+                    <li><span data-en="Electronic Invoicing: Full ARCA (ex-AFIP) integration via SOAP web services. Invoice types A/B/C/M, credit/debit notes, CAE lifecycle, certificate management." data-es="Facturación Electrónica: Integración completa con ARCA (ex-AFIP) vía servicios web SOAP. Tipos de factura A/B/C/M, notas de crédito/débito, ciclo de CAE, gestión de certificados.">Electronic Invoicing: Full ARCA (ex-AFIP) integration via SOAP web services. Invoice types A/B/C/M, credit/debit notes, CAE lifecycle, certificate management.</span></li>
+                    <li><span data-en="Tax Management: IVA withholdings, Ganancias (regime 830), IIBB perceptions (multi-jurisdiction), SICORE reports, CITI books for ARCA upload." data-es="Gestión Impositiva: Retenciones de IVA, Ganancias (régimen 830), percepciones IIBB (multi-jurisdicción), reportes SICORE, libros CITI para carga en ARCA.">Tax Management: IVA withholdings, Ganancias (regime 830), IIBB perceptions (multi-jurisdiction), SICORE reports, CITI books for ARCA upload.</span></li>
+                    <li><span data-en="Bank Reconciliation: Multi-bank, multi-currency (ARS/USD), auto-matching by amount/date/description, accounting integration, statement import (CSV/OFX)." data-es="Conciliación Bancaria: Multi-banco, multi-moneda (ARS/USD), emparejamiento automático por monto/fecha/descripción, integración contable, importación de extractos (CSV/OFX).">Bank Reconciliation: Multi-bank, multi-currency (ARS/USD), auto-matching by amount/date/description, accounting integration, statement import (CSV/OFX).</span></li>
+                    <li><span data-en="Inventory &amp; Operations: Products, warehouses, stock orders, supplier management, purchase orders, fleet management, route optimization (Haversine algorithm)." data-es="Inventario y Operaciones: Productos, almacenes, órdenes de stock, gestión de proveedores, órdenes de compra, gestión de flota, optimización de rutas (algoritmo Haversine).">Inventory &amp; Operations: Products, warehouses, stock orders, supplier management, purchase orders, fleet management, route optimization (Haversine algorithm).</span></li>
+                    <li><span data-en="Dashboards &amp; Reporting: Role-based KPIs, collector rankings, recaudación reports, audit trails, AI-powered credit risk analysis (Xenova/Transformers.js)." data-es="Dashboards y Reporting: KPIs por rol, rankings de cobradores, reportes de recaudación, trazabilidad de auditoría, análisis de riesgo crediticio con IA (Xenova/Transformers.js).">Dashboards &amp; Reporting: Role-based KPIs, collector rankings, recaudación reports, audit trails, AI-powered credit risk analysis (Xenova/Transformers.js).</span></li>
+                    <li><span data-en="Tech Stack: NestJS, React, PostgreSQL/PostGIS, Redis, MinIO, Docker, TypeScript. Mobile via Capacitor (Android APK + PWA)." data-es="Stack Tecnológico: NestJS, React, PostgreSQL/PostGIS, Redis, MinIO, Docker, TypeScript. Móvil vía Capacitor (APK Android + PWA).">Tech Stack: NestJS, React, PostgreSQL/PostGIS, Redis, MinIO, Docker, TypeScript. Mobile via Capacitor (Android APK + PWA).</span></li>
+                </ul>
+            </section>
+
+            <section>
+                <div class="section-title">
+                    <i class="fas fa-graduation-cap"></i> <span data-en="Education" data-es="Educación">Education</span>
+                </div>
+                <div class="education-item">
+                    <div class="job-title" data-en="University Programmer and Systems Analyst" data-es="Programador Universitario y Analista en Sistemas">University Programmer and Systems Analyst</div>
+                    <div class="company-date"><span>2000-2010</span> | <span data-en="University M. Champagnat, Mendoza" data-es="Universidad M. Champagnat, Mendoza">University M. Champagnat, Mendoza</span></div>
+                </div>
+                <div class="education-item">
+                    <div class="job-title" data-en="Game Design with Unity3D" data-es="Diseño de Juegos con Unity3D">Game Design with Unity3D</div>
+                    <div class="company-date"><span>2013-2014</span> | I.D.I.T.S, Mendoza</div>
+                </div>
+            </section>
+
+            <div class="footer-note">
+                <p><span data-en="Expected Remuneration:" data-es="Remuneración esperada:">Expected Remuneration:</span> <span data-en="According to the scope of the job proposal." data-es="Según el alcance de la propuesta laboral.">According to the scope of the job proposal.</span></p>
+                <p><span data-en="Document updated | Author: Fernando G. Sosa" data-es="Documento actualizado | Autor: Fernando G. Sosa">Document updated | Author: Fernando G. Sosa</span></p>
+            </div>
+        </main>
+    </div>
+
+<script>
+(function() {
+  var saved = localStorage.getItem('lang') || 'en';
+  setLang(saved);
+
+  document.getElementById('langToggle').addEventListener('click', function() {
+    var current = document.documentElement.getAttribute('data-lang');
+    var next = current === 'en' ? 'es' : 'en';
+    setLang(next);
+    localStorage.setItem('lang', next);
+  });
+
+  function setLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+    document.getElementById('langToggle').textContent = lang === 'en' ? 'ES' : 'EN';
+
+    document.querySelectorAll('[data-en]').forEach(function(el) {
+      var key = lang === 'en' ? 'en' : 'es';
+      var text = el.getAttribute('data-' + key);
+      if (text) el.innerHTML = text;
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Fernando Gabriel Sosa Fernández</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 40px auto; background: var(--card-bg); box-shadow: 0 0 20px rgba(0,0,0,0.1); display: grid; grid-template-columns: 300px 1fr; }
+        .sidebar { background-color: var(--primary-color); color: #fff; padding: 30px; text-align: center; }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent-color); margin-bottom: 20px; object-fit: cover; background-color: #ddd; }
+        .sidebar h1 { font-size: 1.5rem; margin-bottom: 5px; font-weight: 700; }
+        .sidebar h2 { font-size: 1rem; font-weight: 300; color: var(--accent-color); margin-bottom: 30px; }
+        .contact-info { text-align: left; margin-bottom: 30px; }
+        .contact-item { margin-bottom: 15px; font-size: 0.9rem; word-break: break-all; }
+        .contact-item i { width: 25px; color: var(--accent-color); }
+        .contact-item a { color: #fff; text-decoration: none; transition: color 0.3s; }
+        .contact-item a:hover { color: var(--accent-color); }
+        .skills-section { text-align: left; }
+        .skill-category { margin-bottom: 20px; }
+        .skill-category h3 { font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px; margin-bottom: 10px; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+        .skill-tag { background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; }
+        .main-content { padding: 40px; }
+        section { margin-bottom: 30px; }
+        .section-title { color: var(--primary-color); font-size: 1.4rem; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; margin-bottom: 20px; display: flex; align-items: center; }
+        .section-title i { margin-right: 10px; color: var(--accent-color); }
+        .experience-item, .education-item { margin-bottom: 25px; position: relative; padding-left: 20px; border-left: 2px solid var(--border-color); }
+        .experience-item::before, .education-item::before { content: ''; position: absolute; left: -6px; top: 0; width: 10px; height: 10px; background: var(--accent-color); border-radius: 50%; }
+        .job-title { font-weight: 700; font-size: 1.1rem; }
+        .company-date { font-size: 0.9rem; color: #666; margin-bottom: 10px; font-style: italic; }
+        .company-date span { font-weight: 500; color: var(--primary-color); font-style: normal; }
+        ul.job-details { list-style-type: none; }
+        ul.job-details li { margin-bottom: 5px; position: relative; padding-left: 15px; font-size: 0.95rem; }
+        ul.job-details li::before { content: "•"; color: var(--accent-color); position: absolute; left: 0; font-weight: bold; }
+        .footer-note { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border-color); font-size: 0.9rem; color: #666; text-align: center; }
+        .lang-toggle { position: fixed; top: 15px; right: 15px; z-index: 10000; background: var(--primary-color); color: #fff; border: 1px solid var(--accent-color); border-radius: 4px; padding: 6px 14px; font-size: 13px; cursor: pointer; transition: background 0.3s, color 0.3s; font-family: 'Roboto', sans-serif; }
+        .lang-toggle:hover { background: var(--accent-color); color: #fff; }
+        .back-link { position: fixed; top: 15px; left: 15px; z-index: 10000; background: var(--primary-color); color: #fff; border: 1px solid var(--accent-color); border-radius: 4px; padding: 6px 14px; font-size: 13px; text-decoration: none; transition: background 0.3s, color 0.3s; }
+        .back-link:hover { background: var(--accent-color); color: #fff; }
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; margin: 0; box-shadow: none; }
+            .sidebar { padding: 20px; }
+            .main-content { padding: 20px; }
+        }
+        @media print {
+            body { background: #fff; }
+            .container { box-shadow: none; margin: 0; width: 100%; max-width: 100%; }
+            .sidebar { color: #000; background: #fff; border-bottom: 2px solid #000; }
+            .skill-tag { border: 1px solid #000; color: #000; background: #fff; }
+            a { text-decoration: none; color: #000; }
+            .section-title { border-bottom: 1px solid #000; }
+            .lang-toggle, .back-link { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-link">&larr; <span data-en="Home" data-es="Inicio">Home</span></a>
+    <button class="lang-toggle" id="langToggle" title="Switch language">ES</button>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="fer.png" alt="Fernando Sosa" class="profile-img">
+            
+            <h1>Fernando Gabriel<br>Sosa Fernández</h1>
+            <h2 data-en="Information Systems Analyst" data-es="Analista en Sistemas de Información">Information Systems Analyst</h2>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+5492613668246">+54 9 261 366-8246</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:sosafernandog@gmail.com">sosafernandog@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="https://sosafernando.github.io" target="_blank">sosafernando.github.io</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/fernando-gabriel-sosa-439520a/" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/sosafernando" target="_blank">GitHub</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-link"></i>
+                    <a href="https://ipfs.io/ipfs/QmciAUWAQZu71rMeAsMJw7jq1p4hork4fmL5j8Qn7ovP5c/" target="_blank">IPFS</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Mendoza, Argentina
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <div class="skill-category">
+                    <h3 data-en="Backend Languages" data-es="Lenguajes Backend">Backend Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Bash <span data-en="(Advanced)" data-es="(Avanzado)">(Advanced)</span></span>
+                        <span class="skill-tag">C/C++ <span data-en="(Advanced)" data-es="(Avanzado)">(Advanced)</span></span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Go</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Rust</span>
+                        <span class="skill-tag">Move (SUI)</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-en="Languages" data-es="Idiomas">Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-en="Spanish (Native)" data-es="Español (Nativo)">Spanish (Native)</span>
+                        <span class="skill-tag" data-en="English (B2+)" data-es="Inglés (B2+)">English (B2+)</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Cloud Providers</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Cloudflare</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <section>
+                <div class="section-title">
+                    <i class="fas fa-graduation-cap"></i> <span data-en="Education" data-es="Educación">Education</span>
+                </div>
+                <div class="education-item">
+                    <div class="job-title" data-en="University Programmer and Systems Analyst" data-es="Programador Universitario y Analista en Sistemas">University Programmer and Systems Analyst</div>
+                    <div class="company-date"><span>2000-2010</span> | <span data-en="University M. Champagnat, Mendoza" data-es="Universidad M. Champagnat, Mendoza">University M. Champagnat, Mendoza</span></div>
+                </div>
+                <div class="education-item">
+                    <div class="job-title" data-en="Game Design with Unity3D" data-es="Diseño de Juegos con Unity3D">Game Design with Unity3D</div>
+                    <div class="company-date"><span>2013-2014</span> | I.D.I.T.S, Mendoza</div>
+                </div>
+                <div class="education-item">
+                    <div class="job-title" data-en="Teacher (Head of Practical Work)" data-es="Docente (Jefe de Trabajos Prácticos)">Teacher (Head of Practical Work)</div>
+                    <div class="company-date"><span>2018 – <span data-en="Present" data-es="Presente">Present</span></span> | <span data-en="University of Mendoza" data-es="Universidad de Mendoza">University of Mendoza</span></div>
+                    <ul class="job-details">
+                        <li><span data-en="Subjects: Computer Forensics and Cloud Computing" data-es="Materias: Informática Forense y Cloud Computing">Subjects: Computer Forensics and Cloud Computing</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">
+                    <i class="fas fa-tools"></i> <span data-en="Technical Skills" data-es="Conocimientos Técnicos">Technical Skills</span>
+                </div>
+                <div class="education-item">
+                    <div class="job-title" data-en="Infrastructure & OS" data-es="Infraestructura & SO">Infrastructure & OS</div>
+                    <ul class="job-details">
+                        <li><strong>OS:</strong> <span data-en="Unix/Linux (File systems and tools)" data-es="Unix/Linux (Sistemas de archivos y herramientas)">Unix/Linux (File systems and tools)</span></li>
+                        <li><strong data-en="Virtualization:" data-es="Virtualización:">Virtualization:</strong> <span data-en="KVM (10 years), Proxmox (5 years), OpenStack" data-es="KVM (10 años), Proxmox (5 años), OpenStack">KVM (10 years), Proxmox (5 years), OpenStack</span></li>
+                        <li><strong data-en="Networking:" data-es="Redes:">Networking:</strong> <span data-en="VPNs, VLANs, Firewalls (pfSense, MikroTik, iptables)" data-es="VPNs, VLANs, Firewalls (pfSense, MikroTik, iptables)">VPNs, VLANs, Firewalls (pfSense, MikroTik, iptables)</span></li>
+                        <li><strong data-en="Storage:" data-es="Almacenamiento:">Storage:</strong> LVM, Blocksync, Ceph, ZFS</li>
+                        <li><strong data-en="Monitoring:" data-es="Monitoreo:">Monitoring:</strong> Cacti, Nagios, Zabbix, Grafana</li>
+                    </ul>
+                </div>
+                <div class="education-item">
+                    <div class="job-title" data-en="DevOps, CI/CD & Containers" data-es="DevOps, CI/CD & Contenedores">DevOps, CI/CD & Containers</div>
+                    <ul class="job-details">
+                        <li><strong>CI/CD:</strong> GitHub Actions, Bitbucket Pipelines, GitLab, Jenkins</li>
+                        <li><strong data-en="Containers:" data-es="Contenedores:">Containers:</strong> Docker, Podman, LXC/LXD</li>
+                        <li><strong data-en="Orchestration:" data-es="Orquestación:">Orchestration:</strong> Kubernetes, K3s, Rancher, Docker Swarm</li>
+                        <li><strong>IaC:</strong> Terraform, Ansible, CloudFormation</li>
+                    </ul>
+                </div>
+                <div class="education-item">
+                    <div class="job-title">Blockchain & Web3</div>
+                    <ul class="job-details">
+                        <li><strong data-en="Networks:" data-es="Redes:">Networks:</strong> Hyperledger (Fabric, Besu), Ethereum (Geth), SUI</li>
+                        <li><strong>Smart Contracts:</strong> Solidity, Move</li>
+                        <li><strong data-en="Tools:" data-es="Herramientas:">Tools:</strong> IPFS, Hardhat, Chainlink</li>
+                    </ul>
+                </div>
+                <div class="education-item">
+                    <div class="job-title" data-en="Artificial Intelligence & Security" data-es="Inteligencia Artificial & Seguridad">Artificial Intelligence & Security</div>
+                    <ul class="job-details">
+                        <li><strong>AI/IA:</strong> Prompt Engineering, Ollama, <span data-en="Agents" data-es="Agentes">Agents</span> (AgentZero, n8n)</li>
+                        <li><strong>Security/Seguridad:</strong> Cloudflare WAF, Kali Linux, AWS Security</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">
+                    <i class="fas fa-briefcase"></i> <span data-en="Work Experience" data-es="Experiencia Laboral">Work Experience</span>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Freelance – Blockchain & Full Stack</div>
+                    <div class="company-date"><span>Feb 2024 – <span data-en="Present" data-es="Actualidad">Present</span></span></div>
+                    <ul class="job-details">
+                        <li><span data-en="AI Projects: Data analysis, AI agents, and LLM-based model development." data-es="Proyectos de IA: Análisis de datos, agentes de IA y desarrollo de modelos basados en LLM.">AI Projects: Data analysis, AI agents, and LLM-based model development.</span></li>
+                        <li><span data-en="AWS Dashboards: Deployment and management of dashboards with Amazon QuickSight." data-es="Dashboards AWS: Despliegue y gestión de dashboards con Amazon QuickSight.">AWS Dashboards: Deployment and management of dashboards with Amazon QuickSight.</span></li>
+                        <li><span data-en="Compliance: Assisted companies in London with PCI DSS certification." data-es="Cumplimiento Normativo: Asistí a empresas en Londres con la certificación PCI DSS.">Compliance: Assisted companies in London with PCI DSS certification.</span></li>
+                        <li><span data-en="ISO 27001: Contributed to ISO 27001 information security certification processes." data-es="ISO 27001: Contribuí a procesos de certificación de seguridad de la información ISO 27001.">ISO 27001: Contributed to ISO 27001 information security certification processes.</span></li>
+                        <li><span data-en="Blockchain Projects: CI/CD, Terraform AWS, Smart Contracts (Move/Solidity)." data-es="Proyectos Blockchain: CI/CD, Terraform AWS, Smart Contracts (Move/Solidity).">Blockchain Projects: CI/CD, Terraform AWS, Smart Contracts (Move/Solidity).</span></li>
+                        <li><span data-en="Developed Apps: Credit and merchandise tracking system, GPS monitoring app, Recycling Plant (Go), Clinical Management (Node/React), Suisphere.com (Move)." data-es="Apps desarrolladas: Sistema de seguimiento de créditos y mercaderías, app de monitoreo GPS, Planta de Reciclaje (Go), Gestión Clínica (Node/React), Suisphere.com (Move).">Developed Apps: Credit and merchandise tracking system, GPS monitoring app, Recycling Plant (Go), Clinical Management (Node/React), Suisphere.com (Move).</span></li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">RHT Telecom – <span data-en="Telecommunications" data-es="Telecomunicaciones">Telecommunications</span></div>
+                    <div class="company-date"><span>Jul 2023 – Feb 2024</span></div>
+                    <ul class="job-details">
+                        <li><span data-en="Support on Kubernetes cluster environments (Dev, Staging, Prod)." data-es="Soporte en clústeres Kubernetes (Dev, Staging, Prod).">Support on Kubernetes cluster environments (Dev, Staging, Prod).</span></li>
+                        <li><span data-en="Infrastructure for WhatsApp bots integrated with AI on Azure platform." data-es="Infraestructura para bots de WhatsApp con IA en Azure.">Infrastructure for WhatsApp bots integrated with AI on Azure platform.</span></li>
+                        <li><span data-en="GenAI implementation on Azure and integration with AWS." data-es="Implementación de GenAI en Azure e integración con AWS.">GenAI implementation on Azure and integration with AWS.</span></li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">T4T Partners – SRE / DevOps (<span data-en="Banking Sector" data-es="Sector Bancario">Banking Sector</span>)</div>
+                    <div class="company-date"><span>Sep 2021 – <span data-en="Jan" data-es="Ene">Jan</span> 2023</span></div>
+                    <ul class="job-details">
+                        <li><span data-en="Migration from Tomcat to microservices on Kubernetes." data-es="Migración de Tomcat a microservicios en Kubernetes.">Migration from Tomcat to microservices on Kubernetes.</span></li>
+                        <li><span data-en="Implementation of K3s, Rancher and Service Mesh (Consul)." data-es="Implementación de K3s, Rancher y Service Mesh (Consul).">Implementation of K3s, Rancher and Service Mesh (Consul).</span></li>
+                        <li><span data-en="CI/CD with Jenkins and Docker. Monitoring with Prometheus/Grafana/Loki." data-es="CI/CD con Jenkins y Docker. Monitoreo con Prometheus/Grafana/Loki.">CI/CD with Jenkins and Docker. Monitoring with Prometheus/Grafana/Loki.</span></li>
+                        <li><span data-en="CoinFX Labs Project: Terraform AWS, ELK Stack, Keycloak." data-es="Proyecto CoinFX Labs: Terraform AWS, ELK Stack, Keycloak.">CoinFX Labs Project: Terraform AWS, ELK Stack, Keycloak.</span></li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">NTT Data – <span data-en="Architect & SRE for BCP" data-es="Arquitecto & SRE para BCP">Architect & SRE for BCP</span></div>
+                    <div class="company-date"><span><span data-en="Aug" data-es="Ago">Aug</span> 2020 – Sep 2021</span></div>
+                    <ul class="job-details">
+                        <li><span data-en="Azure infrastructure with Terraform (SQL Server, Data Factory)." data-es="Infraestructura Azure con Terraform (SQL Server, Data Factory).">Azure infrastructure with Terraform (SQL Server, Data Factory).</span></li>
+                        <li><span data-en="CI/CD with GitHub Actions for AWS Fargate." data-es="CI/CD con GitHub Actions para AWS Fargate.">CI/CD with GitHub Actions for AWS Fargate.</span></li>
+                        <li><span data-en="Kafka implementation and ELK Stack." data-es="Implementación de Kafka y Stack ELK.">Kafka implementation and ELK Stack.</span></li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Invoition SA – SRE</div>
+                    <div class="company-date"><span><span data-en="Apr" data-es="Abr">Apr</span> 2019 – <span data-en="Aug" data-es="Ago">Aug</span> 2020</span></div>
+                    <ul class="job-details">
+                        <li><span data-en="Terraform for Proxmox and KVM." data-es="Terraform para Proxmox y KVM.">Terraform for Proxmox and KVM.</span></li>
+                        <li><span data-en="Automation with Ansible and Python." data-es="Automatización con Ansible y Python.">Automation with Ansible and Python.</span></li>
+                        <li><span data-en="Docker container management (Nginx, Gitea, Nextcloud, etc.)." data-es="Gestión de contenedores Docker (Nginx, Gitea, Nextcloud, etc.).">Docker container management (Nginx, Gitea, Nextcloud, etc.).</span></li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">OpenMinds</div>
+                    <div class="company-date"><span>2015 – 2019</span></div>
+                    <ul class="job-details">
+                        <li><span data-en="Virtualization of Dell servers and EqualLogic storage." data-es="Virtualización de servidores Dell y almacenamiento EqualLogic.">Virtualization of Dell servers and EqualLogic storage.</span></li>
+                        <li><span data-en="Server administration (Mail, LDAP, Odoo, Firewalls)." data-es="Administración de servidores (Correo, LDAP, Odoo, Firewalls).">Server administration (Mail, LDAP, Odoo, Firewalls).</span></li>
+                        <li><span data-en="Support for HostSailor VPS and Datacenters in Europe/Egypt." data-es="Soporte para HostSailor VPS y Datacenters en Europa/Egipto.">Support for HostSailor VPS and Datacenters in Europe/Egypt.</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">
+                    <i class="fas fa-project-diagram"></i> <span data-en="Other Projects & Experience" data-es="Otros Proyectos & Experiencia">Other Projects & Experience</span>
+                </div>
+                <ul class="job-details">
+                    <li><strong>2023:</strong> TOB Group Solutions (Blockchain/Hyperledger).</li>
+                    <li><strong>2021:</strong> Criptovision LLC (DEX, NFT Marketplace, Smart Contracts).</li>
+                    <li><strong>2015-2020:</strong> Yacopinimb (<span data-en="Datacenter on KVM" data-es="Datacenter sobre KVM">Datacenter on KVM</span>).</li>
+                    <li><strong>1992-2014:</strong> <span data-en="Government – Mendoza Police Department (Forensic Investigations - Retired)." data-es="Gobierno – Policía de Mendoza (Investigaciones Forenses - Retirado).">Government – Mendoza Police Department (Forensic Investigations - Retired).</span></li>
+                    <li><strong data-en="Collaborations:" data-es="Colaboraciones:">Collaborations:</strong> <span data-en="University of Mendoza (Proxmox, OpenStack, K8s), Undercode.org." data-es="Universidad de Mendoza (Proxmox, OpenStack, K8s), Undercode.org.">University of Mendoza (Proxmox, OpenStack, K8s), Undercode.org.</span></li>
+                </ul>
+            </section>
+
+            <div class="footer-note">
+                <p><span data-en="Expected Remuneration:" data-es="Remuneración esperada:">Expected Remuneration:</span> <span data-en="According to the scope of the job proposal." data-es="Según el alcance de la propuesta laboral.">According to the scope of the job proposal.</span></p>
+                <p><span data-en="Document updated | Author: Fernando G. Sosa" data-es="Documento actualizado | Autor: Fernando G. Sosa">Document updated | Author: Fernando G. Sosa</span></p>
+            </div>
+        </main>
+    </div>
+
+<script>
+(function() {
+  var saved = localStorage.getItem('lang') || 'en';
+  setLang(saved);
+
+  document.getElementById('langToggle').addEventListener('click', function() {
+    var current = document.documentElement.getAttribute('data-lang');
+    var next = current === 'en' ? 'es' : 'en';
+    setLang(next);
+    localStorage.setItem('lang', next);
+  });
+
+  function setLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+    document.getElementById('langToggle').textContent = lang === 'en' ? 'ES' : 'EN';
+
+    document.querySelectorAll('[data-en]').forEach(function(el) {
+      var key = lang === 'en' ? 'en' : 'es';
+      var text = el.getAttribute('data-' + key);
+      if (text) el.innerHTML = text;
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
