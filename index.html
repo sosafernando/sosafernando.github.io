@@ -12,6 +12,12 @@
   <meta property="og:description" content="15+ years building ERP systems, leading IT teams, and driving digital transformation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sosafernando.github.io/">
+  <meta name="theme-color" content="#3498db">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Fernando Sosa">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="assets/img/logo.png">
   <link rel="stylesheet" href="assets/css/main.css">
   <style>
     /* ===== Language Toggle ===== */
@@ -308,6 +314,7 @@
       padding: 60px 20px;
       overflow-y: auto;
       max-height: 100vh;
+      -webkit-overflow-scrolling: touch;
     }
     .services h2 {
       font-size: 2rem;
@@ -357,6 +364,7 @@
       text-align: center;
       overflow-y: auto;
       max-height: 100vh;
+      -webkit-overflow-scrolling: touch;
     }
     .testimonials h2 {
       font-size: 2rem;
@@ -542,17 +550,98 @@
       transition: all 0.5s ease;
     }
 
-    /* ===== Improved Mobile Responsive ===== */
-    @media (max-width: 767px) {
-      .intro--subtitle { font-size: 0.95rem; }
-      .intro--cta { flex-direction: column; align-items: center; }
-      .cta--primary, .cta--secondary { width: 100%; text-align: center; }
-      .achievements { gap: 20px; padding: 25px 15px; }
-      .achievement-number { font-size: 1.8rem; }
-      .services--grid { grid-template-columns: 1fr; }
-      .testimonials--grid { grid-template-columns: 1fr; }
-      .side-nav { display: none !important; }
+    /* ===== Mobile Responsive — Comprehensive ===== */
 
+    /* Tablet */
+    @media (max-width: 1024px) {
+      .intro { max-width: 90%; }
+      .intro--banner { height: 400px; }
+      .services--grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials--grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* Mobile landscape / small tablets */
+    @media (max-width: 767px) {
+      .side-nav { display: none !important; }
+      .lang-toggle { right: 15px !important; top: 12px !important; font-size: 0.75rem !important; padding: 4px 10px !important; }
+      .header--logo p { display: none; }
+
+      /* Intro */
+      .intro { max-width: 95%; }
+      .intro--banner { height: auto; min-height: 200px; padding: 10px 0; }
+      .intro--banner h1 { font-size: 1.8rem; line-height: 1.2; }
+      .intro--subtitle { font-size: 0.9rem; line-height: 1.5; margin-bottom: 15px; }
+      .intro--options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .intro--options a { padding: 12px 10px; }
+      .intro--options a h3 { font-size: 0.85rem; }
+      .intro--options a p { font-size: 0.7rem; }
+      .intro--cta { flex-direction: column; align-items: center; gap: 10px; }
+      .cta--primary, .cta--secondary { width: 100%; text-align: center; padding: 12px 20px; font-size: 0.9rem; }
+
+      /* Achievements */
+      .achievements { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 20px 15px; margin: 15px 0; }
+      .achievement-number { font-size: 1.6rem; }
+      .achievement-label { font-size: 0.75rem; }
+      .achievement { min-width: auto; }
+
+      /* Services */
+      .services { padding: 30px 15px; overflow-y: auto; max-height: 100vh; -webkit-overflow-scrolling: touch; }
+      .services h2 { font-size: 1.5rem; margin-bottom: 25px; }
+      .services--grid { grid-template-columns: 1fr; gap: 15px; }
+      .service--card { padding: 20px 18px; }
+      .service--icon { font-size: 2rem; margin-bottom: 10px; }
+      .service--card h3 { font-size: 1rem; }
+      .service--card p { font-size: 0.85rem; }
+
+      /* Testimonials */
+      .testimonials { padding: 30px 15px; overflow-y: auto; max-height: 100vh; -webkit-overflow-scrolling: touch; }
+      .testimonials h2 { font-size: 1.5rem; margin-bottom: 25px; }
+      .testimonials--grid { grid-template-columns: 1fr; gap: 15px; }
+      .testimonial--card { padding: 20px 18px; }
+      .testimonial--text { font-size: 0.9rem; }
+      .testimonial--author { font-size: 0.8rem; }
+
+      /* About */
+      .about--banner h2 { font-size: 1.8rem; }
+
+      /* Work / Projects */
+      .slider--item-description { font-size: 0.75rem; }
+
+      /* Contact */
+      .modal { padding: 15px; }
+      .modal--options { flex-wrap: wrap; justify-content: center; }
+      .modal--options li { margin: 5px; }
+
+      /* Back to Top */
+      .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; }
+
+      /* Particles - lighter on mobile */
+      .particle { width: 2px !important; height: 2px !important; }
+    }
+
+    /* Mobile portrait */
+    @media (max-width: 480px) {
+      .intro--banner h1 { font-size: 1.4rem; }
+      .intro--subtitle { font-size: 0.82rem; }
+      .intro--options { grid-template-columns: 1fr; }
+      .achievements { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 15px 10px; }
+      .achievement-number { font-size: 1.3rem; }
+      .achievement-label { font-size: 0.7rem; }
+      .services h2, .testimonials h2 { font-size: 1.3rem; }
+      .gps-panel { display: none !important; }
+    }
+
+    /* Small phones */
+    @media (max-width: 360px) {
+      .intro--banner h1 { font-size: 1.2rem; }
+      .achievements { grid-template-columns: 1fr 1fr; gap: 8px; padding: 12px 8px; }
+      .achievement-number { font-size: 1.1rem; }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+      .particle { display: none !important; }
     }
 
 
@@ -567,15 +656,6 @@
   <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
 </div>
 
-<!-- notification for small viewports and landscape oriented smartphones -->
-<div class="device-notification">
-  <a class="device-notification--logo" href="#0">
-    <img src="assets/img/logo.png" alt="sosafernando">
-    <p>Fernando Sosa</p>
-  </a>
-  <p class="device-notification--message">Fernando Sosa — Senior IT Consultant | ERP &amp; Digital Transformation
-  </p>
-</div>
 <div class="perspective effect-rotate-left">
   <div class="container"><div class="outer-nav--return"></div>
     <div id="viewport" class="l-viewport">
@@ -1143,6 +1223,13 @@ function cargarQR() {
   revealCards();
 
 })();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').catch(function() {});
+  });
+}
 </script>
 </body>
 </html>

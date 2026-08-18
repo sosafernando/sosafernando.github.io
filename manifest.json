@@ -1,0 +1,27 @@
+{
+  "name": "Fernando Sosa — Senior IT Consultant | ERP & Digital Transformation",
+  "short_name": "Fernando Sosa",
+  "description": "15+ years transforming businesses through technology. ERP systems, digital transformation, cloud infrastructure.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#3498db",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "assets/img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en",
+  "dir": "ltr"
+}
