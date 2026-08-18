@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Fernando Gabriel Sosa Fernández</title>
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 300px 1fr;
+        }
+
+        /* Sidebar Izquierda */
+        .sidebar {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            margin-bottom: 20px;
+            object-fit: cover;
+            background-color: #ddd; /* Placeholder color */
+        }
+
+        .sidebar h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .sidebar h2 {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--accent-color);
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            word-break: break-all;
+        }
+
+        .contact-item i {
+            width: 25px;
+            color: var(--accent-color);
+        }
+
+        .contact-item a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-color);
+        }
+
+        .skills-section {
+            text-align: left;
+        }
+
+        .skill-category {
+            margin-bottom: 20px;
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .skill-tag {
+            background: rgba(255,255,255,0.1);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* Contenido Principal */
+        .main-content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .experience-item::before, .education-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .company-date {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .company-date span {
+            font-weight: 500;
+            color: var(--primary-color);
+            font-style: normal;
+        }
+
+        ul.job-details {
+            list-style-type: none;
+        }
+
+        ul.job-details li {
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 15px;
+            font-size: 0.95rem;
+        }
+
+        ul.job-details li::before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .languages-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .languages-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                margin: 0;
+                box-shadow: none;
+            }
+            .sidebar {
+                padding: 20px;
+            }
+            .main-content {
+                padding: 20px;
+            }
+        }
+
+        /* Print */
+        @media print {
+            body { background: #fff; }
+            .container { box-shadow: none; margin: 0; width: 100%; max-width: 100%; }
+            .sidebar { color: #000; background: #fff; border-bottom: 2px solid #000; }
+            .skill-tag { border: 1px solid #000; color: #000; background: #fff; }
+            a { text-decoration: none; color: #000; }
+            .section-title { border-bottom: 1px solid #000; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <!-- Puedes poner tu foto aquí cambiando el src -->
+            <!-- <img src="tu-foto.jpg" alt="Fernando Sosa" class="profile-img"> -->
+            <!-- <div class="profile-img" style="display:flex; align-items:center; justify-content:center; font-size:3rem; color:#aaa;">
+                <i class="fas fa-user"></i>
+            </div>
+            -->
+            
+            <img src="fer.png" alt="Fernando Sosa" class="profile-img">
+            
+            <h1>Fernando Gabriel<br>Sosa Fernández</h1>
+            <h2>Analista en Sistemas de Información</h2>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i> 
+                    <a href="tel:+5492613668246">+54 9 261 366-8246</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i> 
+                    <a href="mailto:sosafernandog@gmail.com">sosafernandog@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i> 
+                    <a href="https://sosafernando.com" target="_blank">sosafernando.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i> 
+                    <a href="https://www.linkedin.com/in/fernando-gabriel-sosa-439520a/" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i> 
+                    <a href="https://github.com/neoxolotl" target="_blank">GitHub</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-link"></i> 
+                    <a href="https://ipfs.io/ipfs/QmciAUWAQZu71rMeAsMJw7jq1p4hork4fmL5j8Qn7ovP5c/" target="_blank">IPFS</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i> 
+                    Mendoza, Argentina
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <div class="skill-category">
+                    <h3>Lenguajes Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Bash (Avanzado)</span>
+                        <span class="skill-tag">C/C++ (Avanzado)</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Go</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Rust</span>
+                        <span class="skill-tag">Move (SUI)</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Idiomas</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Español (Nativo)</span>
+                        <span class="skill-tag">Inglés (B2+)</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Cloud Providers</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Cloudflare</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            
+            <section>
+                <div class="section-title">
+                    <i class="fas fa-graduation-cap"></i> Educación
+                </div>
+                <div class="education-item">
+                    <div class="job-title">Programador Universitario y Analista en Sistemas</div>
+                    <div class="company-date"><span>2000-2010</span> | Universidad M. Champagnat, Mendoza</div>
+                </div>
+                <div class="education-item">
+                    <div class="job-title">Diseño de Juegos con Unity3D</div>
+                    <div class="company-date"><span>2013-2014</span> | I.D.I.T.S, Mendoza</div>
+                </div>
+                <div class="education-item">
+                    <div class="job-title">Docente (Jefe de Trabajos Prácticos)</div>
+                    <div class="company-date"><span>2018 – Presente</span> | Universidad de Mendoza</div>
+                    <ul class="job-details">
+                        <li>Materias: Informática Forense y Cloud Computing</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">
+                    <i class="fas fa-tools"></i> Conocimientos Técnicos
+                </div>
+                <div class="education-item">
+                    <div class="job-title">Infraestructura & SO</div>
+                    <ul class="job-details">
+                        <li><strong>SO:</strong> Unix/Linux (Sistemas de archivos y herramientas)</li>
+                        <li><strong>Virtualización:</strong> KVM (10 años), Proxmox (5 años), OpenStack</li>
+                        <li><strong>Redes:</strong> VPNs, VLANs, Firewalls (pfSense, MikroTik, iptables)</li>
+                        <li><strong>Almacenamiento:</strong> LVM, Blocksync, Ceph, ZFS</li>
+                        <li><strong>Monitoreo:</strong> Cacti, Nagios, Zabbix, Grafana</li>
+                    </ul>
+                </div>
+                <div class="education-item">
+                    <div class="job-title">DevOps, CI/CD & Contenedores</div>
+                    <ul class="job-details">
+                        <li><strong>CI/CD:</strong> GitHub Actions, Bitbucket Pipelines, GitLab, Jenkins</li>
+                        <li><strong>Contenedores:</strong> Docker, Podman, LXC/LXD</li>
+                        <li><strong>Orquestación:</strong> Kubernetes, K3s, Rancher, Docker Swarm</li>
+                        <li><strong>IaC:</strong> Terraform, Ansible, CloudFormation</li>
+                    </ul>
+                </div>
+                <div class="education-item">
+                    <div class="job-title">Blockchain & Web3</div>
+                    <ul class="job-details">
+                        <li><strong>Redes:</strong> Hyperledger (Fabric, Besu), Ethereum (Geth), SUI</li>
+                        <li><strong>Smart Contracts:</strong> Solidity, Move</li>
+                        <li><strong>Herramientas:</strong> IPFS, Hardhat, Chainlink</li>
+                    </ul>
+                </div>
+                <div class="education-item">
+                    <div class="job-title">Inteligencia Artificial & Seguridad</div>
+                    <ul class="job-details">
+                        <li><strong>IA:</strong> Prompt Engineering, Ollama, Agentes (AgentZero, n8n)</li>
+                        <li><strong>Security:</strong> Cloudflare WAF, Kali Linux, AWS Security</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">
+                    <i class="fas fa-briefcase"></i> Experiencia Laboral
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Freelance – Blockchain & Full Stack</div>
+                    <div class="company-date"><span>Feb 2024 – Actualidad</span></div>
+                    <ul class="job-details">
+                        <li>Proyectos Blockchain: CI/CD, Terraform AWS, Smart Contracts (Move/Solidity).</li>
+                        <li>Desarrollo IA: Modelos basados en Ollama + DeepSeek, Agentes (n8n, AgentZero).</li>
+                        <li>Apps desarrolladas: Planta de Reciclaje (Go), Gestión de Créditos (Python), Gestión Clínica (Node/React), Suisphere.com (Move).</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">RHT Telecom – Telecomunicaciones</div>
+                    <div class="company-date"><span>Jul 2023 – Feb 2024</span></div>
+                    <ul class="job-details">
+                        <li>Soporte en clústeres Kubernetes (Dev, Staging, Prod).</li>
+                        <li>Infraestructura para bots de WhatsApp con IA en Azure.</li>
+                        <li>Implementación de GenAI en Azure e integración con AWS.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">T4T Partners – SRE / DevOps (Sector Bancario)</div>
+                    <div class="company-date"><span>Sep 2021 – Ene 2023</span></div>
+                    <ul class="job-details">
+                        <li>Migración de Tomcat a microservicios en Kubernetes.</li>
+                        <li>Implementación de K3s, Rancher y Service Mesh (Consul).</li>
+                        <li>CI/CD con Jenkins y Docker. Monitoreo con Prometheus/Grafana/Loki.</li>
+                        <li>Proyecto CoinFX Labs: Terraform AWS, ELK Stack, Keycloak.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">NTT Data – Arquitecto & SRE para BCP</div>
+                    <div class="company-date"><span>Ago 2020 – Sep 2021</span></div>
+                    <ul class="job-details">
+                        <li>Infraestructura Azure con Terraform (SQL Server, Data Factory).</li>
+                        <li>CI/CD con GitHub Actions para AWS Fargate.</li>
+                        <li>Implementación de Kafka y Stack ELK.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Invoition SA – SRE</div>
+                    <div class="company-date"><span>Abr 2019 – Ago 2020</span></div>
+                    <ul class="job-details">
+                        <li>Terraform para Proxmox y KVM.</li>
+                        <li>Automatización con Ansible y Python.</li>
+                        <li>Gestión de contenedores Docker (Nginx, Gitea, Nextcloud, etc.).</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">OpenMinds</div>
+                    <div class="company-date"><span>2015 – 2019</span></div>
+                    <ul class="job-details">
+                        <li>Virtualización de servidores Dell y almacenamiento EqualLogic.</li>
+                        <li>Administración de servidores (Correo, LDAP, Odoo, Firewalls).</li>
+                        <li>Soporte para HostSailor VPS y Datacenters en Europa/Egipto.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">
+                    <i class="fas fa-project-diagram"></i> Otros Proyectos & Experiencia
+                </div>
+                <ul class="job-details">
+                    <li><strong>2023:</strong> TOB Group Solutions (Blockchain/Hyperledger).</li>
+                    <li><strong>2021:</strong> Criptovision LLC (DEX, NFT Marketplace, Smart Contracts).</li>
+                    <li><strong>2015-2020:</strong> Yacopinimb (Datacenter sobre KVM).</li>
+                    <li><strong>1992-2014:</strong> Gobierno – Policía de Mendoza (Investigaciones Forenses - Retirado).</li>
+                    <li><strong>Colaboraciones:</strong> Universidad de Mendoza (Proxmox, OpenStack, K8s), Undercode.org.</li>
+                </ul>
+            </section>
+
+            <div class="footer-note">
+                <p><strong>Remuneración esperada:</strong> Según el alcance de la propuesta laboral.</p>
+                <p>Documento actualizado | Autor: Fernando G. Sosa</p>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
