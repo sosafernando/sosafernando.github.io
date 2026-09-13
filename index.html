@@ -148,6 +148,16 @@ img{display:block;max-width:100%}
 .ben-chips{display:flex;flex-wrap:wrap;gap:8px}
 .ben-chips span{border:1px solid rgba(201,242,78,.3);background:rgba(201,242,78,.06);color:#d9f49a;padding:7px 13px;border-radius:999px;font-size:12.5px}
 
+/* ---------- TRAYECTORIA ---------- */
+.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+.cred{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#0e1622,#0b121c);padding:22px;transition:border-color .3s,transform .3s}
+.cred:hover{border-color:rgba(201,242,78,.4);transform:translateY(-3px)}
+.cred .c-ico{margin-bottom:14px}
+.cred h3{font-size:15px;margin-bottom:8px}
+.cred p{font-size:12.9px;color:var(--muted)}
+@media (max-width:1020px){.cred-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.cred-grid{grid-template-columns:1fr}}
+
 /* ---------- STATS ---------- */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
 .stat-cell{padding:40px 30px 0;border-right:1px solid var(--line)}
@@ -244,6 +254,7 @@ footer{border-top:1px solid var(--line);background:#080d13;padding:48px 0 26px}
     <nav class="site-nav" id="siteNav">
       <a href="#inicio" data-en="Home" data-es="Inicio">Home</a>
       <a href="#servicios" data-en="Services" data-es="Servicios">Services</a>
+      <a href="#trayectoria" data-en="Track record" data-es="Trayectoria">Track record</a>
       <a href="#proyectos" data-en="Projects" data-es="Proyectos">Projects</a>
       <a href="#resultados" data-en="Results" data-es="Resultados">Results</a>
       <a href="#contacto" data-en="Contact" data-es="Contacto">Contact</a>
@@ -258,9 +269,9 @@ footer{border-top:1px solid var(--line);background:#080d13;padding:48px 0 26px}
 <section class="hero" id="inicio">
   <div class="container hero-grid">
     <div class="hero-copy reveal">
-      <span class="eyebrow" data-en="Consultor IT Senior · Mendoza, Argentina" data-es="Consultor IT Senior · Mendoza, Argentina">Consultor IT Senior · Mendoza, Argentina</span>
+      <span class="eyebrow" data-en="42 years coding · Banking · Security · Cloud" data-es="42 años programando · Banca · Seguridad · Cloud">42 years coding · Banking · Security · Cloud</span>
       <h1 data-en="Technology that <em>cuts costs</em> and grows your business" data-es="Tecnología que <em>abarata costos</em> y hace crecer tu negocio">Technology that <em>cuts costs</em> and grows your business</h1>
-      <p class="lead" data-en="With 15+ years building ERP systems, cloud infrastructure, and high-performance teams, I help you use technology as a tool to reduce expenses, eliminate manual work, and sell more." data-es="Con 15+ años construyendo sistemas ERP, infraestructura en la nube y equipos de alto rendimiento, te ayudo a usar la tecnología como herramienta para reducir gastos, eliminar tareas manuales y vender más.">With 15+ years building ERP systems, cloud infrastructure, and high-performance teams, I help you use technology as a tool to reduce expenses, eliminate manual work, and sell more.</p>
+      <p class="lead" data-en="I've been coding since I was 12 — 42 years in the trade, with years inside corporate, banking, information-security, and computer-forensics environments. Today I put that senior experience at the service of small and mid-sized companies to cut costs and grow." data-es="Programo desde los 12 años — 42 años de oficio, con años en ambientes corporativos, banca, seguridad informática y computación forense. Hoy pongo esa experiencia senior al servicio de las PYMES para abaratar costos y crecer.">I've been coding since I was 12 — 42 years in the trade, with years inside corporate, banking, information-security, and computer-forensics environments. Today I put that senior experience at the service of small and mid-sized companies to cut costs and grow.</p>
       <div class="hero-cta">
         <a href="#contacto" class="btn btn-primary" data-en="Book a call" data-es="Agendar una llamada">Book a call</a>
         <a href="cv.html" class="btn btn-ghost" data-en="View my CV" data-es="Ver mi CV">View my CV</a>
@@ -387,12 +398,13 @@ footer{border-top:1px solid var(--line);background:#080d13;padding:48px 0 26px}
         <div class="srv-glyph"><svg viewBox="0 0 100 80" fill="none"><rect x="8" y="6" width="26" height="20" rx="3" stroke="#c9f24e" stroke-width="2"/><rect x="40" y="6" width="26" height="20" rx="3" stroke="#c9f24e" stroke-width="2"/><rect x="72" y="6" width="20" height="20" rx="3" stroke="#c9f24e" stroke-width="2"/><rect x="8" y="42" width="26" height="20" rx="3" stroke="#3ddcf0" stroke-width="2"/><rect x="40" y="42" width="26" height="20" rx="3" stroke="#3ddcf0" stroke-width="2"/><rect x="72" y="42" width="20" height="20" rx="3" stroke="#3ddcf0" stroke-width="2"/><path d="M21 26v16M53 26v16M82 26v16" stroke="rgba(148,180,215,.5)" stroke-width="2"/></svg></div>
       </div>
       <div class="srv-body">
-        <h3 data-en="Cloud, DevOps & containers" data-es="Cloud, DevOps y contenedores">Cloud, DevOps & containers</h3>
-        <p data-en="AWS infrastructure, Kubernetes, and CI/CD pipelines. Scale when you need to — and pay only for what you use." data-es="Infraestructura AWS, Kubernetes y pipelines CI/CD. Escalás cuando lo necesitás y pagás solo por lo que usás.">AWS infrastructure, Kubernetes, and CI/CD pipelines. Scale when you need to — and pay only for what you use.</p>
+        <h3 data-en="Cloud, SRE & containers" data-es="Cloud, SRE y contenedores">Cloud, SRE & containers</h3>
+        <p data-en="SRE with AWS (EKS), GCP, and Azure. Docker, Kubernetes, CI/CD, and on-premise environments. Scale when you need to — and pay only for what you use." data-es="SRE con AWS (EKS), GCP y Azure. Docker, Kubernetes, CI/CD y entornos on-premise. Escalás cuando lo necesitás y pagás solo por lo que usás.">SRE with AWS (EKS), GCP, and Azure. Docker, Kubernetes, CI/CD, and on-premise environments. Scale when you need to — and pay only for what you use.</p>
         <ul class="check-list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Automated zero-downtime deploys" data-es="Deploy automatizado sin downtime">Automated zero-downtime deploys</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Server cost reduction" data-es="Reducción de costos de servidores">Server cost reduction</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="24/7 high availability" data-es="Alta disponibilidad 24/7">24/7 high availability</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="On-premise, DNS & Cloudflare Zero Trust" data-es="On-premise, DNS y Cloudflare Zero Trust">On-premise, DNS & Cloudflare Zero Trust</span></li>
         </ul>
         <div class="ben-box"><h4 data-en="Benefit" data-es="Beneficio">Benefit</h4><div class="ben-chips"><span data-en="Up to 40% less on infra" data-es="Hasta 40% menos en infra">Up to 40% less on infra</span><span data-en="Zero unexpected outages" data-es="Cero caídas inesperadas">Zero unexpected outages</span><span data-en="Grow without new hardware" data-es="Crece sin recompra de hardware">Grow without new hardware</span></div></div>
       </div>
@@ -421,11 +433,12 @@ footer{border-top:1px solid var(--line);background:#080d13;padding:48px 0 26px}
         <div class="srv-glyph"><svg viewBox="0 0 100 80" fill="none"><path d="M50 8l28 10v20c0 20-12 30-28 36-16-6-28-16-28-36V18z" stroke="#c9f24e" stroke-width="2.5" fill="rgba(201,242,78,.06)"/><path d="M38 40l8 8 18-20" stroke="#3ddcf0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </div>
       <div class="srv-body">
-        <h3 data-en="Security & compliance" data-es="Seguridad y cumplimiento">Security & compliance</h3>
-        <p data-en="Audits, control implementation, and the path to ISO 27001. A leaked dataset costs you customers and money — protect it." data-es="Auditorías, implementación de controles y camino hacia ISO 27001. Un dato filtrado te cuesta clientes y plata: protegelo.">Audits, control implementation, and the path to ISO 27001. A leaked dataset costs you customers and money — protect it.</p>
+        <h3 data-en="Security & computer forensics" data-es="Seguridad y computación forense">Security & computer forensics</h3>
+        <p data-en="Audits, control implementation, incident response, and computer forensics, plus the path to ISO 27001. A leaked dataset costs you customers and money — protect it." data-es="Auditorías, implementación de controles, respuesta a incidentes y computación forense, más el camino hacia ISO 27001. Un dato filtrado te cuesta clientes y plata: protegelo.">Audits, control implementation, incident response, and computer forensics, plus the path to ISO 27001. A leaked dataset costs you customers and money — protect it.</p>
         <ul class="check-list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Audits & risk assessment" data-es="Auditorías y diagnóstico de riesgos">Audits & risk assessment</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Backups with tested restore" data-es="Backups con restauración probada">Backups with tested restore</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Forensic analysis & incident response" data-es="Análisis forense y respuesta a incidentes">Forensic analysis & incident response</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="PCI DSS / ISO 27001-aligned controls" data-es="Controles alineados a PCI DSS / ISO 27001">PCI DSS / ISO 27001-aligned controls</span></li>
         </ul>
         <div class="ben-box"><h4 data-en="Benefit" data-es="Beneficio">Benefit</h4><div class="ben-chips"><span data-en="Avoid fines & fraud" data-es="Evitás multas y fraudes">Avoid fines & fraud</span><span data-en="Customer trust" data-es="Confianza de clientes y socios">Customer trust</span><span data-en="Tender advantage" data-es="Ventaja en licitaciones">Tender advantage</span></div></div>
@@ -448,6 +461,49 @@ footer{border-top:1px solid var(--line);background:#080d13;padding:48px 0 26px}
         <div class="ben-box"><h4 data-en="Benefit" data-es="Beneficio">Benefit</h4><div class="ben-chips"><span data-en="Invest in the right thing" data-es="Invertís en lo correcto">Invest in the right thing</span><span data-en="Trained IT team" data-es="Equipo IT formado">Trained IT team</span><span data-en="Less tech risk" data-es="Menos riesgo tecnológico">Less tech risk</span></div></div>
       </div>
     </article>
+  </div>
+</section>
+
+<!-- ============ TRAYECTORIA ============ -->
+<section id="trayectoria" class="section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-en="Track record" data-es="Trayectoria">Track record</span>
+      <h2 data-en="42 years of code — schooled in banking and security" data-es="42 años de código — con la banca y la seguridad como escuela">42 years of code — schooled in banking and security</h2>
+      <p class="lead" data-en="I've been programming since I was 12. I worked in corporate environments, banking, information security, and computer forensics. Today I bring that corporate-grade seniority to small and mid-sized companies — at an SME-friendly cost." data-es="Programo desde los 12 años. Pasé por ambientes corporativos, banca, seguridad informática y computación forense. Hoy llevo esa seniority de nivel corporativo a las PYMES, a un costo accesible.">I've been programming since I was 12. I worked in corporate environments, banking, information security, and computer forensics. Today I bring that corporate-grade seniority to small and mid-sized companies — at an SME-friendly cost.</p>
+    </div>
+    <div class="cred-grid reveal">
+      <div class="cred">
+        <div class="c-ico">🏦</div>
+        <h3 data-en="Banking & corporate" data-es="Banca y corporativo">Banking & corporate</h3>
+        <p data-en="Years building and running systems in regulated, high-availability environments where downtime and errors are not an option." data-es="Años construyendo y operando sistemas en entornos regulados y de alta disponibilidad, donde una caída o un error no son una opción.">Years building and running systems in regulated, high-availability environments where downtime and errors are not an option.</p>
+      </div>
+      <div class="cred">
+        <div class="c-ico">🛡️</div>
+        <h3 data-en="Security & computer forensics" data-es="Seguridad y computación forense">Security & computer forensics</h3>
+        <p data-en="Threat analysis, incident response, forensic evidence handling, and compliance controls." data-es="Análisis de amenazas, respuesta a incidentes, manejo de evidencia forense y controles de cumplimiento.">Threat analysis, incident response, forensic evidence handling, and compliance controls.</p>
+      </div>
+      <div class="cred">
+        <div class="c-ico">☁️</div>
+        <h3 data-en="Cloud & SRE" data-es="Cloud y SRE">Cloud & SRE</h3>
+        <p data-en="SRE with AWS (EKS), GCP, and Azure. Containers with Docker and Kubernetes, CI/CD, and zero-downtime deploys." data-es="SRE con AWS (EKS), GCP y Azure. Contenedores con Docker y Kubernetes, CI/CD y deploys sin downtime.">SRE with AWS (EKS), GCP, and Azure. Containers with Docker and Kubernetes, CI/CD, and zero-downtime deploys.</p>
+      </div>
+      <div class="cred">
+        <div class="c-ico">🖥️</div>
+        <h3 data-en="On-premise & networking" data-es="On-premise y redes">On-premise & networking</h3>
+        <p data-en="Own servers, DNS (FreeDNS/Afraid and others), storage, and hybrid on-premise/cloud infrastructure." data-es="Servidores propios, DNS (FreeDNS/Afraid y otros), almacenamiento e infraestructura híbrida on-premise/cloud.">Own servers, DNS (FreeDNS/Afraid and others), storage, and hybrid on-premise/cloud infrastructure.</p>
+      </div>
+      <div class="cred">
+        <div class="c-ico">🔒</div>
+        <h3 data-en="Cloudflare Zero Trust" data-es="Cloudflare Zero Trust">Cloudflare Zero Trust</h3>
+        <p data-en="Zero Trust access, tunnels, WAF, and secure storage services for distributed teams." data-es="Acceso Zero Trust, túneles, WAF y servicios de almacenamiento seguro para equipos distribuidos.">Zero Trust access, tunnels, WAF, and secure storage services for distributed teams.</p>
+      </div>
+      <div class="cred">
+        <div class="c-ico">⚙️</div>
+        <h3 data-en="Full-stack engineering" data-es="Ingeniería full-stack">Full-stack engineering</h3>
+        <p data-en="ERP, NestJS, React, and PostgreSQL — from architecture to production, with data-driven decisions." data-es="ERP, NestJS, React y PostgreSQL — de la arquitectura a producción, con decisiones basadas en datos.">ERP, NestJS, React, and PostgreSQL — from architecture to production, with data-driven decisions.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -483,7 +539,7 @@ footer{border-top:1px solid var(--line);background:#080d13;padding:48px 0 26px}
   <div class="container">
     <div class="stats reveal">
       <div class="stat-cell"><div class="stat-num" data-target="15">0<b>+</b></div><div class="stat-label" data-en="Years of experience" data-es="Años de experiencia">Years of experience</div></div>
-      <div class="stat-cell"><div class="stat-num" data-target="50">0<b>K+</b></div><div class="stat-label" data-en="Lines of code" data-es="Líneas de código">Lines of code</div></div>
+      <div class="stat-cell"><div class="stat-num" data-target="42">0<b>+</b></div><div class="stat-label" data-en="Years coding" data-es="Años programando">Years coding</div></div>
       <div class="stat-cell"><div class="stat-num" data-target="40">0<b>+</b></div><div class="stat-label" data-en="ERP modules" data-es="Módulos ERP">ERP modules</div></div>
       <div class="stat-cell"><div class="stat-num" data-target="100">0<b>%</b></div><div class="stat-label" data-en="ARCA compliance" data-es="Cumplimiento ARCA">ARCA compliance</div></div>
     </div>
