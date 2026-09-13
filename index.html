@@ -1,722 +1,757 @@
 <!DOCTYPE html>
 <html lang="en" data-lang="en">
 <head>
-  <title>Fernando Sosa — Senior IT Consultant | ERP & Digital Transformation</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Senior IT Consultant with 15+ years experience in ERP development, digital transformation, cloud infrastructure, and team leadership. Based in Mendoza, Argentina.">
-  <meta name="keywords" content="ERP, digital transformation, DevOps, Kubernetes, AWS, NestJS, PostgreSQL, IT consultant, Mendoza Argentina">
-  <meta name="author" content="Fernando Sosa">
-  <meta property="og:title" content="Fernando Sosa — Senior IT Consultant">
-  <meta property="og:description" content="15+ years building ERP systems, leading IT teams, and driving digital transformation.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sosafernando.github.io/">
-  <meta name="theme-color" content="#6C5CE7">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Fernando Sosa">
-  <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" href="assets/img/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0a0a0f;
-      --bg2: #12121a;
-      --surface: #1a1a25;
-      --surface2: #222233;
-      --border: rgba(255,255,255,0.06);
-      --text: #f0f0f5;
-      --muted: #8888aa;
-      --accent: #6C5CE7;
-      --accent2: #00cec9;
-      --accent3: #fd79a8;
-      --gradient: linear-gradient(135deg, #6C5CE7, #00cec9);
-      --gradient2: linear-gradient(135deg, #fd79a8, #6C5CE7);
-      --gradient3: linear-gradient(135deg, #00cec9, #55efc4);
-      --radius: 16px;
-      --radius-sm: 10px;
-      --shadow: 0 8px 32px rgba(0,0,0,0.4);
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-    body { font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; overflow-x:hidden; }
-    a { color:inherit; text-decoration:none; }
-    img { max-width:100%; display:block; }
-    ::selection { background:var(--accent); color:#fff; }
-    ::-webkit-scrollbar { width:6px; }
-    ::-webkit-scrollbar-track { background:var(--bg); }
-    ::-webkit-scrollbar-thumb { background:var(--surface2); border-radius:3px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fernando Sosa · Consultor IT Senior · Tecnología que abarata costos</title>
+<meta name="description" content="Consultor IT Senior con 15+ años de experiencia. Sistemas ERP, transformación digital e infraestructura que reducen costos y hacen crecer tu negocio. Mendoza, Argentina.">
+<meta name="keywords" content="consultor IT, ERP, transformación digital, DevOps, Kubernetes, AWS, NestJS, PostgreSQL, abaratar costos, Mendoza Argentina">
+<meta name="author" content="Fernando Sosa">
+<meta property="og:title" content="Fernando Sosa · Consultor IT Senior">
+<meta property="og:description" content="Tecnología que abarata costos y transforma negocios. 15+ años construyendo ERP, infraestructura y equipos de alto rendimiento.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sosafernando.github.io/">
+<meta name="theme-color" content="#C9F24E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Fernando Sosa">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070b10; --bg2:#0a1017; --surface:#0d1420; --surface2:#0e1622;
+  --line:rgba(148,180,215,.13);
+  --text:#e9f0f7; --muted:#8fa3b8;
+  --lime:#c9f24e; --cyan:#3ddcf0;
+  --lime-soft:rgba(201,242,78,.1); --cyan-soft:rgba(61,220,240,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:400 16px/1.6 'Inter',system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,h4,.font-disp{font-family:'Space Grotesk',sans-serif}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+img{display:block;max-width:100%}
+::selection{background:var(--lime);color:#0a0f14}
+.container{width:min(1180px,92%);margin:0 auto}
+.section{padding:96px 0;scroll-margin-top:84px}
+.section-alt{background:var(--bg2);border-block:1px solid var(--line)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:600;color:var(--cyan)}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--lime)}
+.sec-head{max-width:760px;margin-bottom:14px}
+.sec-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.15;margin:14px 0 14px}
+.lead{color:var(--muted);font-size:16.5px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:12px;font-weight:600;font-size:14.5px;cursor:pointer;transition:.25s;border:1px solid transparent}
+.btn-primary{background:var(--lime);color:#0a0f14}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(201,242,78,.28)}
+.btn-ghost{border-color:var(--line);color:var(--text);background:transparent}
+.btn-ghost:hover{border-color:rgba(201,242,78,.5)}
+.btn-sm{padding:9px 18px;border-radius:10px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
 
-    /* ===== NAV ===== */
-    .nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:0 24px; height:72px; display:flex; align-items:center; justify-content:space-between; background:rgba(10,10,15,0.8); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); transition:all .3s; }
-    .nav.scrolled { background:rgba(10,10,15,0.95); box-shadow:0 4px 20px rgba(0,0,0,0.3); }
-    .nav-brand { display:flex; align-items:center; gap:12px; }
-    .nav-brand img { height:36px; width:36px; border-radius:10px; }
-    .nav-brand span { font-weight:700; font-size:1.1rem; }
-    .nav-links { display:flex; align-items:center; gap:28px; list-style:none; }
-    .nav-links a { font-size:0.88rem; font-weight:500; color:var(--muted); transition:color .2s; }
-    .nav-links a:hover, .nav-links a.active { color:var(--text); }
-    .nav-cta { display:inline-flex; align-items:center; gap:6px; padding:10px 20px; background:var(--gradient); color:#fff !important; border-radius:var(--radius-sm); font-weight:600; font-size:0.85rem; transition:transform .2s, box-shadow .2s; }
-    .nav-cta:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(108,92,231,0.4); }
-    .lang-btn { background:var(--surface); border:1px solid var(--border); color:var(--muted); padding:6px 14px; border-radius:999px; font-size:0.8rem; font-weight:600; cursor:pointer; transition:all .2s; }
-    .lang-btn:hover { color:var(--text); border-color:var(--accent); }
-    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:8px; }
-    .hamburger span { width:22px; height:2px; background:var(--text); transition:all .3s; border-radius:2px; }
-    .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
-    .hamburger.open span:nth-child(2) { opacity:0; }
-    .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
-    .mobile-menu { display:none; position:fixed; top:72px; left:0; right:0; bottom:0; background:rgba(10,10,15,0.98); backdrop-filter:blur(20px); z-index:999; padding:40px 24px; }
-    .mobile-menu.open { display:flex; flex-direction:column; gap:0; }
-    .mobile-menu a { display:block; padding:16px 0; font-size:1.2rem; font-weight:600; color:var(--muted); border-bottom:1px solid var(--border); transition:color .2s; }
-    .mobile-menu a:hover { color:var(--text); }
-    .mobile-menu .mobile-cta { margin-top:24px; display:block; text-align:center; padding:16px; background:var(--gradient); color:#fff !important; border-radius:var(--radius-sm); font-weight:700; border:none; }
+/* ---------- HEADER ---------- */
+#header{position:fixed;top:0;left:0;right:0;z-index:80;padding:16px 0;transition:.3s}
+#header.scrolled{background:rgba(7,11,16,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:10px 0}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand-mark{width:38px;height:38px;border-radius:11px;background:var(--lime);color:#0a0f14;display:grid;place-items:center;flex:none;font-weight:700;font-size:15px;font-family:'Space Grotesk'}
+.brand-text{font:700 19px 'Space Grotesk';line-height:1;display:flex;flex-direction:column;gap:3px}
+.brand-sub{font:500 10px 'Inter';letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.site-nav{display:flex;align-items:center;gap:26px}
+.site-nav a{font-size:14px;font-weight:500;color:var(--muted);transition:.2s}
+.site-nav a:hover{color:var(--text)}
+.site-nav a.btn{color:#0a0f14}
+.lang-btn{background:none;border:1px solid var(--line);color:var(--muted);padding:6px 13px;border-radius:999px;font-size:12px;font-weight:600;cursor:pointer;transition:.2s}
+.lang-btn:hover{color:var(--text);border-color:rgba(201,242,78,.5)}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+.nav-toggle span{width:24px;height:2px;background:var(--text);transition:.3s}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-    /* ===== HERO ===== */
-    .hero { position:relative; min-height:100vh; display:flex; align-items:center; padding:120px 24px 80px; overflow:hidden; }
-    .hero::before { content:''; position:absolute; top:-50%; right:-20%; width:800px; height:800px; background:radial-gradient(circle, rgba(108,92,231,0.15), transparent 70%); pointer-events:none; }
-    .hero::after { content:''; position:absolute; bottom:-30%; left:-10%; width:600px; height:600px; background:radial-gradient(circle, rgba(0,206,201,0.1), transparent 70%); pointer-events:none; }
-    .hero-inner { max-width:1200px; margin:0 auto; width:100%; position:relative; z-index:1; }
-    .hero-badge { display:inline-flex; align-items:center; gap:8px; padding:8px 16px; background:rgba(108,92,231,0.1); border:1px solid rgba(108,92,231,0.3); border-radius:999px; font-size:0.8rem; font-weight:600; color:var(--accent); margin-bottom:24px; }
-    .hero-badge i { width:8px; height:8px; border-radius:50%; background:var(--accent2); animation:pulse-dot 2s infinite; }
-    @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.5)} }
-    .hero h1 { font-size:clamp(2.5rem,6vw,4.2rem); font-weight:900; line-height:1.08; margin-bottom:20px; letter-spacing:-0.03em; }
-    .hero h1 .gradient-text { background:var(--gradient); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-    .hero-sub { font-size:1.15rem; color:var(--muted); max-width:600px; line-height:1.7; margin-bottom:36px; }
-    .hero-actions { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:60px; }
-    .btn-primary { display:inline-flex; align-items:center; gap:8px; padding:14px 28px; background:var(--gradient); color:#fff; border-radius:var(--radius-sm); font-weight:700; font-size:0.95rem; border:none; cursor:pointer; transition:all .25s; }
-    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 10px 30px rgba(108,92,231,0.4); }
-    .btn-secondary { display:inline-flex; align-items:center; gap:8px; padding:14px 28px; background:transparent; color:var(--text); border:1px solid var(--border); border-radius:var(--radius-sm); font-weight:600; font-size:0.95rem; cursor:pointer; transition:all .25s; }
-    .btn-secondary:hover { border-color:var(--accent); color:var(--accent); }
+/* ---------- HERO ---------- */
+.hero{position:relative;padding:150px 0 70px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(640px 420px at 85% 12%,rgba(61,220,240,.10),transparent 60%),
+  radial-gradient(720px 520px at 8% 85%,rgba(201,242,78,.07),transparent 60%)}
+.hero-grid{position:relative;display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,4.6vw,3.7rem);line-height:1.06;margin:18px 0 18px;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--lime)}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0 22px}
+.hero-checks{display:flex;gap:12px 22px;flex-wrap:wrap;list-style:none;color:var(--muted);font-size:13.5px}
+.hero-checks li::before{content:"✓";color:var(--lime);font-weight:700;margin-right:7px}
 
-    /* ===== STATS ===== */
-    .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
-    .stat-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px 20px; text-align:center; transition:all .3s; }
-    .stat-card:hover { border-color:rgba(108,92,231,0.3); transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,0.3); }
-    .stat-number { font-size:2.4rem; font-weight:900; background:var(--gradient); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-    .stat-label { font-size:0.82rem; color:var(--muted); margin-top:4px; font-weight:500; }
+/* dashboard visual */
+.dash{position:relative;border:1px solid var(--line);border-radius:18px;background:#0a121c;box-shadow:0 30px 70px rgba(0,0,0,.5);overflow:hidden}
+.dash-head{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;border-bottom:1px solid var(--line);background:rgba(10,16,24,.85)}
+.live{display:inline-flex;align-items:center;gap:8px;font:600 11.5px 'Space Grotesk';letter-spacing:.14em;text-transform:uppercase;color:var(--text)}
+.live i{width:8px;height:8px;border-radius:50%;background:#ff5d5d;animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+.dash-chip{font-size:11px;letter-spacing:.12em;color:var(--lime);border:1px solid rgba(201,242,78,.4);border-radius:999px;padding:4px 10px}
+.dash-body{position:relative;height:210px;overflow:hidden;background:
+  linear-gradient(rgba(148,180,215,.05) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(148,180,215,.05) 1px,transparent 1px);
+  background-size:38px 38px}
+.dash-bar{position:absolute;bottom:0;width:26px;border-radius:5px 5px 0 0;opacity:.75;transform-origin:bottom}
+.dash-kpi{position:absolute;left:12px;top:12px;display:flex;gap:8px;flex-wrap:wrap;pointer-events:none}
+.kpi-mini{display:inline-flex;align-items:center;gap:7px;background:rgba(8,13,20,.72);border:1px solid var(--line);backdrop-filter:blur(6px);padding:6px 11px;border-radius:999px;font-size:11.5px;color:var(--muted)}
+.dot-live{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 0 rgba(201,242,78,.5);animation:ring 1.8s infinite}
+@keyframes ring{70%{box-shadow:0 0 0 7px rgba(201,242,78,0)}100%{box-shadow:0 0 0 0 rgba(201,242,78,0)}}
+.dash-flow{position:absolute;left:12px;right:12px;bottom:12px;display:flex;align-items:center;gap:11px;background:rgba(10,16,26,.88);border:1px solid rgba(61,220,240,.35);border-radius:12px;padding:10px 14px;backdrop-filter:blur(8px)}
+.dash-flow .n-ico{width:30px;height:30px;flex:none;border-radius:9px;background:var(--cyan-soft);border:1px solid rgba(61,220,240,.35);color:var(--cyan);display:grid;place-items:center;font-size:14px}
+.dash-flow strong{display:block;font:600 12.5px 'Space Grotesk'}
+.dash-flow small{color:var(--muted);font-size:11px}
+.dash-foot{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.dash-foot>div{padding:12px 18px;display:flex;flex-direction:column}
+.dash-foot>div+div{border-left:1px solid var(--line)}
+.dash-foot strong{font:700 19px 'Space Grotesk';color:var(--lime)}
+.dash-foot small{color:var(--muted);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase}
 
-    /* ===== SECTIONS ===== */
-    section { padding:100px 24px; }
-    .container { max-width:1200px; margin:0 auto; }
-    .section-header { text-align:center; margin-bottom:60px; }
-    .section-tag { display:inline-block; font-size:0.75rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
-    .section-title { font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; letter-spacing:-0.02em; }
-    .section-desc { color:var(--muted); font-size:1.05rem; max-width:600px; margin:16px auto 0; }
+/* ---------- TICKER ---------- */
+.ticker{border-block:1px solid var(--line);background:var(--bg2);overflow:hidden;padding:13px 0}
+.ticker-track{display:flex;width:max-content;animation:marquee 40s linear infinite}
+.t-create{display:flex}
+.ticker span{display:inline-flex;align-items:center;gap:20px;padding:0 20px;white-space:nowrap;color:var(--muted);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase}
+.ticker b{color:var(--lime);font-weight:400}
+@keyframes marquee{to{transform:translateX(-50%)}}
 
-    /* ===== SERVICES ===== */
-    #services { background:var(--bg2); }
-    .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
-    .service-card { position:relative; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:32px 24px; transition:all .3s; overflow:hidden; }
-    .service-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--gradient); opacity:0; transition:opacity .3s; }
-    .service-card:hover { border-color:rgba(108,92,231,0.3); transform:translateY(-6px); box-shadow:0 16px 40px rgba(0,0,0,0.3); }
-    .service-card:hover::before { opacity:1; }
-    .service-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin-bottom:20px; }
-    .si-purple { background:rgba(108,92,231,0.12); }
-    .si-teal { background:rgba(0,206,201,0.12); }
-    .si-pink { background:rgba(253,121,168,0.12); }
-    .si-green { background:rgba(85,239,196,0.12); }
-    .si-blue { background:rgba(116,185,255,0.12); }
-    .si-orange { background:rgba(255,165,2,0.12); }
-    .service-card h3 { font-size:1.1rem; font-weight:700; margin-bottom:10px; }
-    .service-card p { font-size:0.9rem; color:var(--muted); line-height:1.6; }
+/* ---------- PAIN GRID ---------- */
+.pain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:10px}
+.pain-card{position:relative;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#0e1622,#0b121c);padding:20px;transition:border-color .3s,transform .3s}
+.pain-card:hover{border-color:rgba(61,220,240,.45);transform:translateY(-3px)}
+.pain-card .p-in{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--cyan);margin-bottom:10px}
+.pain-card .p-in::before{content:"◤";font-size:12px;color:var(--cyan)}
+.pain-card h3{font-size:15px;line-height:1.35;margin-bottom:10px}
+.pain-card .p-out{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--lime);margin-bottom:6px}
+.pain-card .p-out::before{content:"→";font-weight:700}
+.pain-card p{font-size:12.8px;color:var(--muted)}
 
-    /* ===== PROJECTS ===== */
-    .projects-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
-    .project-card { position:relative; border-radius:var(--radius); overflow:hidden; aspect-ratio:16/10; cursor:pointer; }
-    .project-card img { width:100%; height:100%; object-fit:cover; transition:transform .5s; filter:brightness(0.5) saturate(0.8); }
-    .project-card:hover img { transform:scale(1.08); filter:brightness(0.6) saturate(1); }
-    .project-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:24px; }
-    .project-overlay h3 { font-size:1.2rem; font-weight:700; margin-bottom:6px; }
-    .project-overlay p { font-size:0.82rem; color:var(--muted); }
-    .project-tag { position:absolute; top:16px; left:16px; padding:5px 12px; background:rgba(108,92,231,0.85); backdrop-filter:blur(8px); border-radius:999px; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; }
+/* ---------- SERVICES ---------- */
+.srv-row{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center;padding:46px 0}
+.srv-row+.srv-row{border-top:1px dashed rgba(148,180,215,.12)}
+.srv-row.rev .srv-media{order:2}
+.srv-media{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:#0a121c;display:grid;place-items:center}
+.srv-glyph{width:100%;height:100%;display:grid;place-items:center;position:relative}
+.srv-glyph svg{width:52%;height:52%;opacity:.85}
+.srv-tag{position:absolute;top:12px;left:12px;background:rgba(8,13,20,.8);border:1px solid rgba(201,242,78,.45);color:var(--lime);font-size:11px;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:5px 12px;backdrop-filter:blur(6px)}
+.srv-body h3{font-size:clamp(1.3rem,2.2vw,1.6rem);margin-bottom:10px}
+.srv-body>p{color:var(--muted);font-size:14.8px;margin-bottom:16px}
+.check-list{list-style:none}
+.check-list li{display:flex;gap:10px;padding:6px 0;font-size:14px;color:#c6d4e2}
+.check-list li svg{width:16px;height:16px;flex:none;color:var(--lime);margin-top:3px}
+.ben-box{margin-top:18px}
+.ben-box h4{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.ben-chips{display:flex;flex-wrap:wrap;gap:8px}
+.ben-chips span{border:1px solid rgba(201,242,78,.3);background:rgba(201,242,78,.06);color:#d9f49a;padding:7px 13px;border-radius:999px;font-size:12.5px}
 
-    /* ===== ABOUT ===== */
-    #about { background:var(--bg2); }
-    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
-    .about-image { position:relative; border-radius:var(--radius); overflow:hidden; }
-    .about-image img { width:100%; border-radius:var(--radius); filter:brightness(0.8); }
-    .about-image::after { content:''; position:absolute; inset:0; border-radius:var(--radius); border:1px solid var(--border); pointer-events:none; }
-    .about-text h2 { font-size:clamp(1.6rem,3vw,2.2rem); font-weight:800; line-height:1.15; margin-bottom:20px; }
-    .about-text p { color:var(--muted); margin-bottom:16px; font-size:0.95rem; }
-    .about-links { display:flex; gap:12px; margin-top:28px; }
+/* ---------- STATS ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.stat-cell{padding:40px 30px 0;border-right:1px solid var(--line)}
+.stat-cell:last-child{border-right:none}
+.stat-num{font:700 clamp(2.2rem,5vw,3.4rem) 'Space Grotesk';color:var(--lime);letter-spacing:-.03em;line-height:1;margin-bottom:10px}
+.stat-num b{color:var(--text);font-size:.45em;font-weight:500;margin-left:3px}
+.stat-label{font:500 11px 'Inter';text-transform:uppercase;letter-spacing:.16em;color:var(--muted);line-height:1.4}
 
-    /* ===== TESTIMONIALS ===== */
-    .testimonials-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
-    .testimonial-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px 24px; transition:all .3s; position:relative; }
-    .testimonial-card:hover { border-color:rgba(108,92,231,0.25); transform:translateY(-4px); }
-    .testimonial-quote { font-size:2rem; color:var(--accent); opacity:0.4; line-height:1; margin-bottom:12px; }
-    .testimonial-text { font-size:0.92rem; color:var(--muted); line-height:1.7; font-style:italic; margin-bottom:20px; }
-    .testimonial-author { font-size:0.85rem; font-weight:600; }
-    .testimonial-author span { color:var(--accent); }
+/* ---------- TESTIMONIALS ---------- */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.testi-card{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#0e1622,#0b121c);padding:24px;transition:border-color .3s,transform .3s}
+.testi-card:hover{border-color:rgba(201,242,78,.4);transform:translateY(-4px)}
+.testi-stars{color:var(--lime);font-size:13px;letter-spacing:.12em;margin-bottom:10px}
+.testi-card p{font-size:14px;color:#c6d4e2;font-style:italic;line-height:1.6;margin-bottom:16px}
+.testi-author{font:600 13.5px 'Space Grotesk'}
+.testi-author small{display:block;color:var(--muted);font-weight:400;font-size:12px;margin-top:2px}
 
-    /* ===== CONTACT ===== */
-    #contact { background:var(--bg2); }
-    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; }
-    .contact-info { }
-    .contact-info h3 { font-size:1.3rem; font-weight:700; margin-bottom:16px; }
-    .contact-info p { color:var(--muted); margin-bottom:24px; }
-    .contact-links { display:flex; flex-direction:column; gap:12px; }
-    .contact-link { display:flex; align-items:center; gap:12px; padding:14px 18px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-sm); transition:all .25s; }
-    .contact-link:hover { border-color:var(--accent); transform:translateX(4px); }
-    .contact-link-icon { width:40px; height:40px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0; }
-    .contact-link-text { font-size:0.9rem; font-weight:500; }
-    .contact-link-sub { font-size:0.78rem; color:var(--muted); }
-    .contact-qr { text-align:center; }
-    .contact-qr img { max-width:220px; margin:0 auto 12px; border-radius:var(--radius-sm); border:1px solid var(--border); }
-    .contact-qr p { font-size:0.82rem; color:var(--muted); }
-    #calendlyFrame { width:100%; height:0; border:none; border-radius:var(--radius); transition:height .5s; overflow:hidden; }
+/* ---------- CONTACT ---------- */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.c-list{display:flex;flex-direction:column;gap:0}
+.c-row{display:flex;align-items:center;gap:14px;padding:15px 0;border-bottom:1px dashed rgba(148,180,215,.14);cursor:pointer;transition:.2s}
+.c-row:hover{background:rgba(201,242,78,.04)}
+.c-ico{width:42px;height:42px;flex:none;border-radius:12px;display:grid;place-items:center;color:var(--cyan);background:var(--cyan-soft);border:1px solid rgba(61,220,240,.3);font-size:18px}
+.c-row strong{display:block;font:600 14px 'Space Grotesk'}
+.c-row small{color:var(--muted);font-size:12.5px}
+.demo-panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
+.demo-panel h3{font:700 18px 'Space Grotesk';margin-bottom:6px}
+.demo-panel>p{color:var(--muted);font-size:13.5px;margin-bottom:20px}
+#calendlyFrame{width:100%;height:0;border:none;border-radius:12px;transition:height .5s}
+#qrContainer{text-align:center;display:none}
+#qrImage{max-width:210px;margin:0 auto 10px;border-radius:12px;border:1px solid var(--line)}
+#qrContainer p{font-size:12.5px;color:var(--muted)}
 
-    /* ===== TOOLS ===== */
-    .tools-widgets { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:30px; }
-    .tool-widget { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; min-height:120px; }
-    .tool-widget iframe { width:100%; border:none; }
+/* ---------- CONVERT ---------- */
+.convert-box{max-width:460px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px 26px}
+.convert-box input{width:100%;background:#0b1220;border:1px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--text);font:400 14px 'Inter';margin-bottom:12px;transition:border-color .2s;outline:none}
+.convert-box input:focus{border-color:var(--lime)}
+.convert-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.convert-actions button{padding:13px;border:none;border-radius:10px;font-weight:700;font-size:14px;cursor:pointer;transition:.25s}
+.btn-buy{background:var(--lime);color:#0a0f14}
+.btn-buy:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(201,242,78,.3)}
+.btn-sell{background:var(--cyan);color:#0a0f14}
+.btn-sell:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(61,220,240,.3)}
+.convert-result{margin-top:12px;padding:12px;background:var(--bg2);border:1px solid var(--line);border-radius:10px;text-align:center;font-size:14px;color:var(--text);min-height:46px;display:flex;align-items:center;justify-content:center}
 
-    /* ===== CONVERT ===== */
-    #convert { background:var(--bg2); }
-    .convert-box { max-width:480px; margin:0 auto; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:36px 32px; }
-    .convert-box h3 { font-size:1.2rem; font-weight:700; margin-bottom:20px; text-align:center; }
-    .convert-inputs { display:flex; flex-direction:column; gap:14px; margin-bottom:20px; }
-    .convert-inputs input { width:100%; padding:14px 16px; background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-sm); color:var(--text); font-size:0.95rem; font-family:inherit; transition:border-color .2s; outline:none; }
-    .convert-inputs input:focus { border-color:var(--accent); }
-    .convert-inputs input::placeholder { color:var(--muted); }
-    .convert-actions { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-    .convert-actions button { padding:14px; border:none; border-radius:var(--radius-sm); font-weight:700; font-size:0.9rem; cursor:pointer; transition:all .25s; font-family:inherit; }
-    .btn-buy { background:var(--gradient3); color:#0a0a0f; }
-    .btn-buy:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,206,201,0.3); }
-    .btn-sell { background:var(--gradient2); color:#fff; }
-    .btn-sell:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(253,121,168,0.3); }
-    .convert-result { margin-top:16px; padding:14px; background:rgba(108,92,231,0.08); border:1px solid rgba(108,92,231,0.2); border-radius:var(--radius-sm); text-align:center; font-size:0.9rem; color:var(--accent); min-height:48px; display:flex; align-items:center; justify-content:center; }
+/* ---------- FOOTER ---------- */
+footer{border-top:1px solid var(--line);background:#080d13;padding:48px 0 26px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.foot-grid p{color:var(--muted);font-size:13.5px;margin-top:12px;max-width:320px}
+.foot-grid h5{font:600 12px 'Space Grotesk';letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.foot-grid ul{list-style:none}
+.foot-grid ul a{display:block;color:var(--muted);font-size:13.5px;padding:4px 0;transition:.2s}
+.foot-grid ul a:hover{color:var(--lime)}
+.foot-bottom{margin-top:38px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:12.5px}
 
-    /* ===== FOOTER ===== */
-    .footer { padding:60px 24px 30px; border-top:1px solid var(--border); }
-    .footer-inner { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
-    .footer-brand { display:flex; align-items:center; gap:10px; }
-    .footer-brand img { height:28px; border-radius:8px; }
-    .footer-links { display:flex; gap:20px; }
-    .footer-links a { font-size:0.85rem; color:var(--muted); transition:color .2s; }
-    .footer-links a:hover { color:var(--text); }
-    .footer-copy { width:100%; text-align:center; margin-top:30px; padding-top:20px; border-top:1px solid var(--border); font-size:0.78rem; color:var(--muted); }
-
-    /* ===== ANIMATIONS ===== */
-    .fade-up { opacity:0; transform:translateY(30px); transition:opacity .6s ease, transform .6s ease; }
-    .fade-up.visible { opacity:1; transform:none; }
-    .stagger-1 { transition-delay:.1s }
-    .stagger-2 { transition-delay:.2s }
-    .stagger-3 { transition-delay:.3s }
-    .stagger-4 { transition-delay:.4s }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width:1024px) {
-      .services-grid, .projects-grid, .testimonials-grid { grid-template-columns:repeat(2,1fr); }
-      .about-grid { grid-template-columns:1fr; gap:40px; }
-      .tools-widgets { grid-template-columns:1fr; }
-    }
-    @media (max-width:767px) {
-      .nav-links { display:none; }
-      .hamburger { display:flex; }
-      .hero { min-height:auto; padding:100px 20px 60px; }
-      .hero h1 { font-size:2rem; }
-      .hero-sub { font-size:1rem; }
-      .stats { grid-template-columns:repeat(2,1fr); gap:12px; }
-      .stat-card { padding:20px 14px; }
-      .stat-number { font-size:1.8rem; }
-      section { padding:60px 20px; }
-      .services-grid, .projects-grid, .testimonials-grid { grid-template-columns:1fr; }
-      .contact-grid { grid-template-columns:1fr; }
-      .footer-inner { flex-direction:column; text-align:center; }
-      .footer-links { flex-wrap:wrap; justify-content:center; }
-    }
-    @media (max-width:480px) {
-      .hero h1 { font-size:1.7rem; }
-      .hero-actions { flex-direction:column; }
-      .hero-actions a, .hero-actions button { width:100%; justify-content:center; }
-      .stats { grid-template-columns:1fr 1fr; }
-      .convert-box { padding:24px 18px; }
-      .convert-actions { grid-template-columns:1fr; }
-    }
-    @media (prefers-reduced-motion:reduce) {
-      *,*::before,*::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important; }
-    }
-  </style>
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1020px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .pain-grid{grid-template-columns:repeat(2,1fr)}
+  .srv-row{grid-template-columns:1fr;gap:26px}
+  .srv-row.rev .srv-media{order:0}
+  .testi-grid{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat-cell:nth-child(2n){border-right:none}
+  .stat-cell:nth-child(3),.stat-cell:nth-child(4){border-top:1px solid var(--line)}
+  .contact-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  .site-nav{position:fixed;top:66px;left:0;right:0;flex-direction:column;align-items:flex-start;background:rgba(10,16,23,.97);backdrop-filter:blur(12px);padding:22px 6%;gap:16px;border-bottom:1px solid var(--line);opacity:0;transform:translateY(-12px);pointer-events:none;transition:.3s;z-index:79}
+  .site-nav.open{opacity:1;transform:none;pointer-events:auto}
+  .site-nav a.btn{order:9}
+  .nav-toggle{display:flex}
+}
+@media (max-width:640px){
+  .section{padding:72px 0}
+  .hero{padding-top:120px}
+  .dash-body{height:180px}
+  .pain-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .convert-actions{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <a href="#hero" class="nav-brand">
-    <img src="assets/img/logo.png" alt="FS">
-    <span>Fernando Sosa</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#services" data-en="Services" data-es="Servicios">Services</a></li>
-    <li><a href="#projects" data-en="Projects" data-es="Proyectos">Projects</a></li>
-    <li><a href="#about" data-en="About" data-es="Sobre Mi">About</a></li>
-    <li><a href="#testimonials" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
-    <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
-    <li><a href="#tools" data-en="Tools" data-es="Herramientas">Tools</a></li>
-    <li><a href="cv-gerencia.html" class="nav-cta" data-en="View CV" data-es="Ver CV">View CV</a></li>
-    <li><button class="lang-btn" id="langToggle">ES</button></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+<!-- ============ HEADER ============ -->
+<header id="header">
+  <div class="container header-in">
+    <a class="brand" href="#inicio">
+      <span class="brand-mark">FS</span>
+      <span class="brand-text">Fernando Sosa<span class="brand-sub">Consultor IT Senior</span></span>
+    </a>
+    <nav class="site-nav" id="siteNav">
+      <a href="#inicio" data-en="Home" data-es="Inicio">Home</a>
+      <a href="#servicios" data-en="Services" data-es="Servicios">Services</a>
+      <a href="#proyectos" data-en="Projects" data-es="Proyectos">Projects</a>
+      <a href="#resultados" data-en="Results" data-es="Resultados">Results</a>
+      <a href="#contacto" data-en="Contact" data-es="Contacto">Contact</a>
+      <button class="lang-btn" id="langToggle">ES</button>
+      <a href="cv-gerencia.html" class="btn btn-primary btn-sm">CV</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</header>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#services" data-en="Services" data-es="Servicios">Services</a>
-  <a href="#projects" data-en="Projects" data-es="Proyectos">Projects</a>
-  <a href="#about" data-en="About" data-es="Sobre Mi">About</a>
-  <a href="#testimonials" data-en="Testimonials" data-es="Testimonios">Testimonials</a>
-  <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
-  <a href="#tools" data-en="Tools" data-es="Herramientas">Tools</a>
-  <a href="#convert" data-en="Converter" data-es="Convertidor">Converter</a>
-  <a href="cv-gerencia.html" class="mobile-cta" data-en="View My CV" data-es="Ver Mi CV">View My CV</a>
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow" data-en="Consultor IT Senior · Mendoza, Argentina" data-es="Consultor IT Senior · Mendoza, Argentina">Consultor IT Senior · Mendoza, Argentina</span>
+      <h1 data-en="Technology that <em>cuts costs</em> and grows your business" data-es="Tecnología que <em>abarata costos</em> y hace crecer tu negocio">Technology that <em>cuts costs</em> and grows your business</h1>
+      <p class="lead" data-en="With 15+ years building ERP systems, cloud infrastructure, and high-performance teams, I help you use technology as a tool to reduce expenses, eliminate manual work, and sell more." data-es="Con 15+ años construyendo sistemas ERP, infraestructura en la nube y equipos de alto rendimiento, te ayudo a usar la tecnología como herramienta para reducir gastos, eliminar tareas manuales y vender más.">With 15+ years building ERP systems, cloud infrastructure, and high-performance teams, I help you use technology as a tool to reduce expenses, eliminate manual work, and sell more.</p>
+      <div class="hero-cta">
+        <a href="#contacto" class="btn btn-primary" data-en="Book a call" data-es="Agendar una llamada">Book a call</a>
+        <a href="cv.html" class="btn btn-ghost" data-en="View my CV" data-es="Ver mi CV">View my CV</a>
+      </div>
+      <ul class="hero-checks">
+        <li data-en="Lower operating costs" data-es="Menos gastos operativos">Lower operating costs</li>
+        <li data-en="Task automation" data-es="Automatización de tareas">Task automation</li>
+        <li data-en="ARCA e-invoicing" data-es="Facturación electrónica ARCA">ARCA e-invoicing</li>
+        <li data-en="Real-time data" data-es="Datos en tiempo real">Real-time data</li>
+      </ul>
+    </div>
+
+    <div class="hero-visual reveal" data-d="140">
+      <div class="dash">
+        <div class="dash-head">
+          <span class="live"><i></i><span data-en="System live" data-es="Sistema en operación">System live</span></span>
+          <span class="dash-chip">ERP · INVENTARIO</span>
+        </div>
+        <div class="dash-body" id="dashBody"></div>
+        <div class="dash-foot">
+          <div><strong id="dashStat1">0</strong><small data-en="Invoices today" data-es="Recibos hoy">Invoices today</small></div>
+          <div><strong id="dashStat2">0</strong><small data-en="Automations" data-es="Automatizaciones">Automations</small></div>
+          <div><strong id="dashStat3">0</strong><small data-en="Savings %" data-es="Ahorro %">Savings %</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <div class="t-create">
+      <span>ERP a medida <b>✦</b></span><span>Facturación ARCA <b>✦</b></span><span>Kubernetes <b>✦</b></span><span>AWS <b>✦</b></span><span>NestJS <b>✦</b></span><span>React <b>✦</b></span><span>PostgreSQL <b>✦</b></span><span>Automatización IA <b>✦</b></span><span>Seguridad ISO 27001 <b>✦</b></span><span>Transformación digital <b>✦</b></span><span>Menos costos <b>✦</b></span><span>Más eficiencia <b>✦</b></span>
+    </div>
+    <div class="t-create">
+      <span>ERP a medida <b>✦</b></span><span>Facturación ARCA <b>✦</b></span><span>Kubernetes <b>✦</b></span><span>AWS <b>✦</b></span><span>NestJS <b>✦</b></span><span>React <b>✦</b></span><span>PostgreSQL <b>✦</b></span><span>Automatización IA <b>✦</b></span><span>Seguridad ISO 27001 <b>✦</b></span><span>Transformación digital <b>✦</b></span><span>Menos costos <b>✦</b></span><span>Más eficiencia <b>✦</b></span>
+    </div>
+  </div>
 </div>
 
-<!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-inner">
-    <div class="hero-badge"><i></i><span data-en="Available for new projects" data-es="Disponible para nuevos proyectos">Available for new projects</span></div>
-    <h1 data-en="I build systems that<br><span class='gradient-text'>transform businesses</span>" data-es="Construyo sistemas que<br><span class='gradient-text'>transforman negocios</span>">I build systems that<br><span class="gradient-text">transform businesses</span></h1>
-    <p class="hero-sub" data-en="Senior IT Consultant with 15+ years building scalable ERP systems, leading technology teams, and driving digital transformation for companies across Argentina and Latin America." data-es="Consultor IT Senior con 15+ años construyendo sistemas ERP escalables, liderando equipos de tecnología e impulsando la transformación digital de empresas en Argentina y Latinoamérica.">Senior IT Consultant with 15+ years building scalable ERP systems, leading technology teams, and driving digital transformation for companies across Argentina and Latin America.</p>
-    <div class="hero-actions">
-      <a href="cv-gerencia.html" class="btn-primary" data-en="View My CV" data-es="Ver Mi CV">View My CV</a>
-      <a href="https://calendly.com/sosafernandog" target="_blank" class="btn-secondary" data-en="Schedule a Call" data-es="Agendar una Llamada">Schedule a Call</a>
+<!-- ============ PAIN / RESULTADO ============ -->
+<section id="resultados" class="section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-en="From pain to result" data-es="De dolor a resultado">From pain to result</span>
+      <h2 data-en="Does your company sound like any of these?" data-es="¿Te suena tu empresa en alguno de estos?">Does your company sound like any of these?</h2>
+      <p class="lead" data-en="Each solution attacks the specific pain in your operation — and pays for itself with what it saves." data-es="Cada solución ataca el problema puntual de tu operación y se paga sola con lo que ahorra.">Each solution attacks the specific pain in your operation — and pays for itself with what it saves.</p>
     </div>
-    <div class="stats">
-      <div class="stat-card fade-up">
-        <div class="stat-number" data-target="15">0+</div>
-        <div class="stat-label" data-en="Years Experience" data-es="Años de Experiencia">Years Experience</div>
+    <div class="pain-grid reveal">
+      <div class="pain-card">
+        <span class="p-in" data-en="Pain" data-es="Dolor">Pain</span>
+        <h3 data-en="Manual tasks burning your hours" data-es="Tareas manuales que te queman horas">Manual tasks burning your hours</h3>
+        <span class="p-out" data-en="Result" data-es="Resultado">Result</span>
+        <p data-en="Automations that give your team their hours back — the extra employee you need without the extra salary." data-es="Automatizaciones que devuelven horas al equipo: es el empleado que necesitás sin pagar un sueldo más.">Automations that give your team their hours back — the extra employee you need without the extra salary.</p>
       </div>
-      <div class="stat-card fade-up stagger-1">
-        <div class="stat-number" data-target="50">0K+</div>
-        <div class="stat-label" data-en="Lines of Code" data-es="Líneas de Código">Lines of Code</div>
+      <div class="pain-card reveal" data-d="60">
+        <span class="p-in" data-en="Pain" data-es="Dolor">Pain</span>
+        <h3 data-en="Hidden infrastructure costs" data-es="Gastos ocultos en infraestructura">Hidden infrastructure costs</h3>
+        <span class="p-out" data-en="Result" data-es="Resultado">Result</span>
+        <p data-en="An IT audit uncovers costs you can't see: unused servers, duplicate licenses, misconfigured cloud." data-es="Una auditoría IT destapa costos que no ves: servidores que no usás, licencias duplicadas, cloud mal configurado.">An IT audit uncovers costs you can't see: unused servers, duplicate licenses, misconfigured cloud.</p>
       </div>
-      <div class="stat-card fade-up stagger-2">
-        <div class="stat-number" data-target="40">0+</div>
-        <div class="stat-label" data-en="ERP Modules" data-es="Módulos ERP">ERP Modules</div>
+      <div class="pain-card reveal" data-d="120">
+        <span class="p-in" data-en="Pain" data-es="Dolor">Pain</span>
+        <h3 data-en="Invoicing that's slow and error-prone" data-es="Facturación que tarda y falla">Invoicing that's slow and error-prone</h3>
+        <span class="p-out" data-en="Result" data-es="Resultado">Result</span>
+        <p data-en="ARCA e-invoicing integrated into your system: issue invoices in seconds, no errors, no fines." data-es="Factura electrónica ARCA integrada a tu sistema: emitís en segundos, sin errores, sin multas.">ARCA e-invoicing integrated into your system: issue invoices in seconds, no errors, no fines.</p>
       </div>
-      <div class="stat-card fade-up stagger-3">
-        <div class="stat-number" data-target="100">0%</div>
-        <div class="stat-label" data-en="ARCA Compliance" data-es="Cumplimiento ARCA">ARCA Compliance</div>
+      <div class="pain-card reveal" data-d="180">
+        <span class="p-in" data-en="Pain" data-es="Dolor">Pain</span>
+        <h3 data-en="Scattered data, blind decisions" data-es="Datos dispersos, decisiones a ciegas">Scattered data, blind decisions</h3>
+        <span class="p-out" data-en="Result" data-es="Resultado">Result</span>
+        <p data-en="A unified ERP gives you inventory, sales, and accounting in one real-time panel." data-es="Un ERP unificado te da inventario, ventas y contabilidad en un solo panel, en tiempo real.">A unified ERP gives you inventory, sales, and accounting in one real-time panel.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
+<!-- ============ SERVICIOS ============ -->
+<section id="servicios" class="section section-alt">
   <div class="container">
-    <div class="section-header">
-      <div class="section-tag" data-en="What I Do" data-es="Qué Hago">What I Do</div>
-      <h2 class="section-title" data-en="Services that drive results" data-es="Servicios que impulsan resultados">Services that drive results</h2>
-      <p class="section-desc" data-en="End-to-end technology solutions tailored to your business needs." data-es="Soluciones tecnológicas integrales adaptadas a las necesidades de tu negocio.">End-to-end technology solutions tailored to your business needs.</p>
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-en="Services" data-es="Servicios">Services</span>
+      <h2 data-en="What I do — and the cost I take off your plate" data-es="Lo que hago, y el costo que te saco de encima">What I do — and the cost I take off your plate</h2>
     </div>
-    <div class="services-grid">
-      <div class="service-card fade-up">
-        <div class="service-icon si-purple">🏗️</div>
-        <h3 data-en="ERP Development" data-es="Desarrollo ERP">ERP Development</h3>
-        <p data-en="Custom ERP systems with electronic invoicing, double-entry accounting, inventory management, and full ARCA/AFIP compliance." data-es="Sistemas ERP personalizados con facturación electrónica, contabilidad de doble entrada, gestión de inventario y cumplimiento total con ARCA/AFIP.">Custom ERP systems with electronic invoicing, double-entry accounting, inventory management, and full ARCA/AFIP compliance.</p>
+
+    <article class="srv-row reveal">
+      <div class="srv-media">
+        <span class="srv-tag" data-en="ERP" data-es="ERP">ERP</span>
+        <div class="srv-glyph"><svg viewBox="0 0 100 80" fill="none"><rect x="5" y="5" width="90" height="70" rx="8" stroke="#3ddcf0" stroke-width="2.5"/><rect x="14" y="14" width="30" height="18" rx="4" fill="rgba(201,242,78,.15)" stroke="#c9f24e" stroke-width="1.5"/><rect x="52" y="14" width="34" height="8" rx="2" stroke="rgba(148,180,215,.4)" stroke-width="1.5"/><rect x="52" y="27" width="34" height="8" rx="2" stroke="rgba(148,180,215,.4)" stroke-width="1.5"/><rect x="14" y="40" width="30" height="18" rx="4" fill="rgba(61,220,240,.1)" stroke="#3ddcf0" stroke-width="1.5"/><rect x="52" y="40" width="34" height="8" rx="2" stroke="rgba(148,180,215,.4)" stroke-width="1.5"/><rect x="52" y="53" width="34" height="8" rx="2" stroke="rgba(148,180,215,.4)" stroke-width="1.5"/></svg></div>
       </div>
-      <div class="service-card fade-up stagger-1">
-        <div class="service-icon si-teal">🔄</div>
-        <h3 data-en="Digital Transformation" data-es="Transformación Digital">Digital Transformation</h3>
-        <p data-en="Legacy system modernization — from FoxPro and old databases to modern, scalable web applications built with cutting-edge frameworks." data-es="Modernización de sistemas legacy — de FoxPro y bases de datos antiguas a aplicaciones web modernas y escalables con frameworks de vanguardia.">Legacy system modernization — from FoxPro and old databases to modern, scalable web applications built with cutting-edge frameworks.</p>
+      <div class="srv-body">
+        <h3 data-en="Custom ERP development" data-es="Desarrollo de sistemas ERP a medida">Custom ERP development</h3>
+        <p data-en="A system that follows your process, not the other way around. With double-entry accounting, inventory, customer management, and integrated e-invoicing." data-es="Un sistema que sigue tu proceso, no al revés. Con contabilidad de doble entrada, inventario, gestión de clientes y facturación electrónica integrada.">A system that follows your process, not the other way around. With double-entry accounting, inventory, customer management, and integrated e-invoicing.</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="ARCA/AFIP e-invoicing" data-es="Facturación electrónica ARCA/AFIP">ARCA/AFIP e-invoicing</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="40+ modules: sales, purchases, stock, HR" data-es="40+ módulos: ventas, compras, stock, RRHH">40+ modules: sales, purchases, stock, HR</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Kill spreadsheets, errors, wasted hours" data-es="Eliminás planillas, errores y horas perdidas">Kill spreadsheets, errors, wasted hours</span></li>
+        </ul>
+        <div class="ben-box"><h4 data-en="Benefit" data-es="Beneficio">Benefit</h4><div class="ben-chips"><span data-en="Fewer manual staff" data-es="Menos empleados manuales">Fewer manual staff</span><span data-en="Zero AFIP fines" data-es="Cero multas AFIP">Zero AFIP fines</span><span data-en="Data-driven decisions" data-es="Decisiones con datos">Data-driven decisions</span></div></div>
       </div>
-      <div class="service-card fade-up stagger-2">
-        <div class="service-icon si-pink">☁️</div>
-        <h3 data-en="Cloud & DevOps" data-es="Cloud y DevOps">Cloud & DevOps</h3>
-        <p data-en="AWS infrastructure, Kubernetes orchestration, CI/CD pipelines, Docker containers, and automated deployments." data-es="Infraestructura AWS, orquestación Kubernetes, pipelines CI/CD, contenedores Docker y despliegues automatizados.">AWS infrastructure, Kubernetes orchestration, CI/CD pipelines, Docker containers, and automated deployments.</p>
+    </article>
+
+    <article class="srv-row rev reveal">
+      <div class="srv-media">
+        <span class="srv-tag" data-en="Transformation" data-es="Transformación">Transformation</span>
+        <div class="srv-glyph"><svg viewBox="0 0 100 80" fill="none"><path d="M8 55 L30 30 L44 44 L60 22 L78 40 L92 30" stroke="#3ddcf0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="55" r="4" fill="#c9f24e"/><circle cx="30" cy="30" r="4" fill="#c9f24e"/><circle cx="44" cy="44" r="4" fill="#c9f24e"/><circle cx="60" cy="22" r="4" fill="#c9f24e"/><circle cx="78" cy="40" r="4" fill="#c9f24e"/><circle cx="92" cy="30" r="4" fill="#c9f24e"/></svg></div>
       </div>
-      <div class="service-card fade-up stagger-1">
-        <div class="service-icon si-green">🤖</div>
-        <h3 data-en="AI Integration" data-es="Integración IA">AI Integration</h3>
-        <p data-en="n8n workflow automation, LLM integration, intelligent document processing, and AI-powered business tools." data-es="Automatización de flujos n8n, integración de LLMs, procesamiento inteligente de documentos y herramientas de IA para negocios.">n8n workflow automation, LLM integration, intelligent document processing, and AI-powered business tools.</p>
+      <div class="srv-body">
+        <h3 data-en="Digital transformation: from paper to system" data-es="Transformación digital: del papel al sistema">Digital transformation: from paper to system</h3>
+        <p data-en="I modernize legacy systems (FoxPro, spreadsheets, paper) into modern web applications. Your team works less and your business delivers more." data-es="Modernizo sistemas legacy (FoxPro, planillas, papel) a aplicaciones web modernas. Tu equipo trabaja menos y tu negocio rinde más.">I modernize legacy systems (FoxPro, spreadsheets, paper) into modern web applications. Your team works less and your business delivers more.</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Migration without downtime" data-es="Migración sin interrumpir la operación">Migration without downtime</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Processes 5x faster" data-es="Procesos 5x más rápidos">Processes 5x faster</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Mobile and web access" data-es="Acceso desde celular y web">Mobile and web access</span></li>
+        </ul>
+        <div class="ben-box"><h4 data-en="Benefit" data-es="Beneficio">Benefit</h4><div class="ben-chips"><span data-en="2x productivity" data-es="Se duplica la productividad">2x productivity</span><span data-en="Fewer human errors" data-es="Menos errores humanos">Fewer human errors</span><span data-en="Staff focused on growth" data-es="Empleados enfocados en crecer">Staff focused on growth</span></div></div>
       </div>
-      <div class="service-card fade-up stagger-2">
-        <div class="service-icon si-blue">🔒</div>
-        <h3 data-en="Security & Compliance" data-es="Seguridad y Compliance">Security & Compliance</h3>
-        <p data-en="PCI DSS, ISO 27001, security audits, penetration testing, and compliance frameworks for financial systems." data-es="PCI DSS, ISO 27001, auditorías de seguridad, pruebas de penetración y marcos de cumplimiento para sistemas financieros.">PCI DSS, ISO 27001, security audits, penetration testing, and compliance frameworks for financial systems.</p>
+    </article>
+
+    <article class="srv-row reveal">
+      <div class="srv-media">
+        <span class="srv-tag" data-en="Infra" data-es="Infra">Infra</span>
+        <div class="srv-glyph"><svg viewBox="0 0 100 80" fill="none"><rect x="8" y="6" width="26" height="20" rx="3" stroke="#c9f24e" stroke-width="2"/><rect x="40" y="6" width="26" height="20" rx="3" stroke="#c9f24e" stroke-width="2"/><rect x="72" y="6" width="20" height="20" rx="3" stroke="#c9f24e" stroke-width="2"/><rect x="8" y="42" width="26" height="20" rx="3" stroke="#3ddcf0" stroke-width="2"/><rect x="40" y="42" width="26" height="20" rx="3" stroke="#3ddcf0" stroke-width="2"/><rect x="72" y="42" width="20" height="20" rx="3" stroke="#3ddcf0" stroke-width="2"/><path d="M21 26v16M53 26v16M82 26v16" stroke="rgba(148,180,215,.5)" stroke-width="2"/></svg></div>
       </div>
-      <div class="service-card fade-up stagger-3">
-        <div class="service-icon si-orange">👨‍🏫</div>
-        <h3 data-en="IT Consulting" data-es="Consultoría IT">IT Consulting</h3>
-        <p data-en="Strategic technology planning, team leadership, architecture decisions, and hands-on technical mentorship." data-es="Planificación estratégica de tecnología, liderazgo de equipos, decisiones de arquitectura y mentoría técnica práctica.">Strategic technology planning, team leadership, architecture decisions, and hands-on technical mentorship.</p>
+      <div class="srv-body">
+        <h3 data-en="Cloud, DevOps & containers" data-es="Cloud, DevOps y contenedores">Cloud, DevOps & containers</h3>
+        <p data-en="AWS infrastructure, Kubernetes, and CI/CD pipelines. Scale when you need to — and pay only for what you use." data-es="Infraestructura AWS, Kubernetes y pipelines CI/CD. Escalás cuando lo necesitás y pagás solo por lo que usás.">AWS infrastructure, Kubernetes, and CI/CD pipelines. Scale when you need to — and pay only for what you use.</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Automated zero-downtime deploys" data-es="Deploy automatizado sin downtime">Automated zero-downtime deploys</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Server cost reduction" data-es="Reducción de costos de servidores">Server cost reduction</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="24/7 high availability" data-es="Alta disponibilidad 24/7">24/7 high availability</span></li>
+        </ul>
+        <div class="ben-box"><h4 data-en="Benefit" data-es="Beneficio">Benefit</h4><div class="ben-chips"><span data-en="Up to 40% less on infra" data-es="Hasta 40% menos en infra">Up to 40% less on infra</span><span data-en="Zero unexpected outages" data-es="Cero caídas inesperadas">Zero unexpected outages</span><span data-en="Grow without new hardware" data-es="Crece sin recompra de hardware">Grow without new hardware</span></div></div>
       </div>
-    </div>
+    </article>
+
+    <article class="srv-row rev reveal">
+      <div class="srv-media">
+        <span class="srv-tag" data-en="AI" data-es="IA">AI</span>
+        <div class="srv-glyph"><svg viewBox="0 0 100 80" fill="none"><circle cx="50" cy="40" r="20" stroke="#3ddcf0" stroke-width="2.5" fill="rgba(61,220,240,.08)"/><circle cx="50" cy="40" r="4" fill="#c9f24e"/><path d="M50 20v-8M50 68v-8M20 40H12M88 40h-8M29 29L23 23M77 57l-6-6M71 29l6-6M23 57l6-6" stroke="#3ddcf0" stroke-width="2" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="srv-body">
+        <h3 data-en="Business automation & applied AI" data-es="Automatización e IA aplicada al negocio">Business automation & applied AI</h3>
+        <p data-en="I integrate AI and automation flows (n8n, LLMs) into your daily processes: invoicing, customer service, reports. Your team stops doing repetitive tasks." data-es="Integro IA y flujos de automatización (n8n, LLMs) a tus procesos diarios: facturación, atención al cliente, reportes. Tu equipo deja de hacer tareas repetitivas.">I integrate AI and automation flows (n8n, LLMs) into your daily processes: invoicing, customer service, reports. Your team stops doing repetitive tasks.</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="24/7 AI customer service" data-es="Atención al cliente 24/7 con IA">24/7 AI customer service</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Automatic manager reports" data-es="Reportes automáticos para gerencia">Automatic manager reports</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Documents processed hands-free" data-es="Documentos procesados sin intervención">Documents processed hands-free</span></li>
+        </ul>
+        <div class="ben-box"><h4 data-en="Benefit" data-es="Beneficio">Benefit</h4><div class="ben-chips"><span data-en="One less head in ops tasks" data-es="Un empleado menos en tareas operativas">One less head in ops tasks</span><span data-en="Instant customer response" data-es="Respuesta inmediata a clientes">Instant customer response</span><span data-en="Scales without hiring" data-es="Escalable sin contratar">Scales without hiring</span></div></div>
+      </div>
+    </article>
+
+    <article class="srv-row reveal">
+      <div class="srv-media">
+        <span class="srv-tag" data-en="Security" data-es="Seguridad">Security</span>
+        <div class="srv-glyph"><svg viewBox="0 0 100 80" fill="none"><path d="M50 8l28 10v20c0 20-12 30-28 36-16-6-28-16-28-36V18z" stroke="#c9f24e" stroke-width="2.5" fill="rgba(201,242,78,.06)"/><path d="M38 40l8 8 18-20" stroke="#3ddcf0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+      <div class="srv-body">
+        <h3 data-en="Security & compliance" data-es="Seguridad y cumplimiento">Security & compliance</h3>
+        <p data-en="Audits, control implementation, and the path to ISO 27001. A leaked dataset costs you customers and money — protect it." data-es="Auditorías, implementación de controles y camino hacia ISO 27001. Un dato filtrado te cuesta clientes y plata: protegelo.">Audits, control implementation, and the path to ISO 27001. A leaked dataset costs you customers and money — protect it.</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Audits & risk assessment" data-es="Auditorías y diagnóstico de riesgos">Audits & risk assessment</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Backups with tested restore" data-es="Backups con restauración probada">Backups with tested restore</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="PCI DSS / ISO 27001-aligned controls" data-es="Controles alineados a PCI DSS / ISO 27001">PCI DSS / ISO 27001-aligned controls</span></li>
+        </ul>
+        <div class="ben-box"><h4 data-en="Benefit" data-es="Beneficio">Benefit</h4><div class="ben-chips"><span data-en="Avoid fines & fraud" data-es="Evitás multas y fraudes">Avoid fines & fraud</span><span data-en="Customer trust" data-es="Confianza de clientes y socios">Customer trust</span><span data-en="Tender advantage" data-es="Ventaja en licitaciones">Tender advantage</span></div></div>
+      </div>
+    </article>
+
+    <article class="srv-row rev reveal">
+      <div class="srv-media">
+        <span class="srv-tag" data-en="Consulting" data-es="Consultoría">Consulting</span>
+        <div class="srv-glyph"><svg viewBox="0 0 100 80" fill="none"><circle cx="30" cy="30" r="12" stroke="#c9f24e" stroke-width="2.5"/><circle cx="70" cy="30" r="12" stroke="#c9f24e" stroke-width="2.5"/><path d="M30 48h40c0 14-9 22-20 22s-20-8-20-22z" stroke="#3ddcf0" stroke-width="2.5" fill="rgba(61,220,240,.06)"/></svg></div>
+      </div>
+      <div class="srv-body">
+        <h3 data-en="Consulting & IT team leadership" data-es="Consultoría y liderazgo de equipos IT">Consulting & IT team leadership</h3>
+        <p data-en="Technology strategy, architecture decisions, and building technical teams. I help you decide well before you invest." data-es="Plan estratégico de tecnología, decisiones de arquitectura y formación de equipos técnicos. Te ayudo a decidir bien antes de invertir.">Technology strategy, architecture decisions, and building technical teams. I help you decide well before you invest.</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Diagnosis & clear roadmap" data-es="Diagnóstico y hoja de ruta clara">Diagnosis & clear roadmap</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Investment decision support" data-es="Acompañamiento en decisiones de inversión">Investment decision support</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.6 4.6L19.5 6.7"/></svg><span data-en="Developer mentoring" data-es="Formación y mentoría de devs">Developer mentoring</span></li>
+        </ul>
+        <div class="ben-box"><h4 data-en="Benefit" data-es="Beneficio">Benefit</h4><div class="ben-chips"><span data-en="Invest in the right thing" data-es="Invertís en lo correcto">Invest in the right thing</span><span data-en="Trained IT team" data-es="Equipo IT formado">Trained IT team</span><span data-en="Less tech risk" data-es="Menos riesgo tecnológico">Less tech risk</span></div></div>
+      </div>
+    </article>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
+<!-- ============ PROYECTOS ============ -->
+<section id="proyectos" class="section">
   <div class="container">
-    <div class="section-header">
-      <div class="section-tag" data-en="Portfolio" data-es="Portafolio">Portfolio</div>
-      <h2 class="section-title" data-en="Featured Projects" data-es="Proyectos Destacados">Featured Projects</h2>
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-en="Portfolio" data-es="Portafolio">Portfolio</span>
+      <h2 data-en="Projects already delivering results" data-es="Proyectos que ya están dando resultados">Projects already delivering results</h2>
     </div>
-    <div class="projects-grid">
-      <a href="https://www.cfxlabs.com/" target="_blank" class="project-card fade-up">
-        <img src="assets/img/introduction-visual.png" alt="Monitoring">
-        <div class="project-overlay">
-          <h3 data-en="Monitoring & CI/CD" data-es="Monitoreo y CI/CD">Monitoring & CI/CD</h3>
-          <p data-en="Cloud Admin - Security Check - Pipelines" data-es="Admin en la Nube - Seguridad - Pipelines">Cloud Admin - Security Check - Pipelines</p>
-        </div>
-        <span class="project-tag">Live</span>
+    <div class="card-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <a href="https://www.cfxlabs.com/" target="_blank" class="pain-card" style="display:block">
+        <span class="srv-tag" style="position:static;display:inline-block;margin-bottom:14px" data-en="Monitoring" data-es="Monitoreo">Monitoring</span>
+        <h3 data-en="Monitoring & CI/CD" data-es="Monitoreo y pipelines CI/CD">Monitoring & CI/CD</h3>
+        <p data-en="Cloud admin, security check, and automated deploys." data-es="Admin en la nube, security check y automatización de deploys.">Cloud admin, security check, and automated deploys.</p>
       </a>
-      <a href="https://kubernetes.io/" target="_blank" class="project-card fade-up stagger-1">
-        <img src="assets/img/kubernetes.png" alt="Kubernetes">
-        <div class="project-overlay">
-          <h3 data-en="Docker & Orchestration" data-es="Docker y Orquestación">Docker & Orchestration</h3>
-          <p data-en="Kubernetes Clusters - Jenkins - CI/CD" data-es="Clusters Kubernetes - Jenkins - CI/CD">Kubernetes Clusters - Jenkins - CI/CD</p>
-        </div>
-        <span class="project-tag">Infra</span>
+      <a href="https://kubernetes.io/" target="_blank" class="pain-card" style="display:block" data-d="80">
+        <span class="srv-tag" style="position:static;display:inline-block;margin-bottom:14px" data-en="Orchestration" data-es="Orquestación">Orchestration</span>
+        <h3 data-en="Kubernetes clusters & Docker" data-es="Clusters Kubernetes y Docker">Kubernetes clusters & Docker</h3>
+        <p data-en="Containers at scale with high availability and Jenkins." data-es="Contenedores a escala con alta disponibilidad y Jenkins.">Containers at scale with high availability and Jenkins.</p>
       </a>
-      <a href="https://explorer.solana.com/address/HPs8A1WiRypdPwFBG32KaA9qHLt4VDKJ7sWUF5HKoicP" target="_blank" class="project-card fade-up stagger-2">
-        <img src="assets/img/blockchain.png" alt="Blockchain">
-        <div class="project-overlay">
-          <h3>Fsosa Coin</h3>
-          <p data-en="Smart Contracts - Blockchain Infrastructure" data-es="Smart Contracts - Infraestructura Blockchain">Smart Contracts - Blockchain Infrastructure</p>
-        </div>
-        <span class="project-tag">Web3</span>
+      <a href="https://explorer.solana.com/address/HPs8A1WiRypdPwFBG32KaA9qHLt4VDKJ7sWUF5HKoicP" target="_blank" class="pain-card" style="display:block" data-d="160">
+        <span class="srv-tag" style="position:static;display:inline-block;margin-bottom:14px">Web3</span>
+        <h3>Fsosa Coin</h3>
+        <p data-en="Smart contracts & blockchain infrastructure on Solana." data-es="Smart contracts e infraestructura blockchain en Solana.">Smart contracts & blockchain infrastructure on Solana.</p>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
+<!-- ============ STATS ============ -->
+<section class="section-alt section" style="padding:80px 0">
   <div class="container">
-    <div class="about-grid">
-      <div class="about-image fade-up">
-        <img src="assets/img/about-visual.png" alt="Fernando Sosa">
+    <div class="stats reveal">
+      <div class="stat-cell"><div class="stat-num" data-target="15">0<b>+</b></div><div class="stat-label" data-en="Years of experience" data-es="Años de experiencia">Years of experience</div></div>
+      <div class="stat-cell"><div class="stat-num" data-target="50">0<b>K+</b></div><div class="stat-label" data-en="Lines of code" data-es="Líneas de código">Lines of code</div></div>
+      <div class="stat-cell"><div class="stat-num" data-target="40">0<b>+</b></div><div class="stat-label" data-en="ERP modules" data-es="Módulos ERP">ERP modules</div></div>
+      <div class="stat-cell"><div class="stat-num" data-target="100">0<b>%</b></div><div class="stat-label" data-en="ARCA compliance" data-es="Cumplimiento ARCA">ARCA compliance</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section class="section" id="testimonios">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-en="Testimonials" data-es="Testimonios">Testimonials</span>
+      <h2 data-en="What people who worked with me say" data-es="Lo que dicen quienes ya trabajaron conmigo">What people who worked with me say</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p data-en="Fernando transformed our legacy FoxPro system into a modern web app. His ERP expertise is unmatched." data-es="Fernando transformó nuestro sistema legacy de FoxPro en una app web moderna. Su experiencia en desarrollo ERP es inigualable.">Fernando transformed our legacy FoxPro system into a modern web app. His ERP expertise is unmatched.</p>
+        <div class="testi-author" data-en="CEO · Company in Mendoza" data-es="CEO · Empresa en Mendoza">CEO · Company in Mendoza</div>
       </div>
-      <div class="about-text fade-up stagger-1">
-        <div class="section-tag" data-en="About Me" data-es="Sobre Mí">About Me</div>
-        <h2 data-en="I believe in the<br>power of <span class='gradient-text'>open source</span>" data-es="Creo en el<br>poder del <span class='gradient-text'>código abierto</span>">I believe in the<br>power of <span class="gradient-text">open source</span></h2>
-        <p data-en="With over 15 years in the industry, I've architected and built enterprise-grade ERP systems handling thousands of daily transactions. From electronic invoicing compliant with Argentine tax authorities (ARCA/AFIP) to full double-entry accounting modules, I deliver systems that businesses rely on every day." data-es="Con más de 15 años en la industria, he arquitectado y construido sistemas ERP de nivel empresarial que manejan miles de transacciones diarias. Desde facturación electrónica cumpliendo con las autoridades fiscales argentinas (ARCA/AFIP) hasta módulos completos de contabilidad de doble entrada, entrego sistemas en los que las empresas confían todos los días.">With over 15 years in the industry, I've architected and built enterprise-grade ERP systems handling thousands of daily transactions. From electronic invoicing compliant with Argentine tax authorities (ARCA/AFIP) to full double-entry accounting modules, I deliver systems that businesses rely on every day.</p>
-        <p data-en="My tech stack spans NestJS, React, PostgreSQL, Docker, Kubernetes, and AWS — but what really matters is solving business problems with technology." data-es="Mi stack tecnológico abarca NestJS, React, PostgreSQL, Docker, Kubernetes y AWS — pero lo que realmente importa es resolver problemas de negocio con tecnología.">My tech stack spans NestJS, React, PostgreSQL, Docker, Kubernetes, and AWS — but what really matters is solving business problems with technology.</p>
-        <div class="about-links">
-          <a href="cv.html" class="btn-primary" data-en="Career CV" data-es="CV Profesional">Career CV</a>
-          <a href="cv-gerencia.html" class="btn-secondary" data-en="Management CV" data-es="CV Gerencia">Management CV</a>
-        </div>
+      <div class="testi-card reveal" data-d="80">
+        <div class="testi-stars">★★★★★</div>
+        <p data-en="The e-invoicing system handles 1000+ daily invoices with zero downtime. Incredible reliability." data-es="El sistema de facturación electrónica maneja más de 1000 facturas diarias sin caídas. Confiabilidad increíble.">The e-invoicing system handles 1000+ daily invoices with zero downtime. Incredible reliability.</p>
+        <div class="testi-author" data-en="Operations Director · Tech Startup" data-es="Director de Operaciones · Startup Tech">Operations Director · Tech Startup</div>
+      </div>
+      <div class="testi-card reveal" data-d="160">
+        <div class="testi-stars">★★★★★</div>
+        <p data-en="He led our team through a full digital transformation. Exceptional leadership and technical skill." data-es="Lideró a nuestro equipo en una transformación digital completa. Liderazgo y técnica excepcionales.">He led our team through a full digital transformation. Exceptional leadership and technical skill.</p>
+        <div class="testi-author" data-en="CTO · Financial Services" data-es="CTO · Servicios Financieros">CTO · Financial Services</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag" data-en="Social Proof" data-es="Prueba Social">Social Proof</div>
-      <h2 class="section-title" data-en="What clients say" data-es="Qué dicen los clientes">What clients say</h2>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card fade-up">
-        <div class="testimonial-quote">"</div>
-        <p class="testimonial-text" data-en="Fernando transformed our legacy FoxPro system into a modern web application. His expertise in ERP development is unmatched." data-es="Fernando transformó nuestro sistema legacy de FoxPro en una aplicación web moderna. Su experiencia en desarrollo ERP es inigualable.">Fernando transformed our legacy FoxPro system into a modern web application. His expertise in ERP development is unmatched.</p>
-        <div class="testimonial-author">— CEO, <span data-en="Company in Mendoza" data-es="Empresa en Mendoza">Company in Mendoza</span></div>
-      </div>
-      <div class="testimonial-card fade-up stagger-1">
-        <div class="testimonial-quote">"</div>
-        <p class="testimonial-text" data-en="The electronic invoicing system he built handles 1000+ invoices daily with zero downtime. Incredible reliability." data-es="El sistema de facturación electrónica que construyó maneja más de 1000 facturas diarias sin tiempo de inactividad. Increíble confiabilidad.">The electronic invoicing system he built handles 1000+ invoices daily with zero downtime. Incredible reliability.</p>
-        <div class="testimonial-author">— <span data-en="Operations Director" data-es="Director de Operaciones">Operations Director</span>, Tech Startup</div>
-      </div>
-      <div class="testimonial-card fade-up stagger-2">
-        <div class="testimonial-quote">"</div>
-        <p class="testimonial-text" data-en="Fernando led our team through a complete digital transformation. His leadership and technical skills are exceptional." data-es="Fernando lideró nuestro equipo a través de una transformación digital completa. Sus habilidades de liderazgo y técnicas son excepcionales.">Fernando led our team through a complete digital transformation. His leadership and technical skills are exceptional.</p>
-        <div class="testimonial-author">— <span data-en="CTO" data-es="CTO">CTO</span>, <span data-en="Financial Services" data-es="Servicios Financieros">Financial Services</span></div>
+<!-- ============ CONTACTO ============ -->
+<section id="contacto" class="section section-alt">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <span class="eyebrow" data-en="Contact" data-es="Contacto">Contact</span>
+      <h2 style="font-size:clamp(1.7rem,3vw,2.3rem);margin:14px 0 12px" data-en="Where does it hurt? Let's talk." data-es="¿Dónde te duele? Hablemos.">Where does it hurt? Let's talk.</h2>
+      <p class="lead" data-en="Tell me your case and we'll build the plan. The first call is free and will leave you with clearer questions." data-es="Contame tu caso y armamos el plan. La primera llamada no tiene costo y te va a dejar preguntas más claras.">Tell me your case and we'll build the plan. The first call is free and will leave you with clearer questions.</p>
+      <div class="c-list" style="margin-top:24px">
+        <a class="c-row" href="mailto:sosafernandog@gmail.com">
+          <span class="c-ico">✉️</span><span><strong>sosafernandog@gmail.com</strong><small data-en="I reply the same day" data-es="Respondo el mismo día">I reply the same day</small></span>
+        </a>
+        <a class="c-row" href="https://wa.me/5492613668246?text=Hola%20Fernando%2C%20necesito%20ayuda%20con%20tecnolog%C3%ADa" target="_blank" rel="noopener">
+          <span class="c-ico">💬</span><span><strong>WhatsApp +54 9 261 366-8246</strong><small data-en="Sales & support" data-es="Atención comercial y soporte">Sales & support</small></span>
+        </a>
+        <a class="c-row" href="https://www.linkedin.com/in/fernando-gabriel-sosa-439520a/" target="_blank" rel="noopener">
+          <span class="c-ico">💼</span><span><strong>LinkedIn</strong><small data-en="My professional profile" data-es="Mi perfil profesional">My professional profile</small></span>
+        </a>
+        <a class="c-row" href="javascript:void(0)" onclick="cargarQR()">
+          <span class="c-ico">📱</span><span><strong data-en="Save my contact" data-es="Guardame el contacto">Save my contact</strong><small data-en="Scan the QR and add me to your phone" data-es="Escaneá el QR y te agrego al celular">Scan the QR and add me to your phone</small></span>
+        </a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag" data-en="Get in Touch" data-es="Contacto">Get in Touch</div>
-      <h2 class="section-title" data-en="Let's build something great" data-es="Construyamos algo grandioso">Let's build something great</h2>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-info fade-up">
-        <h3 data-en="Contact Information" data-es="Información de Contacto">Contact Information</h3>
-        <p data-en="Ready to transform your business with technology? Let's talk." data-es="¿Listo para transformar tu negocio con tecnología? Hablemos.">Ready to transform your business with technology? Let's talk.</p>
-        <div class="contact-links">
-          <a href="mailto:sosafernandog@gmail.com" class="contact-link">
-            <div class="contact-link-icon si-purple">✉️</div>
-            <div><div class="contact-link-text">sosafernandog@gmail.com</div><div class="contact-link-sub" data-en="Email me anytime" data-es="Escríbime cuando quieras">Email me anytime</div></div>
-          </a>
-          <a href="https://calendly.com/sosafernandog" target="_blank" class="contact-link">
-            <div class="contact-link-icon si-teal">📅</div>
-            <div><div class="contact-link-text" data-en="Schedule a Meeting" data-es="Agendar una Reunión">Schedule a Meeting</div><div class="contact-link-sub" data-en="Pick a time that works" data-es="Elegí un horario">Pick a time that works</div></div>
-          </a>
-          <a href="https://wa.me/5492613668246/?text=Hi%20Fer%20I%20Need%20Help" target="_blank" class="contact-link">
-            <div class="contact-link-icon si-green">💬</div>
-            <div><div class="contact-link-text">WhatsApp</div><div class="contact-link-sub" data-en="Message me directly" data-es="Escribime directo">Message me directly</div></div>
-          </a>
-          <a href="javascript:void(0)" onclick="cargarQR()" class="contact-link">
-            <div class="contact-link-icon si-pink">📱</div>
-            <div><div class="contact-link-text" data-en="Save my Contact" data-es="Guardar mi Contacto">Save my Contact</div><div class="contact-link-sub" data-en="Scan QR to add to your phone" data-es="Escaneá el QR para agregar a tu celular">Scan QR to add to your phone</div></div>
-          </a>
-        </div>
+    <div class="demo-panel reveal" data-d="120">
+      <h3 data-en="Book a call" data-es="Agendá una llamada">Book a call</h3>
+      <p data-en="Pick a time on Calendly or scan the QR to save my contact." data-es="Elegí horario en Calendly o escaneá el QR para tener mi contacto.">Pick a time on Calendly or scan the QR to save my contact.</p>
+      <div id="calendlyPlaceholder" style="text-align:center">
+        <a href="javascript:void(0)" onclick="cargarCalendly()" class="btn btn-primary" data-en="Show Calendly" data-es="Ver Calendly">Show Calendly</a>
       </div>
-      <div class="contact-qr fade-up stagger-1">
-        <div id="qrContainer" style="display:none;">
-          <img id="qrImage" src="" alt="QR Contact">
-          <p data-en="Scan to add Fernando Sosa to your contacts" data-es="Escaneá para agregar a Fernando Sosa a tus contactos">Scan to add Fernando Sosa to your contacts</p>
-        </div>
-        <div id="calendlyPlaceholder">
-          <p style="color:var(--muted);font-size:0.9rem;" data-en="Click 'Schedule a Meeting' or 'Save my Contact' above" data-es="Hacé clic en 'Agendar una Reunión' o 'Guardar mi Contacto' arriba">Click 'Schedule a Meeting' or 'Save my Contact' above</p>
-        </div>
-        <iframe id="calendlyFrame" name="calendlyFrame"></iframe>
+      <div id="qrContainer">
+        <img id="qrImage" src="" alt="QR">
+        <p data-en="Scan to save my contact" data-es="Escaneá para guardar el contacto">Scan to save my contact</p>
       </div>
+      <iframe id="calendlyFrame" name="calendlyFrame"></iframe>
     </div>
   </div>
 </section>
 
-<!-- TOOLS -->
-<section id="tools">
+<!-- ============ CONVERT ============ -->
+<section id="convert" class="section">
   <div class="container">
-    <div class="section-header">
-      <div class="section-tag" data-en="Utilities" data-es="Utilidades">Utilities</div>
-      <h2 class="section-title" data-en="Tools & Market Data" data-es="Herramientas y Datos del Mercado">Tools & Market Data</h2>
+    <div class="sec-head" style="text-align:center;margin:0 auto 40px">
+      <span class="eyebrow" style="justify-content:center" data-en="Utility" data-es="Utilidad">Utility</span>
+      <h2 data-en="Crypto converter" data-es="Convertidor crypto">Crypto converter</h2>
     </div>
-    <div class="tools-widgets">
-      <div class="tool-widget">
-        <iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=1505&invert_hover=" height="36" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-      </div>
-      <div class="tool-widget">
-        <div style="padding:20px;text-align:center;">
-          <a href="https://www.linkedin.com/in/fernando-gabriel-sosa-439520a/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:rgba(108,92,231,0.1);border:1px solid rgba(108,92,231,0.3);border-radius:var(--radius-sm);font-weight:600;font-size:0.9rem;transition:all .2s;">
-            <img src="assets/img/icon/linkedin.svg" alt="LinkedIn" style="width:20px;height:20px;">
-            LinkedIn
-          </a>
-          <a href="https://wa.me/5492613668246/?text=Hi%20Fer%20I%20Need%20Help" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:rgba(85,239,196,0.1);border:1px solid rgba(85,239,196,0.3);border-radius:var(--radius-sm);font-weight:600;font-size:0.9rem;margin-left:10px;transition:all .2s;">
-            <img src="assets/img/icon/whatsapp.svg" alt="WhatsApp" style="width:20px;height:20px;">
-            WhatsApp
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONVERT -->
-<section id="convert">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag" data-en="Utility" data-es="Utilidad">Utility</div>
-      <h2 class="section-title" data-en="Crypto Converter" data-es="Convertidor Crypto">Crypto Converter</h2>
-    </div>
-    <div class="convert-box">
-      <div class="convert-inputs">
-        <input type="number" id="numero1" data-placeholder-en="Price / Quote" data-placeholder-es="Precio / Cotización" placeholder="Price / Quote" step="any">
-        <input type="number" id="numero2" placeholder="Quantity" step="any">
-        <input type="number" id="numero3" placeholder="$ USD" step="any">
-      </div>
+    <div class="convert-box reveal">
+      <input type="number" id="numero1" data-placeholder-en="Price / quote" data-placeholder-es="Precio / cotización" placeholder="Price / quote" step="any">
+      <input type="number" id="numero2" data-placeholder-en="Quantity" data-placeholder-es="Cantidad" placeholder="Quantity" step="any">
+      <input type="number" id="numero3" data-placeholder-en="$ USD" data-placeholder-es="$ USD" placeholder="$ USD" step="any">
       <div class="convert-actions">
         <button class="btn-buy" onclick="comprar()" data-en="Buy" data-es="Comprar">Buy</button>
         <button class="btn-sell" onclick="vender()" data-en="Sell" data-es="Vender">Sell</button>
       </div>
       <div class="convert-result" id="resultado">—</div>
-      <div class="convert-result" id="resultado1" style="margin-top:10px;">—</div>
+      <div class="convert-result" id="resultado1">—</div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="assets/img/logo.png" alt="FS">
-      <span>Fernando Sosa</span>
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#inicio"><span class="brand-mark">FS</span><span class="brand-text" style="color:var(--text)">Fernando Sosa<span class="brand-sub">Consultor IT Senior</span></span></a>
+        <p data-en="Technology that cuts costs and transforms businesses. ERP systems, infrastructure, and high-performance teams." data-es="Tecnología que abarata costos y transforma negocios. Sistemas ERP, infraestructura y equipos de alto rendimiento.">Technology that cuts costs and transforms businesses. ERP systems, infrastructure, and high-performance teams.</p>
+      </div>
+      <div>
+        <h5 data-en="Sections" data-es="Secciones">Sections</h5>
+        <ul>
+          <li><a href="#servicios" data-en="Services" data-es="Servicios">Services</a></li>
+          <li><a href="#resultados" data-en="Results" data-es="Resultados">Results</a></li>
+          <li><a href="#proyectos" data-en="Projects" data-es="Proyectos">Projects</a></li>
+          <li><a href="#contacto" data-en="Contact" data-es="Contacto">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-en="Links" data-es="Links">Links</h5>
+        <ul>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="cv-gerencia.html">CV Gerencia</a></li>
+          <li><a href="https://neoxolotl.github.io/blog/" target="_blank">Blog</a></li>
+          <li><a href="https://neoxolotl.github.io/newblog/" target="_blank">New Blog</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-links">
-      <a href="https://neoxolotl.github.io/blog/" target="_blank">Blog</a>
-      <a href="https://neoxolotl.github.io/newblog/" target="_blank">New Blog</a>
-      <a href="https://www.linkedin.com/in/fernando-gabriel-sosa-439520a/" target="_blank">LinkedIn</a>
-      <a href="mailto:sosafernandog@gmail.com">Email</a>
+    <div class="foot-bottom">
+      <span>© 2025 Fernando Sosa</span>
+      <span data-en="Built with tech to cut costs" data-es="Hecho con tecnología para abaratar costos">Built with tech to cut costs</span>
     </div>
-    <div class="footer-copy">© 2025 Fernando Sosa. All rights reserved.</div>
   </div>
 </footer>
 
-<!-- JS -->
 <script>
-// === Nav scroll effect ===
-var nav = document.getElementById('nav');
-window.addEventListener('scroll', function() {
-  nav.classList.toggle('scrolled', window.scrollY > 50);
-});
+// ---- Header scroll ----
+var hdr=document.getElementById('header');
+window.addEventListener('scroll',function(){hdr.classList.toggle('scrolled',window.scrollY>50);});
 
-// === Hamburger menu ===
-var hamburger = document.getElementById('hamburger');
-var mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', function() {
-  hamburger.classList.toggle('open');
-  mobileMenu.classList.toggle('open');
-});
-mobileMenu.querySelectorAll('a').forEach(function(a) {
-  a.addEventListener('click', function() {
-    hamburger.classList.remove('open');
-    mobileMenu.classList.remove('open');
+// ---- Mobile nav ----
+var nt=document.getElementById('navToggle'),sn=document.getElementById('siteNav');
+nt.addEventListener('click',function(){nt.classList.toggle('open');sn.classList.toggle('open');});
+sn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nt.classList.remove('open');sn.classList.remove('open');});});
+
+// ---- Reveal on scroll ----
+function doReveal(){
+  document.querySelectorAll('.reveal').forEach(function(el){
+    var r=el.getBoundingClientRect();
+    if(r.top<window.innerHeight-60)el.classList.add('in');
   });
-});
+}
+window.addEventListener('scroll',doReveal);
+doReveal();
 
-// === Active nav link ===
-var sections = document.querySelectorAll('section[id]');
-window.addEventListener('scroll', function() {
-  var scrollY = window.scrollY + 100;
-  sections.forEach(function(s) {
-    var top = s.offsetTop;
-    var h = s.offsetHeight;
-    var id = s.getAttribute('id');
-    var link = document.querySelector('.nav-links a[href="#' + id + '"]');
-    if (link) {
-      if (scrollY >= top && scrollY < top + h) link.classList.add('active');
-      else link.classList.remove('active');
-    }
-  });
-});
-
-// === Language Toggle ===
-var saved = localStorage.getItem('lang') || 'en';
+// ---- Language ----
+var saved=localStorage.getItem('lang')||'en';
 setLang(saved);
-
-document.getElementById('langToggle').addEventListener('click', function() {
-  var current = document.documentElement.getAttribute('data-lang');
-  var next = current === 'en' ? 'es' : 'en';
-  setLang(next);
-  localStorage.setItem('lang', next);
+document.getElementById('langToggle').addEventListener('click',function(){
+  var cur=document.documentElement.getAttribute('data-lang');
+  var next=cur==='en'?'es':'en';
+  setLang(next);localStorage.setItem('lang',next);
 });
+function setLang(lang){
+  document.documentElement.setAttribute('data-lang',lang);
+  document.documentElement.setAttribute('lang',lang);
+  var t=document.getElementById('langToggle');
+  t.textContent=lang==='en'?'ES':'EN';
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    var k=lang==='en'?'en':'es',txt=el.getAttribute('data-'+k);
+    if(txt)el.innerHTML=txt;
+  });
+  document.querySelectorAll('[data-placeholder-en]').forEach(function(el){
+    var k=lang==='en'?'en':'es',ph=el.getAttribute('data-placeholder-'+k);
+    if(ph)el.setAttribute('placeholder',ph);
+  });
+  if(window._done){document.querySelectorAll('.stat-num').forEach(function(el){var t=el.getAttribute('data-target'),s=el.querySelector('b').textContent;if(t)el.innerHTML=t+'<b>'+s+'</b>';});}
+}
 
-function setLang(lang) {
-  document.documentElement.setAttribute('data-lang', lang);
-  document.documentElement.setAttribute('lang', lang);
-  document.getElementById('langToggle').textContent = lang === 'en' ? 'ES' : 'EN';
-  document.querySelectorAll('[data-en]').forEach(function(el) {
-    var key = lang === 'en' ? 'en' : 'es';
-    var text = el.getAttribute('data-' + key);
-    if (text) el.innerHTML = text;
+// ---- Counters ----
+window._done=false;
+function animateStats(){
+  if(window._done)return;window._done=true;
+  document.querySelectorAll('.stat-num').forEach(function(el){
+    var target=parseInt(el.getAttribute('data-target'));
+    var b=el.querySelector('b').textContent;
+    if(!target)return;
+    var cur=0,step=Math.ceil(target/50);
+    var iv=setInterval(function(){cur+=step;if(cur>=target){cur=target;clearInterval(iv);}el.innerHTML=cur+'<b>'+b+'</b>';},30);
   });
-  document.querySelectorAll('[data-placeholder-en]').forEach(function(el) {
-    var key = lang === 'en' ? 'en' : 'es';
-    var ph = el.getAttribute('data-placeholder-' + key);
-    if (ph) el.setAttribute('placeholder', ph);
-  });
-  if (window._counterDone) {
-    document.querySelectorAll('.stat-number').forEach(function(el) {
-      var t = parseInt(el.getAttribute('data-target'));
-      var s = el.getAttribute('data-suffix') || '';
-      if (t) el.textContent = t + s;
+}
+setTimeout(animateStats,700);
+
+// ---- Dash mini chart ----
+(function(){
+  var body=document.getElementById('dashBody');if(!body)return;
+  var palette=['#3ddcf0','#c9f24e'];
+  var today=0;
+  function setBars(){
+    body.innerHTML='';
+    var data=[42,58,51,66,72,61,80,88];
+    data.forEach(function(v,i){
+      var bar=document.createElement('div');
+      bar.className='dash-bar';
+      var h=(v/100)*80;
+      bar.style.height=h+'%';
+      bar.style.left=(14+i*(100/8).toFixed(1))+'%';
+      bar.style.background=palette[i%2];
+      body.appendChild(bar);
     });
   }
-}
+  setBars();
 
-// === Achievement Counters ===
-window._counterDone = false;
-function animateCounters() {
-  if (window._counterDone) return;
-  window._counterDone = true;
-  document.querySelectorAll('.stat-number').forEach(function(el) {
-    var target = parseInt(el.getAttribute('data-target'));
-    var suffix = el.textContent.replace('0', '');
-    el.setAttribute('data-suffix', suffix);
-    if (!target) return;
-    var current = 0;
-    var step = Math.ceil(target / 50);
-    var iv = setInterval(function() {
-      current += step;
-      if (current >= target) { current = target; clearInterval(iv); }
-      el.textContent = current + suffix;
-    }, 30);
-  });
-}
-setTimeout(animateCounters, 800);
+  var kpi=document.createElement('div');
+  kpi.className='dash-kpi';
+  kpi.innerHTML='<span class="kpi-mini"><i class="dot-live"></i><span data-en="System active" data-es="Sistema activo">System active</span></span>';
+  body.appendChild(kpi);
 
-// === Scroll Reveal ===
-function revealOnScroll() {
-  document.querySelectorAll('.fade-up').forEach(function(el) {
-    var rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 60) el.classList.add('visible');
-  });
-}
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
+  var flow=document.createElement('div');
+  flow.className='dash-flow';
+  flow.innerHTML='<span class="n-ico">⚡</span><span><strong id="flowMsg" data-en="Invoice #142 issued" data-es="Factura #142 emitida">Invoice #142 issued</strong><small id="flowSub" data-en="Automatic saving · today" data-es="Ahorro automático · hoy">Automatic saving · today</small></span>';
+  body.appendChild(flow);
 
-// === QR Code ===
-function cargarQR() {
-  var container = document.getElementById('qrContainer');
-  var img = document.getElementById('qrImage');
-  var frame = document.getElementById('calendlyFrame');
-  var placeholder = document.getElementById('calendlyPlaceholder');
-  frame.style.height = '0';
-  frame.src = '';
-  if (placeholder) placeholder.style.display = 'none';
-  var vcard = 'BEGIN:VCARD%0AVERSION:3.0%0AN:Fernando%20Sosa%0AFN:Fernando%20Sosa%0ATEL;TYPE=CELL:+5492613668246%0AEMAIL:sosafernandog@gmail.com%0AURL:https://sosafernando.github.io%0AEND:VCARD';
-  img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=' + encodeURIComponent(vcard);
-  container.style.display = 'block';
-}
-
-// === Calendly ===
-function cargarCalendly() {
-  var frame = document.getElementById('calendlyFrame');
-  var container = document.getElementById('qrContainer');
-  var placeholder = document.getElementById('calendlyPlaceholder');
-  container.style.display = 'none';
-  if (placeholder) placeholder.style.display = 'none';
-  frame.src = 'https://calendly.com/sosafernandog';
-  frame.style.height = '600px';
-}
-
-// === Convert Functions ===
-function comprar() {
-  var n1 = parseFloat(document.getElementById('numero1').value);
-  var n2 = parseFloat(document.getElementById('numero2').value);
-  var n3 = parseFloat(document.getElementById('numero3').value);
-  var lang = document.documentElement.getAttribute('data-lang');
-  var msg = lang === 'es'
-    ? { i1: "Ingrese un precio válido.", i2: "Ingrese al menos un valor en cantidad o USD." }
-    : { i1: "Enter a valid price.", i2: "Enter at least a quantity or USD value." };
-  if (isNaN(n1)) { alert(msg.i1); return; }
-  if (isNaN(n2) && isNaN(n3)) { alert(msg.i2); return; }
-  var r = n2 * n1;
-  var lang2 = lang === 'es' ? 'Recibe' : 'Receive';
-  document.getElementById('resultado').textContent = lang2 + ': ' + r.toFixed(2);
-}
-
-function vender() {
-  var n1 = parseFloat(document.getElementById('numero1').value);
-  var n2 = parseFloat(document.getElementById('numero2').value);
-  var n3 = parseFloat(document.getElementById('numero3').value);
-  var lang = document.documentElement.getAttribute('data-lang');
-  var msg = lang === 'es'
-    ? { i1: "Ingrese un precio válido.", i2: "Ingrese al menos un valor en cantidad o USD." }
-    : { i1: "Enter a valid price.", i2: "Enter at least a quantity or USD value." };
-  if (isNaN(n1)) { alert(msg.i1); return; }
-  if (isNaN(n2) && isNaN(n3)) { alert(msg.i2); return; }
-  document.getElementById('resultado').textContent = '—';
-  document.getElementById('resultado1').textContent = '—';
-  if (!isNaN(n2)) {
-    var r1 = n1 * n2;
-    document.getElementById('resultado1').textContent = 'Value $: ' + r1.toFixed(2) + '.-';
+  var dash1=document.getElementById('dashStat1');
+  var dash2=document.getElementById('dashStat2');
+  var dash3=document.getElementById('dashStat3');
+  var t1=0,t2=0,t3=0;
+  function upd(){t1=(t1+1)%130;t2=(t2+2)%60;t3=(t3+1)%41;
+    dash1.textContent=t1;dash2.textContent=t2;dash3.textContent=t3;
+    var es=document.documentElement.getAttribute('data-lang')==='es';
+    var msg=es?['Factura #'+t1+' emitida','Stock actualizado','Pago conciliado','Cliente nuevo sincronizado']:['Invoice #'+t1+' issued','Stock updated','Payment reconciled','New client synced'];
+    var sub=es?['Ahorro automático · hoy','Inventario en tiempo real','Sin tareas manuales','CRM actualizado']:['Automatic saving · today','Real-time inventory','No manual tasks','CRM updated'];
+    var i=Math.floor(t1/10)%msg.length;
+    document.getElementById('flowMsg').textContent=msg[i];
+    document.getElementById('flowSub').textContent=sub[i];
   }
-  if (!isNaN(n3)) {
-    var r2 = n3 / n1;
-    document.getElementById('resultado').textContent = 'Crypto: ' + r2.toFixed(2);
+  var dIv=setInterval(upd,1800);upd();
+  if(document.documentElement.getAttribute('data-lang')){
+    setLang(document.documentElement.getAttribute('data-lang'));
   }
+})();
+
+// ---- QR ----
+function cargarQR(){
+  var c=document.getElementById('qrContainer'),img=document.getElementById('qrImage'),
+      f=document.getElementById('calendlyFrame'),p=document.getElementById('calendlyPlaceholder');
+  f.style.height='0';f.src='';if(p)p.style.display='none';
+  var v='BEGIN:VCARD%0AVERSION:3.0%0AN:Fernando%20Sosa%0AFN:Fernando%20Sosa%0ATEL;TYPE=CELL:+5492613668246%0AEMAIL:sosafernandog@gmail.com%0AURL:https://sosafernando.github.io%0AEND:VCARD';
+  img.src='https://api.qrserver.com/v1/create-qr-code/?size=300x300&data='+encodeURIComponent(v);
+  c.style.display='block';
 }
 
-// === Service Worker ===
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js').catch(function() {});
-  });
+// ---- Calendly ----
+function cargarCalendly(){
+  var f=document.getElementById('calendlyFrame'),c=document.getElementById('qrContainer'),p=document.getElementById('calendlyPlaceholder');
+  c.style.display='none';if(p)p.style.display='none';
+  f.src='https://calendly.com/sosafernandog';f.style.height='600px';
 }
+
+// ---- Convert ----
+function comprar(){
+  var n1=parseFloat(document.getElementById('numero1').value),n2=parseFloat(document.getElementById('numero2').value),n3=parseFloat(document.getElementById('numero3').value);
+  var es=document.documentElement.getAttribute('data-lang')==='es';var r;
+  if(isNaN(n1)||isNaN(n2)){r=es?'Ingresá precio y cantidad':'Enter price and quantity';}
+  else{r=(n1*n2).toFixed(2);r=(es?'Recibís $ ':'You get $ ')+r;}
+  document.getElementById('resultado').textContent=r;
+}
+function vender(){
+  var n1=parseFloat(document.getElementById('numero1').value),n2=parseFloat(document.getElementById('numero2').value),n3=parseFloat(document.getElementById('numero3').value);
+  var es=document.documentElement.getAttribute('data-lang')==='es';
+  document.getElementById('resultado').textContent='—';document.getElementById('resultado1').textContent='—';
+  if(isNaN(n1)){document.getElementById('resultado').textContent=es?'Ingresá un precio válido':'Enter a valid price';return;}
+  if(!isNaN(n2)){document.getElementById('resultado1').textContent='$ '+(n1*n2).toFixed(2);}
+  if(!isNaN(n3)){document.getElementById('resultado').textContent=(n3/n1).toFixed(4)+(es?' crypto':' crypto');}
+}
+
+// ---- SW ----
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/service-worker.js').catch(function(){});});}
 </script>
 </body>
 </html>
