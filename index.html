@@ -148,6 +148,12 @@ img{display:block;max-width:100%}
 .ben-chips{display:flex;flex-wrap:wrap;gap:8px}
 .ben-chips span{border:1px solid rgba(201,242,78,.3);background:rgba(201,242,78,.06);color:#d9f49a;padding:7px 13px;border-radius:999px;font-size:12.5px}
 
+/* ---------- PROCESO ---------- */
+.step-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
+.step-num{font:700 1.9rem 'Space Grotesk';color:var(--lime);line-height:1;margin-bottom:10px;letter-spacing:-.02em}
+@media (max-width:1020px){.step-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.step-grid{grid-template-columns:1fr}}
+
 /* ---------- TRAYECTORIA ---------- */
 .cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
 .cred{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#0e1622,#0b121c);padding:22px;transition:border-color .3s,transform .3s}
@@ -255,6 +261,7 @@ footer{border-top:1px solid var(--line);background:#080d13;padding:48px 0 26px}
       <a href="#inicio" data-en="Home" data-es="Inicio">Home</a>
       <a href="#servicios" data-en="Services" data-es="Servicios">Services</a>
       <a href="#trayectoria" data-en="Track record" data-es="Trayectoria">Track record</a>
+      <a href="#proceso" data-en="Process" data-es="Proceso">Process</a>
       <a href="#proyectos" data-en="Projects" data-es="Proyectos">Projects</a>
       <a href="#resultados" data-en="Results" data-es="Resultados">Results</a>
       <a href="#contacto" data-en="Contact" data-es="Contacto">Contact</a>
@@ -502,6 +509,39 @@ footer{border-top:1px solid var(--line);background:#080d13;padding:48px 0 26px}
         <div class="c-ico">⚙️</div>
         <h3 data-en="Full-stack engineering" data-es="Ingeniería full-stack">Full-stack engineering</h3>
         <p data-en="ERP, NestJS, React, and PostgreSQL — from architecture to production, with data-driven decisions." data-es="ERP, NestJS, React y PostgreSQL — de la arquitectura a producción, con decisiones basadas en datos.">ERP, NestJS, React, and PostgreSQL — from architecture to production, with data-driven decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESO ============ -->
+<section id="proceso" class="section section-alt">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-en="How I work" data-es="Cómo trabajo">How I work</span>
+      <h2 data-en="A clear process, with numbers from day one" data-es="Un proceso claro, con números desde el día uno">A clear process, with numbers from day one</h2>
+      <p class="lead" data-en="No risk for your operation: diagnosis, plan, implementation, and support. You always know where your money goes." data-es="Sin riesgo para tu operación: diagnóstico, plan, implementación y soporte. Siempre sabés a dónde va tu plata.">No risk for your operation: diagnosis, plan, implementation, and support. You always know where your money goes.</p>
+    </div>
+    <div class="step-grid reveal">
+      <div class="cred">
+        <div class="step-num">01</div>
+        <h3 data-en="Free diagnosis" data-es="Diagnóstico sin costo">Free diagnosis</h3>
+        <p data-en="I walk through your operation with you and find the leaks: time, licenses, servers, and manual tasks." data-es="Recorro tu operación con vos y encuentro las fugas: tiempo, licencias, servidores y tareas manuales.">I walk through your operation with you and find the leaks: time, licenses, servers, and manual tasks.</p>
+      </div>
+      <div class="cred">
+        <div class="step-num">02</div>
+        <h3 data-en="Plan with real numbers" data-es="Plan con números reales">Plan with real numbers</h3>
+        <p data-en="Scope, timeline, and estimated savings. So the decision is easy to make." data-es="Alcance, tiempos y ahorro estimado. Para que la decisión sea fácil.">Scope, timeline, and estimated savings. So the decision is easy to make.</p>
+      </div>
+      <div class="cred">
+        <div class="step-num">03</div>
+        <h3 data-en="Agile implementation" data-es="Implementación ágil">Agile implementation</h3>
+        <p data-en="Short deliveries without stopping your operation. You see progress every single week." data-es="Entregas cortas sin frenar tu operación. Ves avance todas las semanas.">Short deliveries without stopping your operation. You see progress every single week.</p>
+      </div>
+      <div class="cred">
+        <div class="step-num">04</div>
+        <h3 data-en="Support & evolution" data-es="Soporte y evolución">Support & evolution</h3>
+        <p data-en="We keep measuring results and improving. Technology that stays cheap to run." data-es="Seguimos midiendo resultados y mejorando. Tecnología que se mantiene barata de operar.">We keep measuring results and improving. Technology that stays cheap to run.</p>
       </div>
     </div>
   </div>
