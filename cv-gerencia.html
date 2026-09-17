@@ -80,14 +80,17 @@
             .company-date { font-size: 7px; margin-bottom: 2px; }
             ul.job-details li { font-size: 7px; margin-bottom: 1px; padding-left: 8px; }
             .footer-note { margin-top: 4px; padding-top: 3px; font-size: 6.5px; }
-            .lang-toggle, .back-link { display: none !important; }
+            .lang-toggle, .back-link, .download-pdf-btn { display: none !important; }
         }
+        .download-pdf-btn { position: fixed; top: 15px; right: 90px; z-index: 10000; background: var(--primary-color); color: #fff; border: 1px solid var(--accent-color); border-radius: 4px; padding: 6px 14px; font-size: 13px; cursor: pointer; transition: background 0.3s, color 0.3s; font-family: 'Roboto', sans-serif; }
+        .download-pdf-btn:hover { background: var(--accent-color); color: #fff; }
     </style>
 </head>
 <body>
 
     <a href="index.html" class="back-link">&larr; <span data-en="Home" data-es="Inicio">Home</span></a>
     <button class="lang-toggle" id="langToggle" title="Switch language">ES</button>
+    <button class="download-pdf-btn" onclick="window.print()" data-en="Download PDF" data-es="Descargar PDF">Download PDF</button>
 
     <div class="container">
         <!-- Sidebar -->

@@ -249,10 +249,15 @@
             .skill-tag { border: 1px solid #000; color: #000; background: #fff; }
             a { text-decoration: none; color: #000; }
             .section-title { border-bottom: 1px solid #000; }
+            .download-pdf-btn { display: none; }
         }
+        .download-pdf-btn { position: fixed; top: 15px; right: 15px; z-index: 10000; background: var(--primary-color); color: #fff; border: 1px solid var(--accent-color); border-radius: 4px; padding: 6px 14px; font-size: 13px; cursor: pointer; transition: background 0.3s, color 0.3s; font-family: 'Roboto', sans-serif; }
+        .download-pdf-btn:hover { background: var(--accent-color); color: #fff; }
     </style>
 </head>
 <body>
+
+    <button class="download-pdf-btn" onclick="window.print()">Descargar PDF</button>
 
     <div class="container">
         <!-- Barra Lateral -->

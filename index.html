@@ -246,6 +246,11 @@ footer{border-top:1px solid var(--line);background:#080d13;padding:48px 0 26px}
   .testi-grid{grid-template-columns:1fr}
   .convert-actions{grid-template-columns:1fr}
 }
+
+/* ---------- DOWNLOAD PDF ---------- */
+.download-pdf-btn{position:fixed;top:16px;right:180px;z-index:81;background:none;border:1px solid var(--line);color:var(--muted);padding:6px 13px;border-radius:999px;font-size:12px;font-weight:600;cursor:pointer;transition:.2s;font-family:'Inter',sans-serif}
+.download-pdf-btn:hover{color:var(--text);border-color:rgba(201,242,78,.5)}
+@media print{.download-pdf-btn{display:none!important}}
 </style>
 </head>
 <body>
@@ -267,6 +272,7 @@ footer{border-top:1px solid var(--line);background:#080d13;padding:48px 0 26px}
       <a href="#contacto" data-en="Contact" data-es="Contacto">Contact</a>
       <button class="lang-btn" id="langToggle">ES</button>
       <a href="cv-gerencia.html" class="btn btn-primary btn-sm">CV</a>
+      <button class="download-pdf-btn" onclick="window.print()" data-en="Download PDF" data-es="Descargar PDF">Download PDF</button>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Menú"><span></span><span></span><span></span></button>
   </div>
